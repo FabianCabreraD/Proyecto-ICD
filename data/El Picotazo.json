@@ -44,27 +44,27 @@
         },
         {
             "type": "Refresco",
-            "brand": null,
+            "brand": "Booms Boom",
             "details": "Cola",
             "price": 250,
             "unity": "Lata",
-            "origin": "Nacional"
+            "origin": "Importado"
         },
         {
             "type": "Refresco",
-            "brand": null,
+            "brand": "Booms Boom",
             "details": "Naranja",
             "price": 250,
             "unity": "Lata",
-            "origin": "Nacional"
+            "origin": "Importado"
         },
         {
             "type": "Refresco",
-            "brand": null,
+            "brand": "Booms Boom",
             "details": "Limón",
             "price": 250,
             "unity": "Lata",
-            "origin": "Nacional"
+            "origin": "Importado"
         },
         {
             "type": "Cerveza",
