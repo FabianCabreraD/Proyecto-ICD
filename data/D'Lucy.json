@@ -2,10 +2,10 @@
     "name": "D'Lucy",
     "location": {
         "province": "La Habana",
-        "address": "",
+        "address": "Calle 28 pasaje B E/235 y 237 XX Aniversario",
         "municipality": "La Lisa",
-        "lat": "",
-        "long": "",
+        "lat": 23.0251839,
+        "long": -82.4907,
         "delivery": true,
         "transfer_payment": true
     },
