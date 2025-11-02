@@ -1,11 +1,13 @@
 {
-    "name": "D'Lucy",
+    "name": "El Picotazo",
     "location": {
         "province": "La Habana",
         "address": "",
         "municipality": "La Lisa",
         "lat": "",
-        "long": ""
+        "long": "",
+        "delivery": false,
+        "transfer_payment": true
     },
     "product": [
         {
