@@ -1,0 +1,21 @@
+{
+    "V1": {
+        "contact": "",
+        "delivery": "",
+        "transfer_payment": "",
+        "drugs": {
+            "paracetamol": [],
+            "dipirona": [],
+            "captopril": [],
+            "enalapril": [],
+            "amlodipino": [],
+            "aspirina": [],
+            "atorvastatina": [],
+            "furosemida": [],
+            "amoxicilina": [],
+            "ciprofloxacina": [],
+            "azitromicina": [],
+            "alprazolam": []
+        }
+    }
+}
