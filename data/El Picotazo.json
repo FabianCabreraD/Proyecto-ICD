@@ -4,8 +4,8 @@
         "province": "La Habana",
         "address": "Avenida 251 #4405 E/44 y 46 Punta Brava",
         "municipality": "La Lisa",
-        "lat": 23.0161723,
-        "long": -82.4979741,
+        "lat": 23.016240,
+        "long": -82.497709,
         "delivery": false,
         "transfer_payment": true
     },
