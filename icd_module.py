@@ -1,6 +1,7 @@
 import os
 import json
 import folium
+import matplotlib.pyplot as plt
 
 def mipymes_list():
     files = os.listdir("d:\\uh\\icd\\Proyecto-ICD\\data\\mipymes")
