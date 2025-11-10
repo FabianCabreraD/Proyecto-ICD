@@ -1,0 +1,214 @@
+{
+    "name": "El Picotazo",
+    "location": {
+        "province": "La Habana",
+        "address": "Avenida 251 #4405 E/44 y 46 Punta Brava",
+        "municipality": "La Lisa",
+        "lat": 23.016240,
+        "long": -82.497709,
+        "delivery": false,
+        "transfer_payment": true
+    },
+    "product": [
+        {
+            "type": "Arroz",
+            "brand": null,
+            "details": null,
+            "price": 700,
+            "unity": "1 kg",
+            "origin": "Importado"
+        },
+        {
+            "type": "Aceite",
+            "brand": null,
+            "details": null,
+            "price": 1200,
+            "unity": "1 lt",
+            "origin": null
+        },
+        {
+            "type": "Leche",
+            "brand": null,
+            "details": "Polvo",
+            "price": 2500,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Leche",
+            "brand": null,
+            "details": "Condensada",
+            "price": 600,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Refresco",
+            "brand": "Booms Boom",
+            "details": "Cola",
+            "price": 250,
+            "unity": "Lata",
+            "origin": "Importado"
+        },
+        {
+            "type": "Refresco",
+            "brand": "Booms Boom",
+            "details": "Naranja",
+            "price": 250,
+            "unity": "Lata",
+            "origin": "Importado"
+        },
+        {
+            "type": "Refresco",
+            "brand": "Booms Boom",
+            "details": "Limón",
+            "price": 250,
+            "unity": "Lata",
+            "origin": "Importado"
+        },
+        {
+            "type": "Cerveza",
+            "brand": "Cristal",
+            "details": null,
+            "price": 350,
+            "unity": "Lata",
+            "origin": "Nacional"
+        },
+        {
+            "type": "Cerveza",
+            "brand": "Cabeza de lobo",
+            "details": null,
+            "price": 220,
+            "unity": "Lata",
+            "origin": "Nacional"
+        },
+        {
+            "type": "Malta",
+            "brand": "Bucanero",
+            "details": null,
+            "price": 350,
+            "unity": "Lata",
+            "origin": "Nacional"
+        },
+        {
+            "type": "Malta",
+            "brand": "Perla Negra",
+            "details": null,
+            "price": 300,
+            "unity": "Lata",
+            "origin": "Nacional"
+        },
+        {
+            "type": "Jugo",
+            "brand": null,
+            "details": "Manzana",
+            "price": 180,
+            "unity": "Caja Pequeña",
+            "origin": "180"
+        },
+        {
+            "type": "Pollo",
+            "brand": null,
+            "details": "Pechuga",
+            "price": 5500,
+            "unity": "2.5 kg",
+            "origin": null
+        },
+        {
+            "type": "Pollo",
+            "brand": null,
+            "details": "Molleja",
+            "price": 1200,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Pollo",
+            "brand": null,
+            "details": "Hígado",
+            "price": 850,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Azúcar Blanca",
+            "brand": "Caiobá",
+            "details": null,
+            "price": 800,
+            "unity": "1kg",
+            "origin": "Importado"
+        },
+        {
+            "type": "Sal",
+            "brand": null,
+            "details": null,
+            "price": 420,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Jabón de Baño",
+            "brand": "Jolié",
+            "details": null,
+            "price": 170,
+            "unity": "70 gr",
+            "origin": "Importado"
+        },
+        {
+            "type": "Pasta Dental",
+            "brand": "Fluoride",
+            "details": null,
+            "price": 700,
+            "unity": "181 gr",
+            "origin": "Importado"
+        },
+        {
+            "type": "Pan",
+            "brand": null,
+            "details": "Con Ajonjolí",
+            "price": 400,
+            "unity": "6 u",
+            "origin": "Nacional"
+        },
+        {
+            "type": "Frijol",
+            "brand": null,
+            "details": "Negro",
+            "price": 1000,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Frijol",
+            "brand": null,
+            "details": "Chícharos verdes",
+            "price": 700,
+            "unity": "1 lb",
+            "origin": null
+        },
+        {
+            "type": "Frijol",
+            "brand": null,
+            "details": "Garbanzos",
+            "price": 800,
+            "unity": "1 lb",
+            "origin": null
+        },
+        {
+            "type": "Papel Sanitario",
+            "brand": null,
+            "details": null,
+            "price": 1980,
+            "unity": "12 u",
+            "origin": null
+        },
+        {
+            "type": "Huevos",
+            "brand": null,
+            "details": null,
+            "price": 2850,
+            "unity": "30 u",
+            "origin": null
+        }
+    ]
+}
