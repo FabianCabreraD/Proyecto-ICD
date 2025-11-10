@@ -12,7 +12,7 @@ def read_json(path):
         file = json.load(f)
         return file
 
-def show_map():    
+def show_map_mipymes():    
     mapa = folium.Map(location=(23.0515757,-82.3304645),zoom_start=11)
 
     archivos = mipymes_list()
