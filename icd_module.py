@@ -7,10 +7,17 @@ def mipymes_list():
     files = os.listdir("d:\\uh\\icd\\Proyecto-ICD\\data\\mipymes")
     return files
 
+def return_path_mipymes(name):
+    path = f"d:\\uh\\icd\\Proyecto-ICD\\data\\mipymes\\{name}"
+    return path
+
 def read_json(path):
     with open(path,"r",encoding="utf-8") as f:
         file = json.load(f)
         return file
+    
+def mean_list(list):
+    return sum(list)/len(list)
 
 def show_map_mipymes():    
     mapa = folium.Map(location=(23.0515757,-82.3304645),zoom_start=11)
@@ -25,4 +32,4 @@ def show_map_mipymes():
         
         folium.Marker([lat,long],tooltip=name).add_to(mapa)
     
-    return mapa    
+    return mapa
