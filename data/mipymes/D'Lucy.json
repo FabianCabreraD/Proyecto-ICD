@@ -36,11 +36,11 @@
         },
         {
             "type": "Refresco",
-            "brand": null,
+            "brand": "Santa Cola",
             "details": "Cola",
             "price": 200,
             "unity": "Lata",
-            "origin": "Nacional"
+            "origin": "Importado"
         },
         {
             "type": "Cerveza",
@@ -60,11 +60,11 @@
         },
         {
             "type": "Jugo",
-            "brand": null,
+            "brand": "Sunchy",
             "details": null,
             "price": 160,
             "unity": "Caja Pequeña",
-            "origin": null
+            "origin": "Importado"
         },
         {
             "type": "Azúcar Blanca",

@@ -28,11 +28,11 @@
         },
         {
             "type": "Refresco",
-            "brand": "Ciego Montero",
+            "brand": "Santa Cola",
             "details": null,
             "price": 250,
             "unity": "Lata",
-            "origin": "Nacional"            
+            "origin": "Importado"            
         },
         {
             "type": "Cerveza",
@@ -52,7 +52,7 @@
         },
         {
             "type": "Jugo",
-            "brand": "",
+            "brand": "Sunchy",
             "details": null,
             "price": 330,
             "unity": "Lata",
