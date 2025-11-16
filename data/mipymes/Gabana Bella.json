@@ -4,20 +4,12 @@
         "province": "La Habana",
         "address": "13 E/182 y 184 #12208",
         "municipality": "Playa",
-        "lat": "",
-        "long": "",
+        "lat": 23.086389, 
+        "long": -82.468003,
         "delivery": false,
         "transfer_payment": true
     },
     "product": [
-        {
-            "type": "",
-            "brand": "",
-            "details": null,
-            "price": 0,
-            "unity": "",
-            "origin": ""            
-        },
         {
             "type": "Arroz",
             "brand": null,

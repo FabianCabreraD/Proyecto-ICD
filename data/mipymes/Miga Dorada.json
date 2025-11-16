@@ -4,8 +4,8 @@
         "province": "La Habana",
         "address": "13 E/182 Y 184",
         "municipality": "Playa",
-        "lat": "",
-        "long": "",
+        "lat": 23.086320, 
+        "long": -82.467751,
         "delivery": false,
         "transfer_payment": true
     },
