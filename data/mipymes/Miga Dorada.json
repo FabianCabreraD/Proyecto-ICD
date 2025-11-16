@@ -11,14 +11,6 @@
     },
     "product": [
         {
-            "type": "",
-            "brand": "",
-            "details": null,
-            "price": 0,
-            "unity": "",
-            "origin": ""            
-        },
-        {
             "type": "Arroz",
             "brand": null,
             "details": null,
