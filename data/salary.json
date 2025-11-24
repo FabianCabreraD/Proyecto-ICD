@@ -20,7 +20,55 @@
         "Fuente": "https://www.dane.gov.co/index.php/estadisticas-por-tema/mercado-laboral"
     },
     "Costa Rica": {
-        "Salario": 0,
-        "Fuente": ""
+        "Salario": 998.60,
+        "Fuente": "https://inec.cr/estadisticas-fuentes/"
+    },
+    "Cuba": {
+        "Salario": 6660.1,
+        "Fuente": "ONEI"
+    },
+    "Ecuador": {
+        "Salario": 400,
+        "Fuente": "https://www.ecuadorencifras.gob.ec/documentos/web-inec/EMPLEO/2024/Trimestre_I/2024_I_Trimestre_Mercado_Laboral.pdf"
+    },
+    "El Salvador": {
+        "Salario": 300,
+        "Fuente": "https://www.digestyc.gob.sv/index.php/temas/mercado-laboral/encuesta-de-hogares-de-propositos-multiples.html"
+    },
+    "Guatemala": {
+        "Salario": 326.38,
+        "Fuente": "https://www.ine.gob.gt/inei/"
+    },
+    "Jamaica": {
+        "Salario": 1250,
+        "Fuente": "https://statinja.gov.jm/"
+    },
+    "Mexico": {
+        "Salario": 245.74,
+        "Fuente": "https://www.inegi.org.mx/temas/remuneracionesmr/"
+    },
+    "Nicaragua": {
+        "Salario": 366.84,
+        "Fuente": "https://bcn.gob.ni/mercado-laboral"
+    },
+    "Panamá": {
+        "Salario": 1288,
+        "Fuente": "https://www.inec.gob.pa/archivos/P0705547520250124095018Cuadro%2025.pdf"
+    },
+    "Paraguay": {
+        "Salario": 385.04,
+        "Fuente": "https://www.bcp.gov.py"
+    },
+    "Perú": {
+        "Salario": 606.47,
+        "Fuente": "https://www.inei.gob.pe/"
+    },
+    "República Dominicana": {
+        "Salario": 574,
+        "Fuente": "https://www.one.gob.do/"
+    },
+    "Uruguay": {
+        "Salario": 843.33,
+        "Fuente": "https://www.gub.uy/instituto-nacional-estadistica/comunicacion/publicaciones/ingresos-hogares-personas-tercer-trimestre-2025"
     }
 }
