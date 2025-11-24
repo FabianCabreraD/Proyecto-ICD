@@ -3,9 +3,13 @@ import json
 import folium
 import matplotlib.pyplot as plt
 import csv
+import datetime
 
+#CONSTANTS
 MIPYMES_PATH = "d:\\uh\\icd\\Proyecto-ICD\\data\\mipymes"
 RICE_MEAN_PRICE_PATH = "d:\\uh\\icd\\Proyecto-ICD\\data\\rice_price.json" 
+AVERAGE_SALARY = 6660.1
+MINIMUM_PENSION = 3056
 
 #Retorna el listado de archivos json de las mipymes
 def mipymes_list():
@@ -14,7 +18,7 @@ def mipymes_list():
 
 #Devuelve el path del json dado su nombre
 def return_path_mipymes(name):
-    path = f"{MIPYMES_PATH+name}"
+    path = f"{MIPYMES_PATH+"\\"+name}"
     return path
 
 #Lee el archivo json
@@ -26,22 +30,6 @@ def read_json(path):
 #Devuelve el promedio de los elementos de una lista    
 def mean_list(list):
     return round(sum(list)/len(list),2)
-
-#Muestra el mapa con las mipymes analizadas
-def show_map_mipymes():    
-    mapa = folium.Map(location=(23.0515757,-82.3304645),zoom_start=11)
-
-    archivos = mipymes_list()
-    for i in archivos:
-        diccionario = read_json(f"d:\\uh\\icd\\Proyecto-ICD\\data\\mipymes\\{i}")
-        
-        name = diccionario['name']
-        lat = diccionario["location"]["lat"]
-        long = diccionario["location"]["long"]            
-        
-        folium.Marker([lat,long],tooltip=name).add_to(mapa)
-    
-    return mapa
 
 def currency_data():
     with open("d:\\uh\\icd\\Proyecto-ICD\\data\\tasa copy.csv","r") as file:
@@ -59,7 +47,44 @@ def currency_data():
     euro = [i[2] for i in data_list_final]
     
     return dates, usd, euro
+
+def product_mean_price(product):
+    files = mipymes_list()
     
+    prices = []
+    for i in files:
+        path = return_path_mipymes(i)
+        data = read_json(path)
+        for j in data["product"]:
+            if j["type"].lower() == product.lower():
+                prices.append(j["price"])
+    mean = mean_list(prices)
+    return mean
+    
+def currency_vs_data(data,data_currency):
+    dt = AVERAGE_SALARY if data == "salary" else MINIMUM_PENSION
+    values = [dt/i for i in data_currency]
+    return values
+    
+#GRAPHS
+
+#Mapa de las mipymes
+def show_map_mipymes():    
+    mapa = folium.Map(location=(23.0515757,-82.3304645),zoom_start=11)
+
+    archivos = mipymes_list()
+    for i in archivos:
+        diccionario = read_json(f"d:\\uh\\icd\\Proyecto-ICD\\data\\mipymes\\{i}")
+        
+        name = diccionario['name']
+        lat = diccionario["location"]["lat"]
+        long = diccionario["location"]["long"]            
+        
+        folium.Marker([lat,long],tooltip=name).add_to(mapa)
+        
+    return mapa
+    
+#Tasa cambiaria    
 def currency_graph():
     dates, usd, euro = currency_data()
     
@@ -72,15 +97,8 @@ def currency_graph():
     plt.ylabel("cambio en CUP")
     plt.legend()
     plt.show()
-    
-AVERAGE_SALARY = 6660.1
-MINIMUM_PENSION = 3056
-    
-def currency_vs_data(data,data_currency):
-    dt = AVERAGE_SALARY if data == "salary" else MINIMUM_PENSION
-    values = [dt/i for i in data_currency]
-    return values
-    
+        
+#Salario medio y pensión mínima contra usd y euro
 def salary_and_pension_graph():
     dates, usd, euro = currency_data()
     
@@ -111,11 +129,12 @@ def salary_and_pension_graph():
 
     plt.show()
     
-def cuba_rice_mean_price():
-    ...
-    
+#Precio promedio del arroz en países de América
 def rice_mean_price_graph():
     data = read_json(RICE_MEAN_PRICE_PATH)
+    cuba_price = product_mean_price("Arroz")
+    data["Cuba"] = cuba_price/435
+    
     tuples_sorted = sorted(data.items(),key=lambda x: x[1])
     countries = [i[0] for i in tuples_sorted]
     prices = [i[1] for i in tuples_sorted]
