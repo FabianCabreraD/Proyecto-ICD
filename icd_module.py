@@ -4,14 +4,17 @@ import folium
 import matplotlib.pyplot as plt
 import csv
 
+MIPYMES_PATH = "d:\\uh\\icd\\Proyecto-ICD\\data\\mipymes"
+RICE_MEAN_PRICE_PATH = "d:\\uh\\icd\Proyecto-ICD\\data\\rice_price.json" 
+
 #Retorna el listado de archivos json de las mipymes
 def mipymes_list():
-    files = os.listdir("d:\\uh\\icd\\Proyecto-ICD\\data\\mipymes")
+    files = os.listdir(MIPYMES_PATH)
     return files
 
 #Devuelve el path del json dado su nombre
 def return_path_mipymes(name):
-    path = f"d:\\uh\\icd\\Proyecto-ICD\\data\\mipymes\\{name}"
+    path = f"{MIPYMES_PATH+name}"
     return path
 
 #Lee el archivo json
@@ -57,7 +60,7 @@ def currency_data():
     
     return dates, usd, euro
     
-def currency():
+def currency_graph():
     dates, usd, euro = currency_data()
     
     plt.figure()
@@ -78,7 +81,7 @@ def currency_vs_data(data,data_currency):
     values = [dt/i for i in data_currency]
     return values
     
-def salary_and_pension():
+def salary_and_pension_graph():
     dates, usd, euro = currency_data()
     
     fig, (ax1, ax2) = plt.subplots(1,2,figsize=(12,6))
@@ -107,3 +110,6 @@ def salary_and_pension():
     ax2.set_title("Pensión mínima en USD y EUR")
 
     plt.show()
+    
+def rice_mean_price():
+    ...
