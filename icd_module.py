@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import csv
 import datetime
 
-#CONSTANTS
+#CONSTANTES
 MIPYMES_PATH = "d:\\uh\\icd\\Proyecto-ICD\\data\\mipymes"
 RICE_MEAN_PRICE_PATH = "d:\\uh\\icd\\Proyecto-ICD\\data\\rice_price.json" 
 AVERAGE_SALARY = 6660.1
@@ -31,6 +31,7 @@ def read_json(path):
 def mean_list(list):
     return round(sum(list)/len(list),2)
 
+#Retorna las fechas y el valor correspondiente del dolar y el euro
 def currency_data():
     with open("d:\\uh\\icd\\Proyecto-ICD\\data\\tasa copy.csv","r") as file:
         data = csv.reader(file)
@@ -73,7 +74,7 @@ def currency_vs_data(data,data_currency):
     values = [dt/i for i in data_currency]
     return values
     
-#GRAPHS
+#GRÁFICOS
 
 #Mapa de las mipymes
 def show_map_mipymes():    
