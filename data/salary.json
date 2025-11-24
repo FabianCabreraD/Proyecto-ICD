@@ -1,0 +1,26 @@
+{
+    "Argentina": {
+        "Salario": 1278.74,
+        "Fuente": "https://www.argentina.gob.ar/economia/dpyegp/salariopromedio"
+    },
+    "Brasil": {
+        "Salario": 551.92,
+        "Fuente": "https://www.gov.br/planalto/en/latest-news/2024/04/average-per-capita-income-in-brazil-surges-by-11-5-to-reach-12-year-high#:~:text=The%20average%20real%20monthly%20income,to%202019%20(BRL%202%2C927)."
+    },
+    "Canada": {
+        "Salario": 3657.69,
+        "Fuente": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410041701&pickMembers%5B0%5D=1.1&pickMembers%5B1%5D=2.3&pickMembers%5B2%5D=3.1&pickMembers%5B3%5D=5.1&pickMembers%5B4%5D=6.1&cubeTimeFrame.startYear=2020&cubeTimeFrame.endYear=2024&referencePeriods=20200101%2C20240101"
+    },
+    "Chile": {
+        "Salario": 650.30,
+        "Fuente": "https://www.ine.gob.cl/estadisticas/sociales/ingresos-y-gastos/encuesta-de-presupuestos-familiares"
+    },
+    "Colombia": {
+        "Salario": 315.18,
+        "Fuente": "https://www.dane.gov.co/index.php/estadisticas-por-tema/mercado-laboral"
+    },
+    "Costa Rica": {
+        "Salario": 0,
+        "Fuente": ""
+    }
+}
