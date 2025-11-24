@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import csv
 
 MIPYMES_PATH = "d:\\uh\\icd\\Proyecto-ICD\\data\\mipymes"
-RICE_MEAN_PRICE_PATH = "d:\\uh\\icd\Proyecto-ICD\\data\\rice_price.json" 
+RICE_MEAN_PRICE_PATH = "d:\\uh\\icd\\Proyecto-ICD\\data\\rice_price.json" 
 
 #Retorna el listado de archivos json de las mipymes
 def mipymes_list():
@@ -111,5 +111,18 @@ def salary_and_pension_graph():
 
     plt.show()
     
-def rice_mean_price():
+def cuba_rice_mean_price():
     ...
+    
+def rice_mean_price_graph():
+    data = read_json(RICE_MEAN_PRICE_PATH)
+    tuples_sorted = sorted(data.items(),key=lambda x: x[1])
+    countries = [i[0] for i in tuples_sorted]
+    prices = [i[1] for i in tuples_sorted]
+
+    fig, ax = plt.subplots()
+    
+    ax.barh(countries,prices)
+    plt.show()
+    
+rice_mean_price_graph()
