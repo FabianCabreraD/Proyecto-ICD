@@ -145,11 +145,11 @@ def rice_mean_price_graph():
     tuples_sorted = sorted(data.items(),key=lambda x: x[1])
     countries = [i[0] for i in tuples_sorted]
     prices = [i[1] for i in tuples_sorted]
+    
+    bar_color = ["red" if country == "Cuba" else "#1f77b4" for country in countries]
 
     fig, ax = plt.subplots()
     
-    ax.barh(countries,prices)
+    ax.barh(countries,prices,color=bar_color)
     ax.set_title("Precio promedio de 1kg de arroz")
     plt.show()
-    
-rice_mean_price_graph()
