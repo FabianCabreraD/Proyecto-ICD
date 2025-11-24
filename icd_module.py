@@ -48,16 +48,23 @@ def currency_data():
     
     return dates, usd, euro
 
+#Precio promedio de 1kg de arroz en las mipymes
 def product_mean_price(product):
     files = mipymes_list()
-    
     prices = []
     for i in files:
         path = return_path_mipymes(i)
         data = read_json(path)
         for j in data["product"]:
             if j["type"].lower() == product.lower():
-                prices.append(j["price"])
+                #Si la mipyme no vende un 1kg de arroz, se le aplica una proporción
+                if j["unity"] == "1 kg":
+                    prices.append(j["price"])
+                else:
+                    unity = j["unity"].replace(" kg", "")
+                    proportion = j["price"]/float(unity)
+                    prices.append(proportion)
+                    
     mean = mean_list(prices)
     return mean
     
@@ -142,6 +149,7 @@ def rice_mean_price_graph():
     fig, ax = plt.subplots()
     
     ax.barh(countries,prices)
+    ax.set_title("Precio promedio de 1kg de arroz")
     plt.show()
     
 rice_mean_price_graph()
