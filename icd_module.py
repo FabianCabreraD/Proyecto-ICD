@@ -164,20 +164,23 @@ def rice_salary_percentage():
     
     salary = read_json(SALARIES_PATH)
     
-    countries = []
-    percentages = []
+    data_countries_rice = []
     
     for country in rice:
         salary_country = salary[country]["Salario"]
         rice_price = rice[country]
         percentage = (rice_price/salary_country) * 100
         
-        countries.append(country)
-        percentages.append(percentage)
-        
-    plt.bar(countries,percentages)
+        data_countries_rice.append((country,percentage))
+    
+    sorted_dcr = sorted(data_countries_rice,key=lambda x: x[1])
+    
+    countries = [i[0] for i in sorted_dcr]
+    percentages = [i[1] for i in sorted_dcr]
+    
+    bar_color = ["red" if country == "Cuba" else "#1f77b4" for country in countries]
+            
+    plt.barh(countries,percentages, color=bar_color)
     plt.show()
-
     
 rice_salary_percentage()
-        
