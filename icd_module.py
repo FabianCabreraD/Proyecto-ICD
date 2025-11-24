@@ -179,10 +179,10 @@ def rice_salary_percentage(ax):
     
     bar_color = ["red" if country == "Cuba" else "#1f77b4" for country in countries]
        
-    ax.barh(countries,percentages, color=bar_color)
+    ax.bar(countries,percentages, color=bar_color)
   
 def full_rice_graph():  
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4))
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 6))
 
     rice_mean_price_graph(ax1)
     rice_salary_percentage(ax2)
