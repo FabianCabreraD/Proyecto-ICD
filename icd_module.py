@@ -7,7 +7,8 @@ import datetime
 
 #CONSTANTES
 MIPYMES_PATH = "d:\\uh\\icd\\Proyecto-ICD\\data\\mipymes"
-RICE_MEAN_PRICE_PATH = "d:\\uh\\icd\\Proyecto-ICD\\data\\rice_price.json" 
+RICE_MEAN_PRICE_PATH = "d:\\uh\\icd\\Proyecto-ICD\\data\\rice_price.json"
+SALARIES_PATH = "d:\\uh\\icd\\Proyecto-ICD\\data\\salary.json" 
 AVERAGE_SALARY = 6660.1
 MINIMUM_PENSION = 3056
 
@@ -154,3 +155,29 @@ def rice_mean_price_graph():
     ax.barh(countries,prices,color=bar_color)
     ax.set_title("Precio promedio de 1kg de arroz")
     plt.show()
+
+#Por ciento con respecto al salario de 1kg de Arroz
+def rice_salary_percentage():
+    rice = read_json(RICE_MEAN_PRICE_PATH)
+    cuba_rice = product_mean_price("Arroz")
+    rice["Cuba"] = cuba_rice
+    
+    salary = read_json(SALARIES_PATH)
+    
+    countries = []
+    percentages = []
+    
+    for country in rice:
+        salary_country = salary[country]["Salario"]
+        rice_price = rice[country]
+        percentage = (rice_price/salary_country) * 100
+        
+        countries.append(country)
+        percentages.append(percentage)
+        
+    plt.bar(countries,percentages)
+    plt.show()
+
+    
+rice_salary_percentage()
+        
