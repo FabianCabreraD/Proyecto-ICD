@@ -2,6 +2,7 @@ import os
 import json
 import folium
 import matplotlib.pyplot as plt
+import csv
 
 #Retorna el listado de archivos json de las mipymes
 def mipymes_list():
@@ -21,7 +22,7 @@ def read_json(path):
 
 #Devuelve el promedio de los elementos de una lista    
 def mean_list(list):
-    return sum(list)/len(list)
+    return round(sum(list)/len(list),2)
 
 #Muestra el mapa con las mipymes analizadas
 def show_map_mipymes():    
@@ -38,3 +39,71 @@ def show_map_mipymes():
         folium.Marker([lat,long],tooltip=name).add_to(mapa)
     
     return mapa
+
+def currency_data():
+    with open("d:\\uh\\icd\\Proyecto-ICD\\data\\tasa copy.csv","r") as file:
+        data = csv.reader(file)
+        data_list = [i for i in data]
+        
+    data_list = data_list[1:]
+    data_list_final = []
+    for i in data_list:
+        row = [i[0],float(i[1]),float(i[2])]
+        data_list_final.append(row)
+    
+    dates = [i[0] for i in data_list_final]
+    usd = [i[1] for i in data_list_final]
+    euro = [i[2] for i in data_list_final]
+    
+    return dates, usd, euro
+    
+def currency():
+    dates, usd, euro = currency_data()
+    
+    plt.figure()
+    plt.plot(dates,usd,label="USD")
+    plt.plot(dates,euro,label="EUR")
+    plt.xticks(dates[::15],rotation=45)
+    plt.title("Tasa cambiaria en los últimos 3 meses")
+    plt.xlabel("fecha")
+    plt.ylabel("cambio en CUP")
+    plt.legend()
+    plt.show()
+    
+AVERAGE_SALARY = 6660.1
+MINIMUM_PENSION = 3056
+    
+def currency_vs_data(data,data_currency):
+    dt = AVERAGE_SALARY if data == "salary" else MINIMUM_PENSION
+    values = [dt/i for i in data_currency]
+    return values
+    
+def salary_and_pension():
+    dates, usd, euro = currency_data()
+    
+    fig, (ax1, ax2) = plt.subplots(1,2,figsize=(12,6))
+
+    usd_vs_salary = currency_vs_data("salary",usd)
+    euro_vs_salary = currency_vs_data("salary",euro)
+
+    ax1.plot(dates,usd_vs_salary,label="USD")
+    ax1.plot(dates,euro_vs_salary,label="EUR")
+    ax1.set_xticks(dates[::15])
+    ax1.set_xlabel("fecha")
+    ax1.tick_params(axis="x",rotation=45)
+    ax1.legend()
+    ax1.set_title("Salario Promedio en USD y EUR")
+    
+    usd_vs_pension = currency_vs_data("pension",usd)
+    euro_vs_pension = currency_vs_data("pension",euro)
+
+
+    ax2.plot(dates,usd_vs_pension, label="USD")
+    ax2.plot(dates,euro_vs_pension, label="EUR")
+    ax2.set_xticks(dates[::15])
+    ax2.set_xlabel("fecha")
+    ax2.tick_params(axis="x",rotation=45)
+    ax2.legend()
+    ax2.set_title("Pensión mínima en USD y EUR")
+
+    plt.show()
