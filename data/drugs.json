@@ -1,192 +1,208 @@
 {
-    "V1": {
-        "contact": "+5363192539",
-        "delivery": true,
-        "transfer_payment": null,
-        "drugs": {
-            "paracetamol": [400,null,null],
-            "dipirona": [],
-            "captopril": [350,null,null],
-            "enalapril": [350,null,null],
-            "amlodipino": [350,null,null],
-            "aspirina": [300,"80mg",null],
-            "atorvastatina": [400,null,null],
-            "furosemida": [350,null,null],
-            "amoxicilina": [450,null,null],
-            "ciprofloxacina": [450,null,null],
-            "azitromicina": [],
-            "alprazolam": []
-        }
+    "regulated_prices": {
+        "paracetamol": 13.50,
+        "dipirona": 12.90,
+        "captopril": null,
+        "aspirina": 0.40,
+        "alprazolam": 10.80,
+        "enalapril": null,
+        "amlodipino": null,
+        "atorvastatina": null,
+        "furosemida": null,
+        "amoxicilina": null,
+        "ciprofloxacina": null,
+        "azitromicina": null
     },
-    "V2": {
-        "contact": "+5350074652",
-        "delivery": true,
-        "transfer_payment": null,
-        "drugs": {
-            "paracetamol": [350,null,null],
-            "dipirona": [700,"500 mg", "10 u"],
-            "captopril": [350,null,null],
-            "enalapril": [350,null,null],
-            "amlodipino": [350,null,null],
-            "aspirina": [305,null,null],
-            "atorvastatina": [400,null,null],
-            "furosemida": [350,null,null],
-            "amoxicilina": [450,null,null],
-            "ciprofloxacina": [],
-            "azitromicina": [],
-            "alprazolam": [1000,null,"20 u"]
-        }
-    },
-    "V3": {
-        "contact": "",
-        "delivery": "",
-        "transfer_payment": "",
-        "drugs": {
-            "paracetamol": [],
-            "dipirona": [],
-            "captopril": [],
-            "enalapril": [],
-            "amlodipino": [],
-            "aspirina": [],
-            "atorvastatina": [],
-            "furosemida": [],
-            "amoxicilina": [],
-            "ciprofloxacina": [],
-            "azitromicina": [],
-            "alprazolam": []
-        }
-    },
-    "V4": {
-        "contact": "",
-        "delivery": "",
-        "transfer_payment": "",
-        "drugs": {
-            "paracetamol": [],
-            "dipirona": [],
-            "captopril": [],
-            "enalapril": [],
-            "amlodipino": [],
-            "aspirina": [],
-            "atorvastatina": [],
-            "furosemida": [],
-            "amoxicilina": [],
-            "ciprofloxacina": [],
-            "azitromicina": [],
-            "alprazolam": []
-        }
-    },
-    "V5": {
-        "contact": "",
-        "delivery": "",
-        "transfer_payment": "",
-        "drugs": {
-            "paracetamol": [],
-            "dipirona": [],
-            "captopril": [],
-            "enalapril": [],
-            "amlodipino": [],
-            "aspirina": [],
-            "atorvastatina": [],
-            "furosemida": [],
-            "amoxicilina": [],
-            "ciprofloxacina": [],
-            "azitromicina": [],
-            "alprazolam": []
-        }
-    },
-    "V6": {
-        "contact": "",
-        "delivery": "",
-        "transfer_payment": "",
-        "drugs": {
-            "paracetamol": [],
-            "dipirona": [],
-            "captopril": [],
-            "enalapril": [],
-            "amlodipino": [],
-            "aspirina": [],
-            "atorvastatina": [],
-            "furosemida": [],
-            "amoxicilina": [],
-            "ciprofloxacina": [],
-            "azitromicina": [],
-            "alprazolam": []
-        }
-    },
-    "V7": {
-        "contact": "",
-        "delivery": "",
-        "transfer_payment": "",
-        "drugs": {
-            "paracetamol": [],
-            "dipirona": [],
-            "captopril": [],
-            "enalapril": [],
-            "amlodipino": [],
-            "aspirina": [],
-            "atorvastatina": [],
-            "furosemida": [],
-            "amoxicilina": [],
-            "ciprofloxacina": [],
-            "azitromicina": [],
-            "alprazolam": []
-        }
-    },
-    "V8": {
-        "contact": "",
-        "delivery": "",
-        "transfer_payment": "",
-        "drugs": {
-            "paracetamol": [],
-            "dipirona": [],
-            "captopril": [],
-            "enalapril": [],
-            "amlodipino": [],
-            "aspirina": [],
-            "atorvastatina": [],
-            "furosemida": [],
-            "amoxicilina": [],
-            "ciprofloxacina": [],
-            "azitromicina": [],
-            "alprazolam": []
-        }
-    },
-    "V9": {
-        "contact": "",
-        "delivery": "",
-        "transfer_payment": "",
-        "drugs": {
-            "paracetamol": [],
-            "dipirona": [],
-            "captopril": [],
-            "enalapril": [],
-            "amlodipino": [],
-            "aspirina": [],
-            "atorvastatina": [],
-            "furosemida": [],
-            "amoxicilina": [],
-            "ciprofloxacina": [],
-            "azitromicina": [],
-            "alprazolam": []
-        }
-    },
-    "V10": {
-        "contact": "",
-        "delivery": "",
-        "transfer_payment": "",
-        "drugs": {
-            "paracetamol": [],
-            "dipirona": [],
-            "captopril": [],
-            "enalapril": [],
-            "amlodipino": [],
-            "aspirina": [],
-            "atorvastatina": [],
-            "furosemida": [],
-            "amoxicilina": [],
-            "ciprofloxacina": [],
-            "azitromicina": [],
-            "alprazolam": []
+    "sellers": {
+        "V1": {
+            "contact": "+5363192539",
+            "delivery": true,
+            "transfer_payment": null,
+            "drugs": {
+                "paracetamol": [400,null,null],
+                "dipirona": [],
+                "captopril": [350,null,null],
+                "enalapril": [350,null,null],
+                "amlodipino": [350,null,null],
+                "aspirina": [300,"80mg",null],
+                "atorvastatina": [400,null,null],
+                "furosemida": [350,null,null],
+                "amoxicilina": [450,null,null],
+                "ciprofloxacina": [450,null,null],
+                "azitromicina": [],
+                "alprazolam": []
+            }
+        },
+        "V2": {
+            "contact": "+5350074652",
+            "delivery": true,
+            "transfer_payment": null,
+            "drugs": {
+                "paracetamol": [350,null,null],
+                "dipirona": [700,"500 mg", "10 u"],
+                "captopril": [350,null,null],
+                "enalapril": [350,null,null],
+                "amlodipino": [350,null,null],
+                "aspirina": [305,null,null],
+                "atorvastatina": [400,null,null],
+                "furosemida": [350,null,null],
+                "amoxicilina": [450,null,null],
+                "ciprofloxacina": [],
+                "azitromicina": [],
+                "alprazolam": [1000,null,"20 u"]
+            }
+        },
+        "V3": {
+            "contact": "",
+            "delivery": "",
+            "transfer_payment": "",
+            "drugs": {
+                "paracetamol": [],
+                "dipirona": [],
+                "captopril": [],
+                "enalapril": [],
+                "amlodipino": [],
+                "aspirina": [],
+                "atorvastatina": [],
+                "furosemida": [],
+                "amoxicilina": [],
+                "ciprofloxacina": [],
+                "azitromicina": [],
+                "alprazolam": []
+            }
+        },
+        "V4": {
+            "contact": "",
+            "delivery": "",
+            "transfer_payment": "",
+            "drugs": {
+                "paracetamol": [],
+                "dipirona": [],
+                "captopril": [],
+                "enalapril": [],
+                "amlodipino": [],
+                "aspirina": [],
+                "atorvastatina": [],
+                "furosemida": [],
+                "amoxicilina": [],
+                "ciprofloxacina": [],
+                "azitromicina": [],
+                "alprazolam": []
+            }
+        },
+        "V5": {
+            "contact": "",
+            "delivery": "",
+            "transfer_payment": "",
+            "drugs": {
+                "paracetamol": [],
+                "dipirona": [],
+                "captopril": [],
+                "enalapril": [],
+                "amlodipino": [],
+                "aspirina": [],
+                "atorvastatina": [],
+                "furosemida": [],
+                "amoxicilina": [],
+                "ciprofloxacina": [],
+                "azitromicina": [],
+                "alprazolam": []
+            }
+        },
+        "V6": {
+            "contact": "",
+            "delivery": "",
+            "transfer_payment": "",
+            "drugs": {
+                "paracetamol": [],
+                "dipirona": [],
+                "captopril": [],
+                "enalapril": [],
+                "amlodipino": [],
+                "aspirina": [],
+                "atorvastatina": [],
+                "furosemida": [],
+                "amoxicilina": [],
+                "ciprofloxacina": [],
+                "azitromicina": [],
+                "alprazolam": []
+            }
+        },
+        "V7": {
+            "contact": "",
+            "delivery": "",
+            "transfer_payment": "",
+            "drugs": {
+                "paracetamol": [],
+                "dipirona": [],
+                "captopril": [],
+                "enalapril": [],
+                "amlodipino": [],
+                "aspirina": [],
+                "atorvastatina": [],
+                "furosemida": [],
+                "amoxicilina": [],
+                "ciprofloxacina": [],
+                "azitromicina": [],
+                "alprazolam": []
+            }
+        },
+        "V8": {
+            "contact": "",
+            "delivery": "",
+            "transfer_payment": "",
+            "drugs": {
+                "paracetamol": [],
+                "dipirona": [],
+                "captopril": [],
+                "enalapril": [],
+                "amlodipino": [],
+                "aspirina": [],
+                "atorvastatina": [],
+                "furosemida": [],
+                "amoxicilina": [],
+                "ciprofloxacina": [],
+                "azitromicina": [],
+                "alprazolam": []
+            }
+        },
+        "V9": {
+            "contact": "",
+            "delivery": "",
+            "transfer_payment": "",
+            "drugs": {
+                "paracetamol": [],
+                "dipirona": [],
+                "captopril": [],
+                "enalapril": [],
+                "amlodipino": [],
+                "aspirina": [],
+                "atorvastatina": [],
+                "furosemida": [],
+                "amoxicilina": [],
+                "ciprofloxacina": [],
+                "azitromicina": [],
+                "alprazolam": []
+            }
+        },
+        "V10": {
+            "contact": "",
+            "delivery": "",
+            "transfer_payment": "",
+            "drugs": {
+                "paracetamol": [],
+                "dipirona": [],
+                "captopril": [],
+                "enalapril": [],
+                "amlodipino": [],
+                "aspirina": [],
+                "atorvastatina": [],
+                "furosemida": [],
+                "amoxicilina": [],
+                "ciprofloxacina": [],
+                "azitromicina": [],
+                "alprazolam": []
+            }
         }
     }
 }
