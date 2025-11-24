@@ -1,0 +1,22 @@
+{
+    "name": "",
+    "location": {
+        "province": "",
+        "address": "",
+        "municipality": "",
+        "lat": "",
+        "long": "",
+        "delivery": "",
+        "transfer_payment": ""
+    },
+    "product": [
+        {
+            "type": "",
+            "brand": "",
+            "details": null,
+            "price": 0,
+            "unity": "",
+            "origin": ""            
+        }
+    ]
+}

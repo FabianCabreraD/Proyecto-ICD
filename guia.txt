@@ -1,0 +1,6 @@
+Gráficos
+- Tasa cambiaria
+- Salario Promedio y Jubilacion
+- Grafico del precio del arroz comparado con países de América
+
+* Mapa de mipymes
