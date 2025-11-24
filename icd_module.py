@@ -135,13 +135,15 @@ def salary_and_pension_graph():
     ax2.tick_params(axis="x",rotation=45)
     ax2.legend()
     ax2.set_title("Pensión mínima en USD y EUR")
-
+    
     plt.show()
     
 #Precio promedio del arroz en países de América
-def rice_mean_price_graph():
+def rice_mean_price_graph(ax):
     data = read_json(RICE_MEAN_PRICE_PATH)
     cuba_price = product_mean_price("Arroz")
+    
+    #Implementar que coja la tasa de cambio del dia
     data["Cuba"] = cuba_price/435
     
     tuples_sorted = sorted(data.items(),key=lambda x: x[1])
@@ -149,15 +151,12 @@ def rice_mean_price_graph():
     prices = [i[1] for i in tuples_sorted]
     
     bar_color = ["red" if country == "Cuba" else "#1f77b4" for country in countries]
-
-    fig, ax = plt.subplots()
-    
+   
     ax.barh(countries,prices,color=bar_color)
     ax.set_title("Precio promedio de 1kg de arroz")
-    plt.show()
 
 #Por ciento con respecto al salario de 1kg de Arroz
-def rice_salary_percentage():
+def rice_salary_percentage(ax):
     rice = read_json(RICE_MEAN_PRICE_PATH)
     cuba_rice = product_mean_price("Arroz")
     rice["Cuba"] = cuba_rice
@@ -179,8 +178,13 @@ def rice_salary_percentage():
     percentages = [i[1] for i in sorted_dcr]
     
     bar_color = ["red" if country == "Cuba" else "#1f77b4" for country in countries]
-            
-    plt.barh(countries,percentages, color=bar_color)
+       
+    ax.barh(countries,percentages, color=bar_color)
+  
+def full_rice_graph():  
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4))
+
+    rice_mean_price_graph(ax1)
+    rice_salary_percentage(ax2)
+
     plt.show()
-    
-rice_salary_percentage()
