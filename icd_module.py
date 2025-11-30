@@ -195,8 +195,15 @@ def rice_vs_minimum_pension():
     cuba_rice_rationed = round(lb7_to_kg*cuba_rice,2)
     pension = MINIMUM_PENSION
     
+    percentage = round((cuba_rice_rationed/pension)*100,2)
+    print(percentage)
+    
     fig, ax = plt.subplots()
     
-    bar_container = ax.bar(["Pensión Mínima", "Precio Promedio 7 libras Arroz"],[pension,cuba_rice_rationed],color=['blue','red'])
-    ax.bar_label(bar_container,[pension,cuba_rice_rationed])
+    x = ["Pensión Mínima", "Precio Promedio 7 libras Arroz"]
+    y = [pension,cuba_rice_rationed]
+    
+    bar_container = ax.bar(x,y,color=['blue','red'])
+    ax.bar_label(bar_container,y)
+    ax.text(x[1],y[1]/2,f"{percentage}%",ha='center',color='white',fontname="Arial",fontweight="bold",fontsize=20)
     plt.show()
