@@ -51,14 +51,14 @@ def currency_data():
     return dates, usd, euro
 
 #Precio promedio de 1kg de arroz en las mipymes
-def product_mean_price(product):
+def rice_mean_price():
     files = mipymes_list()
     prices = []
     for i in files:
         path = return_path_mipymes(i)
         data = read_json(path)
         for j in data["product"]:
-            if j["type"].lower() == product.lower():
+            if j["type"].lower() == "Arroz".lower():
                 #Si la mipyme no vende un 1kg de arroz, se le aplica una proporción
                 if j["unity"] == "1 kg":
                     prices.append(j["price"])
@@ -141,7 +141,7 @@ def salary_and_pension_graph():
 #Precio promedio del arroz en países de América
 def rice_mean_price_graph(ax):
     data = read_json(RICE_MEAN_PRICE_PATH)
-    cuba_price = product_mean_price("Arroz")
+    cuba_price = rice_mean_price()
     
     #Implementar que coja la tasa de cambio del dia
     data["Cuba"] = cuba_price/435
@@ -158,7 +158,7 @@ def rice_mean_price_graph(ax):
 #Por ciento con respecto al salario de 1kg de Arroz
 def rice_salary_percentage(ax):
     rice = read_json(RICE_MEAN_PRICE_PATH)
-    cuba_rice = product_mean_price("Arroz")
+    cuba_rice = rice_mean_price()
     rice["Cuba"] = cuba_rice
     
     salary = read_json(SALARIES_PATH)
@@ -187,4 +187,16 @@ def full_rice_graph():
     rice_mean_price_graph(ax1)
     rice_salary_percentage(ax2)
 
+    plt.show()
+    
+def rice_vs_minimum_pension():
+    cuba_rice = rice_mean_price()
+    lb7_to_kg = round(7/2.20462,2)
+    cuba_rice_rationed = round(lb7_to_kg*cuba_rice,2)
+    pension = MINIMUM_PENSION
+    
+    fig, ax = plt.subplots()
+    
+    bar_container = ax.bar(["Pensión Mínima", "Precio Promedio 7 libras Arroz"],[pension,cuba_rice_rationed],color=['blue','red'])
+    ax.bar_label(bar_container,[pension,cuba_rice_rationed])
     plt.show()
