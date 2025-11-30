@@ -166,21 +166,30 @@ def rice_salary_percentage(ax):
     
     data_countries_rice = []
     
+    cuba_percentage = 0
+    
     for country in rice:
         salary_country = salary[country]["Salario"]
         rice_price = rice[country]
         percentage = (rice_price/salary_country) * 100
         
+        if country == "Cuba":
+            cuba_percentage = percentage
+        
         data_countries_rice.append((country,percentage))
     
     sorted_dcr = sorted(data_countries_rice,key=lambda x: x[1])
-    
+
     countries = [i[0] for i in sorted_dcr]
     percentages = [i[1] for i in sorted_dcr]
     
     bar_color = ["red" if country == "Cuba" else "#1f77b4" for country in countries]
        
-    ax.bar(countries,percentages, color=bar_color)
+    ax.barh(countries,percentages, color=bar_color)
+    ax.set_title("Costo de 1kg de arroz con respecto al salario medio (por ciento)")
+    ax.set_yticks(range(len(countries)))
+    ax.set_yticklabels(["Cuba" if i == "Cuba" else "" for i in countries])
+    ax.tick_params(axis="y")
   
 def full_rice_graph():  
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 6))
