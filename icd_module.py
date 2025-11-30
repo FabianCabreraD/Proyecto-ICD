@@ -3,6 +3,7 @@ import json
 import folium
 import matplotlib.pyplot as plt
 import csv
+from PIL import Image
 import datetime
 
 #CONSTANTES
