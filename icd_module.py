@@ -197,7 +197,6 @@ def rice_vs_minimum_pension():
     pension = MINIMUM_PENSION
     
     percentage = round((cuba_rice_rationed/pension)*100,2)
-    print(percentage)
     
     fig, ax = plt.subplots()
     
