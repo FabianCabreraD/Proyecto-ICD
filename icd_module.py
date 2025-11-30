@@ -34,7 +34,7 @@ def mean_list(list):
 
 #Retorna las fechas y el valor correspondiente del dolar y el euro
 def currency_data():
-    with open("d:\\uh\\icd\\Proyecto-ICD\\data\\tasa copy.csv","r") as file:
+    with open("d:\\uh\\icd\\Proyecto-ICD\\data\\precio_compra.csv","r") as file:
         data = csv.reader(file)
         data_list = [i for i in data]
         
@@ -203,7 +203,7 @@ def rice_vs_minimum_pension():
     x = ["Pensión Mínima", "Precio Promedio 7 libras Arroz"]
     y = [pension,cuba_rice_rationed]
     
-    bar_container = ax.bar(x,y,color=['blue','red'])
+    bar_container = ax.bar(x,y,color=['#1f77b4','red'])
     ax.bar_label(bar_container,y)
     ax.text(x[1],y[1]/2,f"{percentage}%",ha='center',color='white',fontname="Arial",fontweight="bold",fontsize=20)
     plt.show()
