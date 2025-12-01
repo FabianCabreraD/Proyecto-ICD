@@ -12,6 +12,7 @@ RICE_MEAN_PRICE_PATH = "d:\\uh\\icd\\Proyecto-ICD\\data\\rice_price.json"
 SALARIES_PATH = "d:\\uh\\icd\\Proyecto-ICD\\data\\salary.json" 
 AVERAGE_SALARY = 6660.1
 MINIMUM_PENSION = 3056
+REGULATED_RICE_PRICE_LB = 7 
 
 #Retorna el listado de archivos json de las mipymes
 def mipymes_list():
@@ -209,10 +210,12 @@ def rice_vs_minimum_pension():
     
     fig, ax = plt.subplots()
     
-    x = ["Pensión Mínima", "Precio Promedio 7 libras Arroz"]
-    y = [pension,cuba_rice_rationed]
+    x = ["Pensión Mínima", "Promedio Mipymes", "Precio Subsidiado"]
+    y = [pension,cuba_rice_rationed,7*REGULATED_RICE_PRICE_LB]
     
-    bar_container = ax.bar(x,y,color=['#1f77b4','red'])
+    bar_container = ax.bar(x,y,color=['#1f77b4','red','yellow'])
     ax.bar_label(bar_container,y)
     ax.text(x[1],y[1]/2,f"{percentage}%",ha='center',color='white',fontname="Arial",fontweight="bold",fontsize=20)
     plt.show()
+    
+rice_vs_minimum_pension()
