@@ -12,3 +12,6 @@ Tasa de compra de divisas en Cuba
 
 Fuente Imágenes de Billetes
 - https://www.cgbfr.es
+
+Fuente Precios Normados del arroz
+- https://www.gacetaoficial.gob.cu/sites/default/files/goc-2021-ex41_0.pdf
