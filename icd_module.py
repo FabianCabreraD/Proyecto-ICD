@@ -208,12 +208,15 @@ def rice_vs_minimum_pension():
     
     percentage = round((cuba_rice_rationed/pension)*100,2)
     
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(12,6))
     
-    x = ["Pensión Mínima", "Promedio Mipymes", "Precio Subsidiado"]
+    x = ["Pensión Mínima", "Precio Mipymes", "Precio Subsidiado"]
     y = [pension,cuba_rice_rationed,7*REGULATED_RICE_PRICE_LB]
     
     bar_container = ax.bar(x,y,color=['#1f77b4','red','yellow'])
     ax.bar_label(bar_container,y)
+    ax.set_title("Ingreso mínimo y acceso al arroz: comparación subsidiado vs privado")
     ax.text(x[1],y[1]/2,f"{percentage}%",ha='center',color='white',fontname="Arial",fontweight="bold",fontsize=20)
     plt.show()
+    
+rice_vs_minimum_pension()
