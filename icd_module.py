@@ -3,8 +3,8 @@ import json
 import folium
 import matplotlib.pyplot as plt
 import csv
-from PIL import Image
 import datetime
+import numpy as np
 
 #CONSTANTES
 MIPYMES_PATH = "d:\\uh\\icd\\Proyecto-ICD\\data\\mipymes"
@@ -266,3 +266,5 @@ def liquids_graph():
     ax_means_pension.bar(products, means_vs_pension)
     
     plt.show()
+    
+liquids_graph()
