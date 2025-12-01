@@ -218,5 +218,3 @@ def rice_vs_minimum_pension():
     ax.set_title("Ingreso mínimo y acceso al arroz: comparación subsidiado vs privado")
     ax.text(x[1],y[1]/2,f"{percentage}%",ha='center',color='white',fontname="Arial",fontweight="bold",fontsize=20)
     plt.show()
-    
-rice_vs_minimum_pension()
