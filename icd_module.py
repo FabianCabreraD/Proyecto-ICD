@@ -76,7 +76,37 @@ def currency_vs_data(data,data_currency):
     dt = AVERAGE_SALARY if data == "salary" else MINIMUM_PENSION
     values = [dt/i for i in data_currency]
     return values
+
+def mean_price_liquids():
+    soft_drink = []
+    beer = []
+    juice = []
+    malt = []
     
+    mipymes = mipymes_list()
+    
+    for i in mipymes:
+        path = return_path_mipymes(i)
+        json_file = read_json(path)
+        for j in json_file['product']:
+            if j['type'] == "Refresco":
+                soft_drink.append(j['price'])
+            elif j['type'] == "Cerveza":
+                beer.append(j['price'])
+            elif j['type'] == "Jugo":
+                juice.append(j['price']) 
+            elif j['type'] == "Malta":
+                malt.append(j['price'])
+    
+    mean_soft_drink = mean_list(soft_drink)
+    mean_beer = mean_list(beer)
+    mean_juice = mean_list(juice)
+    mean_malt = mean_list(malt)
+    
+    return mean_soft_drink,mean_beer,mean_juice,mean_malt
+    
+    
+      
 #GRÁFICOS
 
 #Mapa de las mipymes
