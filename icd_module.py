@@ -249,10 +249,13 @@ def rice_vs_minimum_pension():
     
 def liquids_graph():
     means = mean_price_liquids()
+    products = ["Refresco", "Cerveza", "Jugo", "Malta"]
     
-    fig, ax = plt.subplots()
+    fig = plt.figure(figsize=(10,6))
+    gs = fig.add_gridspec(2,2)
     
-    ax.bar(["Refresco", "Cerveza", "Jugo", "Malta"], means)
+    ax_means = fig.add_subplot(gs[:,0])
+    ax_means.bar(products, means)
     
     plt.show()
     
