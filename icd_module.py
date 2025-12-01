@@ -208,7 +208,7 @@ def rice_vs_minimum_pension():
     
     percentage = round((cuba_rice_rationed/pension)*100,2)
     
-    fig, ax = plt.subplots(figsize=(10,4))
+    fig, ax = plt.subplots(figsize=(10,6))
     
     x = ["Pensión Mínima", "Precio Mipymes", "Precio Subsidiado"]
     y = [pension,cuba_rice_rationed,7*REGULATED_RICE_PRICE_LB]
