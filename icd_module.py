@@ -252,7 +252,7 @@ def liquids_graph():
     
     fig, ax = plt.subplots()
     
-    ax.bar(["Refresco", "Cerveza", "Jugo", "Malta"],means)
+    ax.bar(["Refresco", "Cerveza", "Jugo", "Malta"], means)
     
     plt.show()
     
