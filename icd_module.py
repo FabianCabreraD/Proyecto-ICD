@@ -168,7 +168,7 @@ def sal_pen_stip_graph():
     ax2.set_title("Pensión mínima en USD y EUR")
     
     usd_vs_stipend = currency_vs_data("stipend",usd)
-    euro_vs_stipend = currency_vs_data("stipend",usd)
+    euro_vs_stipend = currency_vs_data("stipend",euro)
     
     ax3.plot(dates,usd_vs_stipend,label="USD")
     ax3.plot(dates,euro_vs_stipend,label="Euro")
