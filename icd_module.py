@@ -142,38 +142,26 @@ def currency_graph():
 def sal_pen_stip_graph():
     dates, usd, euro = currency_data()
     
-    fig, (ax1, ax2, ax3) = plt.subplots(1,3,figsize=(12,6))
+    fig, ax = plt.subplots()
 
     usd_vs_salary = currency_vs_data("salary",usd)
     euro_vs_salary = currency_vs_data("salary",euro)
 
-    ax1.plot(dates,usd_vs_salary,label="USD")
-    ax1.plot(dates,euro_vs_salary,label="EUR")
-    ax1.set_xticks(dates[::15])
-    ax1.tick_params(axis="x",rotation=45)
-    ax1.legend()
-    ax1.set_title("Salario Promedio en USD y EUR")
-    
     usd_vs_pension = currency_vs_data("pension",usd)
     euro_vs_pension = currency_vs_data("pension",euro)
-
-
-    ax2.plot(dates,usd_vs_pension, label="USD")
-    ax2.plot(dates,euro_vs_pension, label="EUR")
-    ax2.set_xticks(dates[::15])
-    ax2.tick_params(axis="x",rotation=45)
-    ax2.legend()
-    ax2.set_title("Pensión mínima en USD y EUR")
     
     usd_vs_stipend = currency_vs_data("stipend",usd)
     euro_vs_stipend = currency_vs_data("stipend",euro)
     
-    ax3.plot(dates,usd_vs_stipend,label="USD")
-    ax3.plot(dates,euro_vs_stipend,label="Euro")
-    ax3.set_xticks(dates[::15])
-    ax3.tick_params(axis="x",rotation=45)
-    ax3.legend()
-    ax3.set_title("Estipendio 1er Año en USD y EUR")
+    ax.plot(dates,usd_vs_salary,label="Salario Medio USD")
+    ax.plot(dates,euro_vs_salary,label="Salario Medio EUR")
+    ax.plot(dates,usd_vs_pension, label="Pensión Mínima USD")
+    ax.plot(dates,euro_vs_pension, label="Pensión Mínima EUR")
+    ax.plot(dates,usd_vs_stipend,label="Estipendio 1er Año USD")
+    ax.plot(dates,euro_vs_stipend,label="Estipendio 1er Año Euro")
+    ax.set_xticks(dates[::15])
+    ax.tick_params(axis="x",rotation=45)
+    ax.legend(loc="upper left", bbox_to_anchor=(1, 1))
     
     plt.show()
     
