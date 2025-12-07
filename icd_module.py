@@ -125,27 +125,21 @@ def show_map_mipymes():
         folium.Marker([lat,long],tooltip=name).add_to(mapa)
         
     return mapa
-    
-#Tasa cambiaria    
-def currency_graph():
-    dates, usd, euro = currency_data()
-    
-    plt.figure()
-    plt.plot(dates,usd,label="USD")
-    plt.plot(dates,euro,label="EUR")
-    plt.xticks(dates[::15],rotation=45)
-    plt.title("Tasa cambiaria en los últimos 3 meses")
-    plt.xlabel("fecha")
-    plt.ylabel("cambio en CUP")
-    plt.legend()
-    plt.show()
         
-#Salario medio y pensión mínima contra usd y euro
-def sal_pen_stip_graph():
+def full_currency_graph():
+    fig, (ax1, ax2) = plt.subplots(1,2)
+    
     dates, usd, euro = currency_data()
     
-    fig, ax = plt.subplots()
-
+    ax1.plot(dates,usd,label="USD")
+    ax1.plot(dates,euro,label="EUR")
+    ax1.set_xticks(dates[::15])
+    ax1.tick_params(axis="x",rotation=45)
+    ax1.set_title("Tasa de Cambio Últimos 3 meses")
+    ax1.set_xlabel("fecha")
+    ax1.set_ylabel("cambio en CUP")
+    ax1.legend()
+    
     usd_vs_salary = currency_vs_data("salary",usd)
     euro_vs_salary = currency_vs_data("salary",euro)
 
@@ -155,17 +149,19 @@ def sal_pen_stip_graph():
     usd_vs_stipend = currency_vs_data("stipend",usd)
     euro_vs_stipend = currency_vs_data("stipend",euro)
     
-    ax.plot(dates,usd_vs_salary,label="Salario Medio USD")
-    ax.plot(dates,euro_vs_salary,label="Salario Medio EUR")
-    ax.plot(dates,usd_vs_pension, label="Pensión Mínima USD")
-    ax.plot(dates,euro_vs_pension, label="Pensión Mínima EUR")
-    ax.plot(dates,usd_vs_stipend,label="Estipendio 1er Año USD")
-    ax.plot(dates,euro_vs_stipend,label="Estipendio 1er Año Euro")
-    ax.set_xticks(dates[::15])
-    ax.tick_params(axis="x",rotation=45)
-    ax.legend(loc="upper left", bbox_to_anchor=(1, 1))
+    ax2.plot(dates,usd_vs_salary,label="Salario Medio USD")
+    ax2.plot(dates,euro_vs_salary,label="Salario Medio EUR")
+    ax2.plot(dates,usd_vs_pension, label="Pensión Mínima USD")
+    ax2.plot(dates,euro_vs_pension, label="Pensión Mínima EUR")
+    ax2.plot(dates,usd_vs_stipend,label="Estipendio 1er Año USD")
+    ax2.plot(dates,euro_vs_stipend,label="Estipendio 1er Año Euro")
+    ax2.set_xticks(dates[::15])
+    ax2.tick_params(axis="x",rotation=45)
+    ax2.legend(loc="upper left", bbox_to_anchor=(1, 1))
     
     plt.show()
+    
+    
     
 #Precio promedio del arroz en países de América
 def rice_mean_price_graph(ax):
@@ -258,13 +254,17 @@ def liquids_graph():
     means = mean_price_liquids()
     means_vs_salary = [(mean/AVERAGE_SALARY)*100 for mean in means]
     means_vs_pension = [(mean/MINIMUM_PENSION)*100 for mean in means]
+    means_vs_pension = [(mean/STIPEND_YEAR_ONE)*100 for mean in means]
     products = ["Refresco", "Cerveza", "Jugo", "Malta"]
     
     fig = plt.figure(figsize=(10,6))
     gs = fig.add_gridspec(2,2)
     
-    ax_means = fig.add_subplot(gs[:,0])
+    ax_means = fig.add_subplot(gs[0,0])
     ax_means.bar(products, means)
+    
+    ax_means_stipend = fig.add_subplot(gs[1,0])
+    ax_means_stipend.bar(products,means_vs_pension)
     
     ax_means_salary = fig.add_subplot(gs[0,1])
     ax_means_salary.bar(products,means_vs_salary)
