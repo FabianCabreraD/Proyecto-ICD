@@ -179,7 +179,7 @@ def rice_mean_price_graph(ax):
     countries = [i[0] for i in tuples_sorted]
     prices = [i[1] for i in tuples_sorted]
     
-    bar_color = ["red" if country == "Cuba" else "#1f77b4" for country in countries]
+    bar_color = ["#78aa87" if country == "Cuba" else "#c3854c" for country in countries]
    
     ax.barh(countries,prices,color=bar_color)
     ax.set_title("Precio promedio de 1kg de arroz")
@@ -206,12 +206,12 @@ def rice_salary_percentage(ax):
     countries = [i[0] for i in sorted_dcr]
     percentages = [i[1] for i in sorted_dcr]
     
-    bar_color = ["red" if country == "Cuba" else "#1f77b4" for country in countries]
+    bar_color = ["#78aa87" if country == "Cuba" else "#c3854c" for country in countries]
        
     img = mpimg.imread('img/m1.png')
-    imagebox = OffsetImage(img, zoom=0.6)  # zoom controla el tamaño
+    imagebox = OffsetImage(img, zoom=0.4)  # zoom controla el tamaño
 
-    ab = AnnotationBbox(imagebox, (7, 8), frameon=False)
+    ab = AnnotationBbox(imagebox, (9, 3), frameon=False)
     ax.add_artist(ab)          
     ax.barh(countries,percentages, color=bar_color)
     ax.set_title("Costo de 1kg de arroz con respecto al salario medio (por ciento)")
