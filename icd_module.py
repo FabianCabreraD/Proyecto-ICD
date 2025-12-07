@@ -273,5 +273,3 @@ def liquids_graph():
     ax_means_pension.bar(products, means_vs_pension)
     
     plt.show()
-    
-liquids_graph()
