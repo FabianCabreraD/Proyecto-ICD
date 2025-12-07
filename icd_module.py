@@ -286,5 +286,3 @@ def liquids_graph():
     ax.set_title("Precio promedio de líquidos")
     
     plt.show()
-    
-liquids_graph()
