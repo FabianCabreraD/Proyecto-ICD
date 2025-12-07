@@ -283,7 +283,6 @@ def liquids_graph():
     ax.axhline(y=200,ls="--",color="#003049")
     ax.annotate("Estipendio 1er Año Mensual", xytext=(0.6,270), xy=(0, 205),arrowprops=dict(arrowstyle="->",color="#003049",linewidth=2))
     ax.set_title("Precio promedio de líquidos")
+    ax.set_ylabel("Precio en CUP")
     
     plt.show()
-    
-liquids_graph()
