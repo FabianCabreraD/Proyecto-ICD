@@ -159,7 +159,6 @@ def full_currency_graph():
     ax1.set_xticks(dates[::15])
     ax1.tick_params(axis="x",rotation=45)
     ax1.set_title("Tasa de Cambio Últimos 3 meses")
-    ax1.set_xlabel("fecha")
     ax1.set_ylabel("cambio en CUP")
     ax1.legend()
     
@@ -280,9 +279,11 @@ def liquids_graph():
     
     fig, ax = plt.subplots()
     
-    ax.bar(products,means,color="#EE6983")
-    ax.axhline(y=200,ls="--",color="#BDBDBD")
-    ax.annotate("Estipendio 1er Año Mensual", xytext=(0.6,270), xy=(0, 205),arrowprops=dict(arrowstyle="->",color="#dda15e",linewidth=2))
+    ax.bar(products,means,color="#F0B884")
+    ax.axhline(y=200,ls="--",color="#003049")
+    ax.annotate("Estipendio 1er Año Mensual", xytext=(0.6,270), xy=(0, 205),arrowprops=dict(arrowstyle="->",color="#003049",linewidth=2))
     ax.set_title("Precio promedio de líquidos")
     
     plt.show()
+    
+liquids_graph()
