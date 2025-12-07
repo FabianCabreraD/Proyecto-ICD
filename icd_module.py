@@ -119,12 +119,12 @@ def means():
     tx2 = f"Precio promedio de EUR: {euro_mean}"
     tx3 = f"Promedio Salario Medio en USD: {round(AVERAGE_SALARY/usd_mean,2)}"
     tx4 = f"Promedio Salario Medio en EUR: {round(AVERAGE_SALARY/euro_mean,2)}"
-    tx6 = f"Promedio Pensión Mínima en USD: {round(MINIMUM_PENSION/usd_mean,2)}"
-    tx5 = f"Promedio Pensión Mínima en EUR: {round(MINIMUM_PENSION/euro_mean,2)}"
-    tx5 = f"Promedio Estipendio 1er Año en USD: {round(STIPEND_YEAR_ONE/usd_mean,2)}"
-    tx6 = f"Promedio Estipendio 1er Año en EUR: {round(STIPEND_YEAR_ONE/euro_mean,2)}"
+    tx5 = f"Promedio Pensión Mínima en USD: {round(MINIMUM_PENSION/usd_mean,2)}"
+    tx6 = f"Promedio Pensión Mínima en EUR: {round(MINIMUM_PENSION/euro_mean,2)}"
+    tx7 = f"Promedio Estipendio 1er Año en USD: {round(STIPEND_YEAR_ONE/usd_mean,2)}"
+    tx8 = f"Promedio Estipendio 1er Año en EUR: {round(STIPEND_YEAR_ONE/euro_mean,2)}"
     
-    means = [tx1,tx2,tx3,tx4,tx5,tx6]
+    means = [tx1,tx2,tx3,tx4,tx5,tx6,tx7,tx8]
     
     print("Últimos 3 Meses")
     print("--------------------------------------------")
@@ -280,9 +280,11 @@ def liquids_graph():
     
     fig, ax = plt.subplots()
     
-    ax.bar(products,means)
-    ax.axhline(y=200,ls="--",color="black")
-    ax.annotate("Estipendio 1er Año Mensual", xytext=(0.6,270), xy=(0, 205),arrowprops=dict(arrowstyle="->"))
+    ax.bar(products,means,color="#EE6983")
+    ax.axhline(y=200,ls="--",color="#BDBDBD")
+    ax.annotate("Estipendio 1er Año Mensual", xytext=(0.6,270), xy=(0, 205),arrowprops=dict(arrowstyle="->",color="#dda15e",linewidth=2))
     ax.set_title("Precio promedio de líquidos")
     
     plt.show()
+    
+liquids_graph()
