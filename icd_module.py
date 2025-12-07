@@ -248,6 +248,7 @@ def rice_vs_minimum_pension():
     ax.bar_label(bar_container,y)
     ax.set_title("Ingreso mínimo y acceso al arroz: comparación subsidiado vs privado (7 lb)")
     ax.text(x[1],y[1]/2,f"{percentage}%",ha='center',color='white',fontname="Arial",fontweight="bold",fontsize=20)
+    ax.annotate("", xytext=(0.8, (y[1]/2)+70), xy=(0, y[0]/2),arrowprops=dict(arrowstyle="->"))
     plt.show()
     
 def liquids_graph():
