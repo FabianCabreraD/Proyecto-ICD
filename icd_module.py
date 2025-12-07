@@ -112,20 +112,22 @@ def means():
     data = currency_data()
     usd, euro = data[1], data[2]
     
-    usd_mean = mean_list(usd)
-    euro_mean = mean_list(euro)
+    usd_mean = round(mean_list(usd))
+    euro_mean = round(mean_list(euro))
     
     tx1 = f"Precio promedio de USD: {usd_mean}"
     tx2 = f"Precio promedio de EUR: {euro_mean}"
-    tx3 = f"Promedio Salario Medio en USD: {AVERAGE_SALARY/usd_mean}"
-    tx4 = f"Promedio Salario Medio en EUR: {AVERAGE_SALARY/euro_mean}"
-    tx6 = f"Promedio Pensión Mínima en USD: {MINIMUM_PENSION/usd_mean}"
-    tx5 = f"Promedio Pensión Mínima en EUR: {MINIMUM_PENSION/euro_mean}"
-    tx5 = f"Promedio Estipendio 1er Año en USD: {STIPEND_YEAR_ONE/usd_mean}"
-    tx6 = f"Promedio Estipendio 1er Año en EUR: {STIPEND_YEAR_ONE/euro_mean}"
+    tx3 = f"Promedio Salario Medio en USD: {round(AVERAGE_SALARY/usd_mean,2)}"
+    tx4 = f"Promedio Salario Medio en EUR: {round(AVERAGE_SALARY/euro_mean,2)}"
+    tx6 = f"Promedio Pensión Mínima en USD: {round(MINIMUM_PENSION/usd_mean,2)}"
+    tx5 = f"Promedio Pensión Mínima en EUR: {round(MINIMUM_PENSION/euro_mean,2)}"
+    tx5 = f"Promedio Estipendio 1er Año en USD: {round(STIPEND_YEAR_ONE/usd_mean,2)}"
+    tx6 = f"Promedio Estipendio 1er Año en EUR: {round(STIPEND_YEAR_ONE/euro_mean,2)}"
     
     means = [tx1,tx2,tx3,tx4,tx5,tx6]
     
+    print("Últimos 3 Meses")
+    print("--------------------------------------------")
     for mean in means:
         print(mean)
      
