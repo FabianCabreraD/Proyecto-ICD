@@ -276,24 +276,13 @@ def rice_vs_minimum_pension():
     
 def liquids_graph():
     means = mean_price_liquids()
-    means_vs_salary = [(mean/AVERAGE_SALARY)*100 for mean in means]
-    means_vs_pension = [(mean/MINIMUM_PENSION)*100 for mean in means]
-    means_vs_pension = [(mean/STIPEND_YEAR_ONE)*100 for mean in means]
     products = ["Refresco", "Cerveza", "Jugo", "Malta"]
     
-    fig = plt.figure(figsize=(10,6))
-    gs = fig.add_gridspec(2,2)
+    fig, ax = plt.subplots()
     
-    ax_means = fig.add_subplot(gs[0,0])
-    ax_means.bar(products, means)
-    
-    ax_means_stipend = fig.add_subplot(gs[1,0])
-    ax_means_stipend.bar(products,means_vs_pension)
-    
-    ax_means_salary = fig.add_subplot(gs[0,1])
-    ax_means_salary.bar(products,means_vs_salary)
-    
-    ax_means_pension = fig.add_subplot(gs[1,1])
-    ax_means_pension.bar(products, means_vs_pension)
+    ax.bar(products,means)
+    ax.axhline(y=200,ls="--",color="black")
+    ax.annotate("Estipendio 1er Año Mensual", xytext=(0.6,270), xy=(0, 205),arrowprops=dict(arrowstyle="->"))
+    ax.set_title("Precio promedio de líquidos")
     
     plt.show()
