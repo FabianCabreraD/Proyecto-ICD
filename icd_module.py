@@ -209,7 +209,7 @@ def rice_salary_percentage(ax):
     bar_color = ["#78aa87" if country == "Cuba" else "#c3854c" for country in countries]
        
     img = mpimg.imread('img/m1.png')
-    imagebox = OffsetImage(img, zoom=0.4)  # zoom controla el tamaño
+    imagebox = OffsetImage(img, zoom=0.4)
 
     ab = AnnotationBbox(imagebox, (9, 3), frameon=False)
     ax.add_artist(ab)          
@@ -241,9 +241,16 @@ def rice_vs_minimum_pension():
     x = ["Pensión Mínima", "Precio Mipymes", "Precio Subsidiado"]
     y = [pension,cuba_rice_rationed,7*REGULATED_RICE_PRICE_LB]
     
-    bar_container = ax.bar(x,y,color=['#1f77b4','red','yellow'])
+    img = mpimg.imread("img/rice.png")
+    
+    imagebox = OffsetImage(img, zoom=0.05)
+
+    ab = AnnotationBbox(imagebox, (2, 2500), frameon=False)
+    ax.add_artist(ab)      
+
+    bar_container = ax.bar(x,y,color=['#aac79a','#f0c4b2','#e3d3c2'])
     ax.bar_label(bar_container,y)
-    ax.set_title("Ingreso mínimo y acceso al arroz: comparación subsidiado vs privado")
+    ax.set_title("Ingreso mínimo y acceso al arroz: comparación subsidiado vs privado (7 lb)")
     ax.text(x[1],y[1]/2,f"{percentage}%",ha='center',color='white',fontname="Arial",fontweight="bold",fontsize=20)
     plt.show()
     
