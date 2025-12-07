@@ -107,7 +107,28 @@ def mean_price_liquids():
     mean_malt = mean_list(malt)
     
     return [mean_soft_drink,mean_beer,mean_juice,mean_malt]
-      
+
+def means():
+    data = currency_data()
+    usd, euro = data[1], data[2]
+    
+    usd_mean = mean_list(usd)
+    euro_mean = mean_list(euro)
+    
+    tx1 = f"Precio promedio de USD: {usd_mean}"
+    tx2 = f"Precio promedio de EUR: {euro_mean}"
+    tx3 = f"Promedio Salario Medio en USD: {AVERAGE_SALARY/usd_mean}"
+    tx4 = f"Promedio Salario Medio en EUR: {AVERAGE_SALARY/euro_mean}"
+    tx6 = f"Promedio Pensión Mínima en USD: {MINIMUM_PENSION/usd_mean}"
+    tx5 = f"Promedio Pensión Mínima en EUR: {MINIMUM_PENSION/euro_mean}"
+    tx5 = f"Promedio Estipendio 1er Año en USD: {STIPEND_YEAR_ONE/usd_mean}"
+    tx6 = f"Promedio Estipendio 1er Año en EUR: {STIPEND_YEAR_ONE/euro_mean}"
+    
+    means = [tx1,tx2,tx3,tx4,tx5,tx6]
+    
+    for mean in means:
+        print(mean)
+     
 #GRÁFICOS
 
 #Mapa de las mipymes
@@ -125,9 +146,9 @@ def show_map_mipymes():
         folium.Marker([lat,long],tooltip=name).add_to(mapa)
         
     return mapa
-        
+          
 def full_currency_graph():
-    fig, (ax1, ax2) = plt.subplots(1,2)
+    fig, (ax1, ax2) = plt.subplots(1,2,figsize=(12,6))
     
     dates, usd, euro = currency_data()
     
