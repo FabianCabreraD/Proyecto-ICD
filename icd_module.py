@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import csv
 import datetime
 import numpy as np
+import matplotlib.image as mpimg
 
 #CONSTANTES
 MIPYMES_PATH = "d:\\uh\\icd\\Proyecto-ICD\\data\\mipymes"
