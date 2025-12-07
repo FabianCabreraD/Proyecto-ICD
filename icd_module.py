@@ -172,6 +172,11 @@ def sal_pen_stip_graph():
     
     ax3.plot(dates,usd_vs_stipend,label="USD")
     ax3.plot(dates,usd_vs_stipend,label="Euro")
+    ax3.set_xticks(dates[::15])
+    ax3.set_xlabel("fecha")
+    ax3.tick_params(axis="x",rotation=45)
+    ax3.legend()
+    ax2.set_title("Estipendio 1er Año en USD y EUR")
     
     plt.show()
     
