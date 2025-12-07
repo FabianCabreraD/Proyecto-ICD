@@ -6,6 +6,7 @@ import csv
 import datetime
 import numpy as np
 import matplotlib.image as mpimg
+from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 
 #CONSTANTES
 MIPYMES_PATH = "d:\\uh\\icd\\Proyecto-ICD\\data\\mipymes"
@@ -207,8 +208,11 @@ def rice_salary_percentage(ax):
     
     bar_color = ["red" if country == "Cuba" else "#1f77b4" for country in countries]
        
-    # img = mpimg.imread('img/meme.png')   
-       
+    img = mpimg.imread('img/m1.png')
+    imagebox = OffsetImage(img, zoom=0.6)  # zoom controla el tamaño
+
+    ab = AnnotationBbox(imagebox, (7, 8), frameon=False)
+    ax.add_artist(ab)          
     ax.barh(countries,percentages, color=bar_color)
     ax.set_title("Costo de 1kg de arroz con respecto al salario medio (por ciento)")
     ax.set_yticks(range(len(countries)))
