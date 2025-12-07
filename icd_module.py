@@ -171,7 +171,7 @@ def sal_pen_stip_graph():
     euro_vs_stipend = currency_vs_data("stipend",usd)
     
     ax3.plot(dates,usd_vs_stipend,label="USD")
-    ax3.plot(dates,usd_vs_stipend,label="Euro")
+    ax3.plot(dates,euro_vs_stipend,label="Euro")
     ax3.set_xticks(dates[::15])
     ax3.set_xlabel("fecha")
     ax3.tick_params(axis="x",rotation=45)
