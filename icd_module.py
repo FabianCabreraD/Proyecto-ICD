@@ -13,6 +13,7 @@ SALARIES_PATH = "d:\\uh\\icd\\Proyecto-ICD\\data\\salary.json"
 AVERAGE_SALARY = 6660.1
 MINIMUM_PENSION = 3056
 REGULATED_RICE_PRICE_LB = 7 
+STIPEND_YEAR_ONE = 200
 
 #Retorna el listado de archivos json de las mipymes
 def mipymes_list():
@@ -73,7 +74,7 @@ def rice_mean_price():
     return mean
     
 def currency_vs_data(data,data_currency):
-    dt = AVERAGE_SALARY if data == "salary" else MINIMUM_PENSION
+    dt = AVERAGE_SALARY if data == "salary" else (MINIMUM_PENSION if data == "pension" else STIPEND_YEAR_ONE)
     values = [dt/i for i in data_currency]
     return values
 
@@ -141,7 +142,7 @@ def currency_graph():
 def salary_and_pension_graph():
     dates, usd, euro = currency_data()
     
-    fig, (ax1, ax2) = plt.subplots(1,2,figsize=(12,6))
+    fig, (ax1, ax2) = plt.subplots(1,3,figsize=(12,6))
 
     usd_vs_salary = currency_vs_data("salary",usd)
     euro_vs_salary = currency_vs_data("salary",euro)
