@@ -139,10 +139,10 @@ def currency_graph():
     plt.show()
         
 #Salario medio y pensión mínima contra usd y euro
-def salary_and_pension_graph():
+def sal_pen_stip_graph():
     dates, usd, euro = currency_data()
     
-    fig, (ax1, ax2) = plt.subplots(1,3,figsize=(12,6))
+    fig, (ax1, ax2, ax3) = plt.subplots(1,3,figsize=(12,6))
 
     usd_vs_salary = currency_vs_data("salary",usd)
     euro_vs_salary = currency_vs_data("salary",euro)
@@ -166,6 +166,12 @@ def salary_and_pension_graph():
     ax2.tick_params(axis="x",rotation=45)
     ax2.legend()
     ax2.set_title("Pensión mínima en USD y EUR")
+    
+    usd_vs_stipend = currency_vs_data("stipend",usd)
+    euro_vs_stipend = currency_vs_data("stipend",usd)
+    
+    ax3.plot(dates,usd_vs_stipend,label="USD")
+    ax3.plot(dates,usd_vs_stipend,label="Euro")
     
     plt.show()
     
