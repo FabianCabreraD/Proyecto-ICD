@@ -133,6 +133,23 @@ def means():
     for mean in means:
         print(mean)
      
+def egg_mean_price():
+    files = mipymes_list()
+    
+    price = []
+    
+    for i in files:
+        path = return_path_mipymes(i)
+        data = read_json(path)
+        
+        for j in data["product"]:
+            if j["type"] == "Huevo":
+                price.append(j["price"])
+                break
+        
+    mean_price = mean_list(price)
+    return mean_price
+     
 #GRÁFICOS
 
 #Mapa de las mipymes
@@ -300,4 +317,4 @@ def liquids_graph():
     ax.set_ylabel("Precio en CUP")
 
 def egg_graph():
-    ...
+    
