@@ -322,7 +322,10 @@ def egg_graph():
     x_axis = ["Salario Medio", "Jubilación Mínima"]
     y_axis = [price_five_eggs/i for i in [AVERAGE_SALARY,MINIMUM_PENSION]]
     
-    fig, ax = fig.subplots()
+    fig, ax = plt.subplots()
     
-    ax.plot(x_axis,y_axis)
+    ax.bar(x_axis,y_axis)
     
+    plt.show()
+    
+egg_graph()
