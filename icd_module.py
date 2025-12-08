@@ -16,6 +16,8 @@ AVERAGE_SALARY = 6660.1
 MINIMUM_PENSION = 3056
 REGULATED_RICE_PRICE_LB = 7 
 STIPEND_YEAR_ONE = 200
+LIKE_ICON = "d:\\uh\\icd\\Proyecto-ICD\\img\\like.png"
+DISLIKE_ICON = "d:\\uh\\icd\\Proyecto-ICD\\img\\dislike.png"
 
 #Retorna el listado de archivos json de las mipymes
 def mipymes_list():
@@ -134,19 +136,31 @@ def means():
 #GRÁFICOS
 
 #Mapa de las mipymes
-def show_map_mipymes():    
+def soft_drink_map():    
     mapa = folium.Map(location=(23.0515757,-82.3304645),zoom_start=11)
-
+    
     archivos = mipymes_list()
     for i in archivos:
-        diccionario = read_json(f"d:\\uh\\icd\\Proyecto-ICD\\data\\mipymes\\{i}")
+        data = read_json(f"d:\\uh\\icd\\Proyecto-ICD\\data\\mipymes\\{i}")
         
-        name = diccionario['name']
-        lat = diccionario["location"]["lat"]
-        long = diccionario["location"]["long"]            
+        name = data['name']
+        lat = data["location"]["lat"]
+        long = data["location"]["long"]          
         
-        folium.Marker([lat,long],tooltip=name).add_to(mapa)
+        under_200 = False
+        for j in data["product"]:
+            if j["type"] == "Refresco" and j["price"] <= 200:
+                under_200 = True
+                break
         
+        like_marker = folium.CustomIcon("d:\\uh\\icd\\Proyecto-ICD\\img\\like.png",icon_size=(30,30))
+        dislike_marker = folium.CustomIcon("d:\\uh\\icd\\Proyecto-ICD\\img\\dislike.png",icon_size=(30,30))
+        
+        if under_200:
+            folium.Marker([lat,long],tooltip=name,icon=like_marker).add_to(mapa)
+        else:
+            folium.Marker([lat,long],tooltip=name,icon=dislike_marker).add_to(mapa)
+            
     return mapa
           
 def full_currency_graph():
@@ -284,5 +298,3 @@ def liquids_graph():
     ax.annotate("Estipendio 1er Año Mensual", xytext=(0.6,270), xy=(0, 205),arrowprops=dict(arrowstyle="->",color="#003049",linewidth=2))
     ax.set_title("Precio promedio de líquidos")
     ax.set_ylabel("Precio en CUP")
-    
-    plt.show()
