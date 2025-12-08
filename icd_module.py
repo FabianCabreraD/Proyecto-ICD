@@ -298,3 +298,6 @@ def liquids_graph():
     ax.annotate("Estipendio 1er Año Mensual", xytext=(0.6,270), xy=(0, 205),arrowprops=dict(arrowstyle="->",color="#003049",linewidth=2))
     ax.set_title("Precio promedio de líquidos")
     ax.set_ylabel("Precio en CUP")
+
+def egg_graph():
+    ...
