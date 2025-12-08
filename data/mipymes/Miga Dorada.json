@@ -6,8 +6,8 @@
         "municipality": "Playa",
         "lat": 23.086320, 
         "long": -82.467751,
-        "delivery": false,
-        "transfer_payment": true
+    "delivery": false,
+    "transfer_payment": true
     },
     "product": [
         {

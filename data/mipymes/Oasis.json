@@ -6,8 +6,8 @@
         "municipality": "Plaza de la Revolución",
         "lat": 23.142762,
         "long": -82.389374,
-        "delivery": true,
-        "transfer_payment": null
+    "delivery": true,
+    "transfer_payment": null
     },
     "product": [
         {

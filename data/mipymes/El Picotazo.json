@@ -6,8 +6,8 @@
         "municipality": "La Lisa",
         "lat": 23.016240,
         "long": -82.497709,
-        "delivery": false,
-        "transfer_payment": true
+    "delivery": false,
+    "transfer_payment": true
     },
     "product": [
         {

@@ -5,8 +5,8 @@
         "address": "15 E/L y K",
         "lat": 23.142964,
         "long": -82.386882,
-        "delivery": null,
-        "transfer_payment": true
+    "delivery": null,
+    "transfer_payment": true
     },
     "product": [
         {
