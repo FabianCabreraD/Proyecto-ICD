@@ -214,8 +214,6 @@ def full_currency_graph():
     
     plt.show()
     
-    
-    
 #Precio promedio del arroz en países de América
 def rice_mean_price_graph(ax):
     data = read_json(RICE_MEAN_PRICE_PATH)
