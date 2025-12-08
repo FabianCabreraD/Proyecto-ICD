@@ -317,4 +317,11 @@ def liquids_graph():
     ax.set_ylabel("Precio en CUP")
 
 def egg_graph():
+    mean_price = egg_mean_price()
+    price_five_eggs = mean_price/5
+    x_axis = ["Salario Medio", "Jubilación Mínima"]
+    y_axis = [price_five_eggs/i for i in [AVERAGE_SALARY,MINIMUM_PENSION]]
     
+    fig, ax = fig.subplots(x_axis,y_axis)
+    
+    ax.plot()
