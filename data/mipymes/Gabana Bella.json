@@ -5,10 +5,10 @@
         "address": "13 E/182 y 184 #12208",
         "municipality": "Playa",
         "lat": 23.086389, 
-        "long": -82.468003,
-    "delivery": false,
-    "transfer_payment": true
+        "long": -82.468003
     },
+    "delivery": false,
+    "transfer_payment": true,
     "product": [
         {
             "type": "Arroz",

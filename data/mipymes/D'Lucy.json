@@ -5,10 +5,10 @@
         "address": "Calle 28 pasaje B E/235 y 237 XX Aniversario",
         "municipality": "La Lisa",
         "lat": 23.025011,
-        "long": -82.491708,
-    "delivery": true,
-    "transfer_payment": true
+        "long": -82.491708
     },
+    "delivery": true,
+    "transfer_payment": true,
     "product": [
         {
             "type": "Arroz",
