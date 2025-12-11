@@ -9,15 +9,15 @@ import matplotlib.image as mpimg
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 
 #CONSTANTES
-MIPYMES_PATH = "d:\\uh\\icd\\Proyecto-ICD\\data\\mipymes"
-RICE_MEAN_PRICE_PATH = "d:\\uh\\icd\\Proyecto-ICD\\data\\rice_price.json"
-SALARIES_PATH = "d:\\uh\\icd\\Proyecto-ICD\\data\\salary.json" 
+MIPYMES_PATH = "data\\mipymes"
+RICE_MEAN_PRICE_PATH = "data\\rice_price.json"
+SALARIES_PATH = "data\\salary.json" 
 AVERAGE_SALARY = 6660.1
 MINIMUM_PENSION = 3056
 REGULATED_RICE_PRICE_LB = 7 
 STIPEND_YEAR_ONE = 200
-LIKE_ICON = "d:\\uh\\icd\\Proyecto-ICD\\img\\like.png"
-DISLIKE_ICON = "d:\\uh\\icd\\Proyecto-ICD\\img\\dislike.png"
+LIKE_ICON = "img\\like.png"
+DISLIKE_ICON = "img\\dislike.png"
 
 #Retorna el listado de archivos json de las mipymes
 def mipymes_list():
