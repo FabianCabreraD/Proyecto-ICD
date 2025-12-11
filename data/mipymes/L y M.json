@@ -1,10 +1,10 @@
 {
-    "name": null,
+    "name": "",
     "location": {
-        "province": "La Habana",
-        "address": "23 E/I y H",
-        "lat": 23.138193,
-        "long": -82.385524
+        "province": "",
+        "address": "",
+        "lat": 0,
+        "long": 0
     },
     "delivery": null,
     "tranfer_payment": true,
