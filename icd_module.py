@@ -249,49 +249,49 @@ def rice_mean_price_graph(ax):
     ax.barh(countries,prices,color=bar_color)
     ax.set_title("Precio promedio de 1kg de arroz")
 
-#Por ciento con respecto al salario de 1kg de Arroz
-def rice_salary_percentage(ax):
-    rice = read_json(RICE_MEAN_PRICE_PATH)
-    cuba_rice = rice_mean_price()
-    rice["Cuba"] = cuba_rice
+# #Por ciento con respecto al salario de 1kg de Arroz
+# def rice_salary_percentage(ax):
+#     rice = read_json(RICE_MEAN_PRICE_PATH)
+#     cuba_rice = rice_mean_price()
+#     rice["Cuba"] = cuba_rice
     
-    salary = read_json(SALARIES_PATH)
+#     salary = read_json(SALARIES_PATH)
     
-    data_countries_rice = []
+#     data_countries_rice = []
     
-    for country in rice:
-        salary_country = salary[country]["Salario"]
-        rice_price = rice[country]
-        percentage = (rice_price/salary_country) * 100
+#     for country in rice:
+#         salary_country = salary[country]["Salario"]
+#         rice_price = rice[country]
+#         percentage = (rice_price/salary_country) * 100
         
-        data_countries_rice.append((country,percentage))
+#         data_countries_rice.append((country,percentage))
     
-    sorted_dcr = sorted(data_countries_rice,key=lambda x: x[1])
+#     sorted_dcr = sorted(data_countries_rice,key=lambda x: x[1])
 
-    countries = [i[0] for i in sorted_dcr]
-    percentages = [i[1] for i in sorted_dcr]
+#     countries = [i[0] for i in sorted_dcr]
+#     percentages = [i[1] for i in sorted_dcr]
     
-    bar_color = ["#78aa87" if country == "Cuba" else "#c3854c" for country in countries]
+#     bar_color = ["#78aa87" if country == "Cuba" else "#c3854c" for country in countries]
        
-    img = mpimg.imread('img/m1.png')
-    imagebox = OffsetImage(img, zoom=0.4)
+#     img = mpimg.imread('img/m1.png')
+#     imagebox = OffsetImage(img, zoom=0.4)
 
-    ab = AnnotationBbox(imagebox, (9, 3), frameon=False)
-    ax.add_artist(ab)          
-    ax.barh(countries,percentages, color=bar_color)
-    ax.set_title("Costo de 1kg de arroz con respecto al salario medio (por ciento)")
-    ax.set_yticks(range(len(countries)))
-    ax.set_yticklabels(["Cuba" if i == "Cuba" else "" for i in countries])
-    ax.tick_params(axis="y")
+#     ab = AnnotationBbox(imagebox, (9, 3), frameon=False)
+#     ax.add_artist(ab)          
+#     ax.barh(countries,percentages, color=bar_color)
+#     ax.set_title("Costo de 1kg de arroz con respecto al salario medio (por ciento)")
+#     ax.set_yticks(range(len(countries)))
+#     ax.set_yticklabels(["Cuba" if i == "Cuba" else "" for i in countries])
+#     ax.tick_params(axis="y")
     
   
-def full_rice_graph():  
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 6))
+# def full_rice_graph():  
+#     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 6))
 
-    rice_mean_price_graph(ax1)
-    rice_salary_percentage(ax2)
+#     rice_mean_price_graph(ax1)
+#     rice_salary_percentage(ax2)
 
-    plt.show()
+#     plt.show()
     
 def rice_vs_minimum_pension():
     cuba_rice = rice_mean_price()
@@ -372,4 +372,35 @@ def egg_employees_graph():
     plt.subplots_adjust(left=0.4)
     plt.show()
     
-egg_employees_graph()
+def rice_and_salary_graph():
+    cuba_rice = rice_mean_price()
+    
+    salary_and_rice_data = read_json("data/salary_and_rice.json")
+    salary_and_rice_data["Cuba"]["Rice"] = cuba_rice/435
+    salary_and_rice_data["Cuba"]["Salary"] = 6660.1/435
+    
+    data = dict(sorted(salary_and_rice_data.items(), key=lambda x: x[1]["Rice"]))
+        
+    countries = data.keys()
+    percentage = [(i["Rice"]/i["Salary"]*100) for i in data.values()]
+    rice = [-i["Rice"] for i in data.values()]
+    
+    fig, ax = plt.subplots()
+    
+    img = mpimg.imread('img/m1.png')
+    imagebox = OffsetImage(img, zoom=0.4)
+
+    ab = AnnotationBbox(imagebox, (9, 3), frameon=False)
+    ax.add_artist(ab)      
+      
+    ax.barh(countries,rice,color="#78aa87", label="Precio Promedio 1kg")
+    
+    ax.barh(countries,percentage,color="#c3854c",label="Por ciento del salario medio")
+    ax.axvline(x=0,ls = "--", color="black")
+    ticks = ax.get_xticks()
+    ax.set_xticklabels([abs(int(t)) for t in ticks])    
+    plt.subplots_adjust(left=0.2)
+    plt.legend()
+    plt.show()
+    
+rice_and_salary_graph()

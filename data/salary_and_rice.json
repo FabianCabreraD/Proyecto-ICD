@@ -1,0 +1,92 @@
+{
+    "Argentina": {
+        "Salary": 1278.74,
+        "Source": "https://www.argentina.gob.ar/economia/dpyegp/salariopromedio",
+        "Rice": 1.78
+    },
+    "Brasil": {
+        "Salary": 551.92,
+        "Source": "https://www.gov.br/planalto/en/latest-news/2024/04/average-per-capita-income-in-brazil-surges-by-11-5-to-reach-12-year-high#:~:text=The%20average%20real%20monthly%20income,to%202019%20(BRL%202%2C927).",
+        "Rice": 1.20
+    },
+    "Canadá": {
+        "Salary": 3657.69,
+        "Source": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410041701&pickMembers%5B0%5D=1.1&pickMembers%5B1%5D=2.3&pickMembers%5B2%5D=3.1&pickMembers%5B3%5D=5.1&pickMembers%5B4%5D=6.1&cubeTimeFrame.startYear=2020&cubeTimeFrame.endYear=2024&referencePeriods=20200101%2C20240101",
+        "Rice": 3.66
+    },
+    "Chile": {
+        "Salary": 650.30,
+        "Source": "https://www.ine.gob.cl/estadisticas/sociales/ingresos-y-gastos/encuesta-de-presupuestos-familiares",
+        "Rice": 1.70
+    },
+    "Colombia": {
+        "Salary": 315.18,
+        "Source": "https://www.dane.gov.co/index.php/estadisticas-por-tema/mercado-laboral",
+        "Rice": 1.18
+    },
+    "Costa Rica": {
+        "Salary": 998.60,
+        "Source": "https://inec.cr/estadisticas-Sources/",
+        "Rice": 2.51
+    },
+    "Cuba": {
+        "Salary": 6660.1,
+        "Source": "ONEI",
+        "Rice": 0
+    },
+    "Ecuador": {
+        "Salary": 400,
+        "Source": "https://www.ecuadorencifras.gob.ec/documentos/web-inec/EMPLEO/2024/Trimestre_I/2024_I_Trimestre_Mercado_Laboral.pdf",
+        "Rice": 1.49
+    },
+    "El Salvador": {
+        "Salary": 300,
+        "Source": "https://www.digestyc.gob.sv/index.php/temas/mercado-laboral/encuesta-de-hogares-de-propositos-multiples.html",
+        "Rice": 1.60
+    },
+    "Guatemala": {
+        "Salary": 326.38,
+        "Source": "https://www.ine.gob.gt/inei/",
+        "Rice": 1.88
+    },
+    "Jamaica": {
+        "Salary": 1250,
+        "Source": "https://statinja.gov.jm/",
+        "Rice": 1.45
+    },
+    "Mexico": {
+        "Salary": 245.74,
+        "Source": "https://www.inegi.org.mx/temas/remuneracionesmr/",
+        "Rice": 1.73
+    },
+    "Nicaragua": {
+        "Salary": 366.84,
+        "Source": "https://bcn.gob.ni/mercado-laboral",
+        "Rice": 1.63
+    },
+    "Panamá": {
+        "Salary": 1288,
+        "Source": "https://www.inec.gob.pa/archivos/P0705547520250124095018Cuadro%2025.pdf",
+        "Rice": 2.33
+    },
+    "Paraguay": {
+        "Salary": 385.04,
+        "Source": "https://www.bcp.gov.py",
+        "Rice": 1.00
+    },
+    "Perú": {
+        "Salary": 606.47,
+        "Source": "https://www.inei.gob.pe/",
+        "Rice": 1.25
+    },
+    "República Dominicana": {
+        "Salary": 574,
+        "Source": "https://www.one.gob.do/",
+        "Rice": 1.24
+    },
+    "Uruguay": {
+        "Salary": 843.33,
+        "Source": "https://www.gub.uy/instituto-nacional-estadistica/comunicacion/publicaciones/ingresos-hogares-personas-tercer-trimestre-2025",
+        "Rice": 1.67
+    }
+}
