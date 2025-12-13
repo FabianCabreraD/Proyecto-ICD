@@ -317,11 +317,11 @@ def liquids_graph():
     means = mean_price_liquids()
     products = ["Refresco", "Cerveza", "Jugo", "Malta"]
     
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(7,5))
     
-    ax.bar(products,means,color="#F0B884")
+    ax.bar(products,means,color="#F0B884",edgecolor="gray")
     ax.axhline(y=200,ls="--",color="#003049")
-    ax.annotate("Estipendio 1er Año Mensual", xytext=(0.6,270), xy=(0, 205),arrowprops=dict(arrowstyle="->",color="#003049",linewidth=2))
+    ax.annotate("Estipendio 1er Año Mensual", xytext=(0,320), xy=(0, 205),arrowprops=dict(arrowstyle="->",color="#003049",linewidth=2))
     ax.set_title("Precio promedio de líquidos")
     ax.set_ylabel("Precio en CUP")
 
@@ -363,3 +363,5 @@ def egg_employees_graph():
 
     plt.subplots_adjust(left=0.4)
     plt.show()
+    
+liquids_graph()
