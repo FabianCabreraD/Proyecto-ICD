@@ -335,6 +335,7 @@ def liquids_graph():
     ax.annotate("Estipendio 1er Año Mensual", xytext=(-0.2,330), xy=(0, 205),arrowprops=dict(arrowstyle="->",color="#003049",linewidth=2),weight="bold")
     ax.set_title("Precio promedio de líquidos")
     ax.set_ylabel("Precio en CUP")
+    plt.show()
 
 def egg_employees_graph():
     mean_price = egg_mean_price()
@@ -345,7 +346,7 @@ def egg_employees_graph():
     percentage_thirty = [mean_price/i[0]*100 for i in salary.values()]
     percentage_employees = [i[1] for i in salary.values()]
     
-    fig, ax = plt.subplots(figsize=(12,6))
+    fig, ax = plt.subplots(figsize=(14,6))
     
     n = len(sector)
     index = list(range(n))
@@ -370,9 +371,10 @@ def egg_employees_graph():
     negativo_patch = mpatches.Patch(color="#FF8C94", label="Decremento trabajadores")
     otro_patch = mpatches.Patch(color="#AED9E0", label="Cartón de Huevo vs Salario (%)")
 
-    ax.legend(handles=[positivo_patch, negativo_patch, otro_patch])
+    ax.legend(handles=[positivo_patch, negativo_patch, otro_patch],fontsize="small")
     
     ax.set_xticks(list(range(-30,90,10)))
+    ax.tick_params(axis="y",labelsize="small")
     
         
     for i in range(len(sector)):
@@ -386,3 +388,5 @@ def egg_employees_graph():
 
     plt.subplots_adjust(left=0.4)
     plt.show()
+    
+liquids_graph()
