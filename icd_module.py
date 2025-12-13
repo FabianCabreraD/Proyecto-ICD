@@ -263,7 +263,7 @@ def rice_and_salary_graph():
     percentage = [(i["Rice"]/i["Salary"]*100) for i in data.values()]
     rice = [-i["Rice"] for i in data.values()]
     
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(12,6))
     
     img = mpimg.imread('img/m1.png')
     imagebox = OffsetImage(img, zoom=0.4)
@@ -276,7 +276,11 @@ def rice_and_salary_graph():
     ax.barh(countries,percentage,color="#c3854c",label="Por ciento del salario medio")
     ax.axvline(x=0,ls = "--", color="black")
     ticks = ax.get_xticks()
-    ax.set_xticklabels([abs(int(t)) for t in ticks])    
+    ax.set_xticks(ticks)
+    ax.set_xticklabels([abs(int(t)) for t in ticks])
+    ax.set_title("Precio de 1kg de arroz y por ciento del salario medio")
+    ax.text(x=-3,y=-3,s="Precio en USD",ha="center")
+    ax.text(x=7,y=-3,s="Por ciento",ha="center")
     plt.subplots_adjust(left=0.2)
     plt.legend()
     plt.show()
