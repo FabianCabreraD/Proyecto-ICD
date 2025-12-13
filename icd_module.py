@@ -164,19 +164,30 @@ def soft_drink_map():
         lat = data["location"]["lat"]
         long = data["location"]["long"]          
         
-        under_200 = False
+        products = []
         for j in data["product"]:
-            if j["type"] == "Refresco" and j["price"] <= 200:
-                under_200 = True
-                break
+            if j["type"] in ["Refresco","Malta","Jugo","Cerveza"] and j["price"] <= 200:
+                products.append(j["type"])
         
         like_marker = folium.CustomIcon("d:\\uh\\icd\\Proyecto-ICD\\img\\like.png",icon_size=(30,30))
         dislike_marker = folium.CustomIcon("d:\\uh\\icd\\Proyecto-ICD\\img\\dislike.png",icon_size=(30,30))
         
-        if under_200:
-            folium.Marker([lat,long],tooltip=name,icon=like_marker).add_to(mapa)
+        products_string = ', '.join(products)
+        
+        html_like = f"""
+            <h1>{name}</h1>
+            <p>{products_string}</p>
+        """
+        
+        html_dislike = f"""
+            <h1>{name}</h1>
+        """
+
+        
+        if len(products) > 0:
+            folium.Marker([lat,long],tooltip=name,popup=html_like,icon=like_marker).add_to(mapa)
         else:
-            folium.Marker([lat,long],tooltip=name,icon=dislike_marker).add_to(mapa)
+            folium.Marker([lat,long],tooltip=name,popup=html_dislike,icon=dislike_marker).add_to(mapa)
             
     return mapa
           
