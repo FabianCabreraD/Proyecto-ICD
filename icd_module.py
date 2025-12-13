@@ -14,7 +14,8 @@ RICE_MEAN_PRICE_PATH = "data\\rice_price.json"
 SALARIES_PATH = "data\\salary.json" 
 AVERAGE_SALARY = 6660.1
 MINIMUM_PENSION = 3056
-REGULATED_RICE_PRICE_LB = 7 
+REG_RICE_NATIONAL_PRICE_LB = 7 
+REG_RICE_INTERNATIONAL_PRICE_LB = 10
 STIPEND_YEAR_ONE = 200
 LIKE_ICON = "img\\like.png"
 DISLIKE_ICON = "img\\dislike.png"
@@ -296,21 +297,22 @@ def rice_vs_minimum_pension():
     
     fig, ax = plt.subplots(figsize=(10,6))
     
-    x = ["Pensión Mínima", "Precio Mipymes", "Precio Subsidiado"]
-    y = [pension,cuba_rice_rationed,7*REGULATED_RICE_PRICE_LB]
+    x = ["Precio Mipymes", "Precio Subsidiado Importado", "Precio Subsidiado Nacional"]
+    y = [cuba_rice_rationed,7*REG_RICE_INTERNATIONAL_PRICE_LB,7*REG_RICE_NATIONAL_PRICE_LB]
     
     img = mpimg.imread("img/rice.png")
     
     imagebox = OffsetImage(img, zoom=0.05)
 
-    ab = AnnotationBbox(imagebox, (2, 2500), frameon=False)
+    ab = AnnotationBbox(imagebox, (2, 2400), frameon=False)
     ax.add_artist(ab)      
 
     bar_container = ax.bar(x,y,color=['#aac79a','#f0c4b2','#e3d3c2'])
     ax.bar_label(bar_container,y)
+    ax.axhline(y=3056,ls="--",color="black")
     ax.set_title("Pensión mínima y costo del arroz: subsidiado vs privado (7 lb)")
-    ax.text(x[1],y[1]/2,f"{percentage}%",ha='center',color='black',fontname="Arial",fontweight="bold",fontsize=20)
-    ax.annotate("", xytext=(0.8, (y[1]/2)+70), xy=(0, y[0]/2),arrowprops=dict(arrowstyle="->"))
+    ax.text(x[0],y[0]/2,f"{percentage}%",ha='center',color='black',fontname="Arial",fontweight="bold",fontsize=20)
+    ax.annotate("", xytext=(0, y[0]-100), xy=(1, 3020),arrowprops=dict(arrowstyle="->",color="black"))
     plt.show()
     
 def liquids_graph():
@@ -336,3 +338,5 @@ def egg_graph():
     ax.bar(x_axis,y_axis)
     
     plt.show()
+    
+rice_vs_minimum_pension()
