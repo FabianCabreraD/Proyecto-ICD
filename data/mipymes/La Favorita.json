@@ -1,19 +1,171 @@
 {
-    "name": "",
+    "name": "La Favorita",
     "location": {
-        "province": "",
-        "address": "",
-        "lat": 0,
-        "long": 0
+        "province": "La Habana",
+        "address": "J E/23 y 25",
+        "lat": 23.137873,
+        "long": -82.384870
     },
     "delivery": null,
     "tranfer_payment": true,
     "product": [
         {
-            "type": "",
+            "type": "Arroz",
             "brand": null,
             "details": null,
-            "price": 0,
+            "price": 700,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Papel Sanitario",
+            "brand": null,
+            "details": null,
+            "price": 550,
+            "unity": "4 u",
+            "origin": null
+        },
+        {
+            "type": "Aceite",
+            "brand": null,
+            "details": null,
+            "price": 990,
+            "unity": "900 ml",
+            "origin": null
+        },
+        {
+            "type": "Pasta Dental",
+            "brand": null,
+            "details": null,
+            "price": 650,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Jabón de Baño",
+            "brand": null,
+            "details": null,
+            "price": 180,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Pollo",
+            "brand": null,
+            "details": "Ahumado",
+            "price": 720,
+            "unity": "1 lb",
+            "origin": null
+        },
+        {
+            "type": "Azúcar",
+            "brand": null,
+            "details": null,
+            "price": 800,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Huevo",
+            "brand": null,
+            "details": null,
+            "price": 3300,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Cerveza",
+            "brand": "Unlaguer",
+            "details": null,
+            "price": 300,
+            "unity": null,
+            "origin": "Importado"
+        },
+        {
+            "type": "Cerveza",
+            "brand": "Cristal",
+            "details": null,
+            "price": 380,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Cerveza",
+            "brand": "La Fría",
+            "details": null,
+            "price": 270,
+            "unity": null,
+            "origin": "Importado"
+        },
+        {
+            "type": "Malta",
+            "brand": "Unlaguer",
+            "details": null,
+            "price": 300,
+            "unity": null,
+            "origin": "Importado"
+        },
+        {
+            "type": "Malta",
+            "brand": "Belga",
+            "details": null,
+            "price": 300,
+            "unity": null,
+            "origin": "Importado"
+        },
+        {
+            "type": "Malta",
+            "brand": "Guajira",
+            "details": null,
+            "price": 300,
+            "unity": null,
+            "origin": "Importado"
+        },
+        {
+            "type": "Refresco",
+            "brand": "Boom Boom",
+            "details": null,
+            "price": 260,
+            "unity": null,
+            "origin": "Importado"
+        },
+        {
+            "type": "Frijoles",
+            "brand": null,
+            "details": "Negros",
+            "price": 1000,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Frijoles",
+            "brand": null,
+            "details": "Chícharos",
+            "price": 850,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Leche",
+            "brand": null,
+            "details": "Condensada",
+            "price": 650,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Leche",
+            "brand": null,
+            "details": "Polvo",
+            "price": 1675,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Café",
+            "brand": null,
+            "details": null,
+            "price": 1700,
             "unity": null,
             "origin": null
         }
