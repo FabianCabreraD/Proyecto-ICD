@@ -1,0 +1,150 @@
+{
+    "name": "Hur\u00f3n Azul",
+    "location": {
+        "province": "La Habana",
+        "address": "Humboldt E/O y P",
+        "municipality": "Plaza de la Revoluci\u00f3n",
+        "lat": 23.14127,
+        "long": -82.379149
+    },
+    "delivery": null,
+    "transfer_payment": true,
+    "product": [
+        {
+            "type": "Cerveza",
+            "brand": "Cristal",
+            "details": null,
+            "price": 350,
+            "unity": null,
+            "origin": "Nacional"
+        },
+        {
+            "type": "Refresco",
+            "brand": "Boom Boom",
+            "details": null,
+            "price": 280,
+            "unity": null,
+            "origin": "Importado"
+        },
+        {
+            "type": "Malta",
+            "brand": null,
+            "details": null,
+            "price": 230,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Arroz",
+            "brand": null,
+            "details": null,
+            "price": 700,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Huevo",
+            "brand": null,
+            "details": null,
+            "price": 3600,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Pollo",
+            "brand": null,
+            "details": "Pechuga",
+            "price": 5400,
+            "unity": "2 kg",
+            "origin": null
+        },
+        {
+            "type": "Az\u00facar",
+            "brand": null,
+            "details": null,
+            "price": 750,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Frijoles",
+            "brand": "Negros",
+            "details": null,
+            "price": 1200,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "",
+            "brand": null,
+            "details": null,
+            "price": 0,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Helado",
+            "brand": null,
+            "details": null,
+            "price": 1400,
+            "unity": "1 l",
+            "origin": null
+        },
+        {
+            "type": "Aceite",
+            "brand": null,
+            "details": null,
+            "price": 990,
+            "unity": "1 l",
+            "origin": null
+        },
+        {
+            "type": "",
+            "brand": null,
+            "details": null,
+            "price": 0,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Papel Sanitario",
+            "brand": null,
+            "details": null,
+            "price": 650,
+            "unity": "4 u",
+            "origin": null
+        },
+        {
+            "type": "Pasta Dental",
+            "brand": "Colgate",
+            "details": null,
+            "price": 700,
+            "unity": null,
+            "origin": "Importado"
+        },
+        {
+            "type": "",
+            "brand": null,
+            "details": null,
+            "price": 0,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Leche",
+            "brand": null,
+            "details": "Polvo",
+            "price": 1600,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Caf\u00e9",
+            "brand": null,
+            "details": null,
+            "price": 1800,
+            "unity": null,
+            "origin": null
+        }
+    ]
+}

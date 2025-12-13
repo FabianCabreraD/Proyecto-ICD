@@ -1,0 +1,166 @@
+{
+    "name": "La Complicidad",
+    "location": {
+        "province": "La Habana",
+        "address": "B E/21 y 23",
+        "municipality": "Plaza de la Revoluci\u00f3n",
+        "lat": 23.133287,
+        "long": -82.392971
+    },
+    "delivery": null,
+    "transfer_payment": true,
+    "product": [
+        {
+            "type": "Huevo",
+            "brand": null,
+            "details": null,
+            "price": 3300,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Pollo",
+            "brand": null,
+            "details": "Pechuga",
+            "price": 4700,
+            "unity": "2kg",
+            "origin": null
+        },
+        {
+            "type": "Pollo",
+            "brand": null,
+            "details": "H\u00edgado",
+            "price": 950,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Caf\u00e9",
+            "brand": null,
+            "details": null,
+            "price": 600,
+            "unity": "1 lb",
+            "origin": null
+        },
+        {
+            "type": "Az\u00facar",
+            "brand": null,
+            "details": null,
+            "price": 750,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Sal",
+            "brand": null,
+            "details": null,
+            "price": 700,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Arroz",
+            "brand": null,
+            "details": null,
+            "price": 760,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Helado",
+            "brand": "Gust\u00f3",
+            "details": null,
+            "price": 1200,
+            "unity": "1 l",
+            "origin": "Nacional"
+        },
+        {
+            "type": "Aceite",
+            "brand": null,
+            "details": null,
+            "price": 1000,
+            "unity": "1 l",
+            "origin": null
+        },
+        {
+            "type": "Frijoles",
+            "brand": null,
+            "details": "Negros",
+            "price": 950,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Leche",
+            "brand": null,
+            "details": "Condensada",
+            "price": 560,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Leche",
+            "brand": null,
+            "details": "Evaporada",
+            "price": 1000,
+            "unity": "1 l",
+            "origin": null
+        },
+        {
+            "type": "papel Sanitario",
+            "brand": null,
+            "details": null,
+            "price": 640,
+            "unity": "4 u",
+            "origin": null
+        },
+        {
+            "type": "Pan",
+            "brand": null,
+            "details": null,
+            "price": 460,
+            "unity": "6 u",
+            "origin": null
+        },
+        {
+            "type": "Refresco",
+            "brand": null,
+            "details": null,
+            "price": 220,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Cerveza",
+            "brand": "Cristal",
+            "details": null,
+            "price": 360,
+            "unity": null,
+            "origin": "Nacional"
+        },
+        {
+            "type": "Malta",
+            "brand": null,
+            "details": null,
+            "price": 260,
+            "unity": null,
+            "origin": "Importado"
+        },
+        {
+            "type": "Jugo",
+            "brand": "Bucanero",
+            "details": null,
+            "price": 240,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Jab\u00f3n",
+            "brand": null,
+            "details": null,
+            "price": 180,
+            "unity": null,
+            "origin": null
+        }
+    ]
+}
