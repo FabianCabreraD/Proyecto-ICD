@@ -156,7 +156,12 @@ def salary_cuba():
     data = read_json("data/salary_cuba.json")
     data_sorted = dict(sorted(data.items(),key=lambda x:x[1][0],reverse=True))
     return data_sorted
-     
+
+def last_usd_price():
+    usd = currency_data()[1]
+    last_usd = usd[-1]
+    return last_usd
+    
 #GRÁFICOS
 
 #Mapa de las mipymes
@@ -252,10 +257,11 @@ def rice_mean_price_graph(ax):
 # #Por ciento con respecto al salario de 1kg de Arroz
 def rice_and_salary_graph():
     cuba_rice = rice_mean_price()
+    usd_price = last_usd_price()
     
     salary_and_rice_data = read_json("data/salary_and_rice.json")
-    salary_and_rice_data["Cuba"]["Rice"] = cuba_rice/435
-    salary_and_rice_data["Cuba"]["Salary"] = 6660.1/435
+    salary_and_rice_data["Cuba"]["Rice"] = cuba_rice/usd_price
+    salary_and_rice_data["Cuba"]["Salary"] = 6660.1/usd_price
     
     data = dict(sorted(salary_and_rice_data.items(), key=lambda x: x[1]["Rice"]))
         
@@ -310,6 +316,8 @@ def rice_vs_minimum_pension():
     ax.set_title("Pensión mínima y costo del arroz: subsidiado vs privado (7 lb)")
     ax.text(x[0],y[0]/2,f"{percentage}%",ha='center',color='black',fontname="Arial",fontweight="bold",fontsize=20)
     ax.annotate("", xytext=(0, y[0]-100), xy=(1, 3020),arrowprops=dict(arrowstyle="->",color="black"))
+    ax.set_yticks(list(range(0,3600,500)))
+    ax.text(x=1,y=3100,s="Pensión Mínima")
     plt.show()
     
 def liquids_graph():
@@ -364,9 +372,17 @@ def egg_employees_graph():
 
     ax.legend(handles=[positivo_patch, negativo_patch, otro_patch])
     
-    ax.set_xticks(list(range(-20,90,10)))
+    ax.set_xticks(list(range(-30,90,10)))
+    
+        
+    for i in range(len(sector)):
+        if percentage_employees[i] > 0:
+            x = percentage_employees[i] + 2
+        else:
+            x = percentage_employees[i] - 7
+        ax.text(x,y=i,s=round(percentage_employees[i],2),fontsize="small")
+        
+        ax.text(x=percentage_thirty[i]+2, y=i-0.35,s=round(percentage_thirty[i],2),fontsize="small")
 
     plt.subplots_adjust(left=0.4)
     plt.show()
-
-egg_employees_graph()
