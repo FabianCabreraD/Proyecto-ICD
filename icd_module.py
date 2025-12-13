@@ -7,6 +7,7 @@ import datetime
 import numpy as np
 import matplotlib.image as mpimg
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
+import matplotlib.patches as mpatches
 
 #CONSTANTES
 MIPYMES_PATH = "data\\mipymes"
@@ -332,35 +333,43 @@ def liquids_graph():
     ax.set_title("Precio promedio de líquidos")
     ax.set_ylabel("Precio en CUP")
 
-def egg_graph():
+def egg_employees_graph():
     mean_price = egg_mean_price()
     price_five_eggs = mean_price/5
     salary = salary_cuba()
     
     sector = salary.keys()
-    percentage_five = [price_five_eggs/i[0]*100 for i in salary.values()]
     percentage_thirty = [mean_price/i[0]*100 for i in salary.values()]
     percentage_employees = [i[1] for i in salary.values()]
     
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(12,6))
     
     n = len(sector)
     index = list(range(n))
-    height = 0.35 
+    height = 0.35
     
     x_egg = [i - height/2 for i in index]
 
     x_employees = [i + height/2 for i in index]
     
-    ax.barh(x_egg,percentage_thirty,label="Cartón (30 u)",color="#A8E6CF",height=height)
-    ax.barh(x_egg,percentage_five,label="Cuota normada (5 u)",color="#FF8C94",height=height),
-    ax.barh(x_employees, percentage_employees,height=height, label="Cambio en porcentaje de trabajadores")
+    color_list = ["#A8E6CF" if v > 0 else "#FF8C94" for v in percentage_employees]
+    
+    ax.barh(x_egg,percentage_thirty,label="Cartón (30 u)",color="#AED9E0",height=height,edgecolor="gray")
+    ax.barh(x_employees, percentage_employees,height=height,color=color_list,edgecolor="gray", label="Cambio en porcentaje de trabajadores")
     
     ax.set_yticks(index)
     ax.set_yticklabels(sector)
     ax.set_xlabel("Por ciento del Salario Medio")
-    ax.legend()
     ax.axvline(x=0,ls="--",color="black")
-            
+    ax.set_title("Salario vs Cartón de Huevo y Variación de empleados")
+        
+    positivo_patch = mpatches.Patch(color="#A8E6CF", label="Incremento trabajadores")
+    negativo_patch = mpatches.Patch(color="#FF8C94", label="Decremento trabajadores")
+    otro_patch = mpatches.Patch(color="#AED9E0", label="Otro dato")
+
+    ax.legend(handles=[positivo_patch, negativo_patch, otro_patch])
+
     plt.subplots_adjust(left=0.4)
     plt.show()
+    
+egg_employees_graph()
