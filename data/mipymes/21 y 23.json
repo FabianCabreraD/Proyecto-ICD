@@ -1,0 +1,118 @@
+{
+    "name":null,
+    "location": {
+        "province": "La Habana",
+        "address": "C E/21 y 23",
+        "municipality": "Plaza de la Revolución",
+        "lat": 23.139893,
+        "long": -82.399987
+    },
+    "delivery": null,
+    "transfer_payment": true,
+    "product": [
+        {
+            "type": "Frijoles",
+            "brand": null,
+            "details": "Negros",
+            "price": 1200,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Pan",
+            "brand": null,
+            "details": null,
+            "price": 180,
+            "unity": "8 u",
+            "origin": null
+        },
+        {
+            "type": "Arroz",
+            "brand": null,
+            "details": null,
+            "price": 800,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Azúcar",
+            "brand": null,
+            "details": null,
+            "price": 800,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Café",
+            "brand": null,
+            "details": null,
+            "price": 1800,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Papel",
+            "brand": null,
+            "details": null,
+            "price": 680,
+            "unity": "4 u",
+            "origin": null
+        },
+        {
+            "type": "Leche",
+            "brand": null,
+            "details": null,
+            "price": 1700,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Cerveza",
+            "brand": "Cristal",
+            "details": null,
+            "price": 360,
+            "unity": null,
+            "origin": "Nacional"
+        },
+        {
+            "type": "Cerveza",
+            "brand": "Unlaguer",
+            "details": null,
+            "price": 240,
+            "unity": null,
+            "origin": "Importado"
+        },
+        {
+            "type": "Cerveza",
+            "brand": "Bucanero",
+            "details": null,
+            "price": 320,
+            "unity": null,
+            "origin": "Nacional"
+        },
+        {
+            "type": "Jugo",
+            "brand": null,
+            "details": null,
+            "price": 300,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Aceite",
+            "brand": null,
+            "details": null,
+            "price": 1050,
+            "unity": "1 lt",
+            "origin": null
+        },
+        {
+            "type": "Pollo",
+            "brand": null,
+            "details": "Pechuga",
+            "price": 4500,
+            "unity": "2 kg",
+            "origin": null
+        }
+    ]
+}
