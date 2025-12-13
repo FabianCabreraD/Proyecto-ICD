@@ -321,7 +321,7 @@ def rice_vs_minimum_pension():
             s = f"{y[index]} ({round(y[index]/MINIMUM_PENSION*100,2)}%)"
         else:
             s = y[index]
-        ax.text(x=x[index], y=y[index]+10,s=s,ha="center")
+        ax.text(x=x[index], y=y[index]+20,s=s,ha="center")
     ax.annotate("", xytext=(0, y[0]-100), xy=(1, 3020),arrowprops=dict(arrowstyle="->",color="black"))
     ax.set_yticks(list(range(0,3600,500)))
     ax.text(x=1,y=3100,s="Pensión Mínima")
@@ -395,5 +395,3 @@ def egg_employees_graph():
 
     plt.subplots_adjust(left=0.4)
     plt.show()
-    
-rice_vs_minimum_pension()
