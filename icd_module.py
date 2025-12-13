@@ -271,9 +271,8 @@ def rice_and_salary_graph():
     ab = AnnotationBbox(imagebox, (9, 3), frameon=False)
     ax.add_artist(ab)      
       
-    ax.barh(countries,rice,color="#78aa87", label="Precio Promedio 1kg")
-    
-    ax.barh(countries,percentage,color="#c3854c",label="Por ciento del salario medio")
+    ax.barh(countries,rice,color="#78aa87",edgecolor="gray", label="Precio Promedio 1kg")
+    ax.barh(countries,percentage,edgecolor="gray",color="#c3854c",label="Por ciento del salario medio")
     ax.axvline(x=0,ls = "--", color="black")
     ticks = ax.get_xticks()
     ax.set_xticks(ticks)
@@ -305,7 +304,7 @@ def rice_vs_minimum_pension():
     ab = AnnotationBbox(imagebox, (2, 2400), frameon=False)
     ax.add_artist(ab)      
 
-    bar_container = ax.bar(x,y,color=['#aac79a','#f0c4b2','#e3d3c2'])
+    bar_container = ax.bar(x,y,color=['#aac79a','#f0c4b2','#e3d3c2'],edgecolor="gray")
     ax.bar_label(bar_container,y)
     ax.axhline(y=3056,ls="--",color="black")
     ax.set_title("Pensión mínima y costo del arroz: subsidiado vs privado (7 lb)")
@@ -320,8 +319,12 @@ def liquids_graph():
     fig, ax = plt.subplots(figsize=(7,5))
     
     ax.bar(products,means,color="#F0B884",edgecolor="gray")
+    
+    for index, mean in enumerate(means):
+        ax.text(x=index,y=mean+5,s=mean,ha="center")
+    
     ax.axhline(y=200,ls="--",color="#003049")
-    ax.annotate("Estipendio 1er Año Mensual", xytext=(0,320), xy=(0, 205),arrowprops=dict(arrowstyle="->",color="#003049",linewidth=2))
+    ax.annotate("Estipendio 1er Año Mensual", xytext=(-0.2,330), xy=(0, 205),arrowprops=dict(arrowstyle="->",color="#003049",linewidth=2),weight="bold")
     ax.set_title("Precio promedio de líquidos")
     ax.set_ylabel("Precio en CUP")
 
@@ -363,5 +366,3 @@ def egg_employees_graph():
 
     plt.subplots_adjust(left=0.4)
     plt.show()
-    
-liquids_graph()
