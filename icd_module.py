@@ -350,19 +350,23 @@ def egg_employees_graph():
     color_list = ["#A8E6CF" if v > 0 else "#FF8C94" for v in percentage_employees]
     
     ax.barh(x_egg,percentage_thirty,label="Cartón (30 u)",color="#AED9E0",height=height,edgecolor="gray")
-    ax.barh(x_employees, percentage_employees,height=height,color=color_list,edgecolor="gray", label="Cambio en porcentaje de trabajadores")
+    ax.barh(x_employees, percentage_employees,height=height,color=color_list,edgecolor="gray")
     
     ax.set_yticks(index)
     ax.set_yticklabels(sector)
     ax.set_xlabel("Por ciento del Salario Medio")
-    ax.axvline(x=0,ls="--",color="black")
+    ax.axvline(x=0,color="black")
     ax.set_title("Salario vs Cartón de Huevo y Variación de empleados")
         
     positivo_patch = mpatches.Patch(color="#A8E6CF", label="Incremento trabajadores")
     negativo_patch = mpatches.Patch(color="#FF8C94", label="Decremento trabajadores")
-    otro_patch = mpatches.Patch(color="#AED9E0", label="Otro dato")
+    otro_patch = mpatches.Patch(color="#AED9E0", label="Cartón de Huevo vs Salario (%)")
 
     ax.legend(handles=[positivo_patch, negativo_patch, otro_patch])
+    
+    ax.set_xticks(list(range(-20,90,10)))
 
     plt.subplots_adjust(left=0.4)
     plt.show()
+
+egg_employees_graph()
