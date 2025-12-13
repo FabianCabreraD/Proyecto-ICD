@@ -1,0 +1,21 @@
+{
+    "Agricultura, ganadería, caza y sivicultura": [6336.8, -13.4562911],
+    "Pesca": [7077.3, 10.67013663],
+    "Explotación de minas y canteras": [8826.5, -0.863376502],
+    "Industria azucarera": [5631.0, -7.1039574],
+    "Industria manufacturada": [7517.3, -4.960931489],
+    "Suministro de electricidad, gas y agua": [12670.6, 1.366601738],
+    "Construcción": [12319.3, -8.337062407],
+    "Comercio, reparación de efectos personales": [4602.2, -6.289627972],
+    "Hoteles y restaurantes": [5411.1, -5.396606156],
+    "Transporte, almacenamiento y comunicaciones": [8601.3, -4.660681665],
+    "Intermediación financiera": [7710.3, -4.841828448],
+    "Servicios empresariales, actividades inmobiliarias y de alquiler": [9355.5, -9.6087989],
+    "Administración pública, defensa, seguridad social": [5566.1, -5.822060279],
+    "Ciencia e innovación tecnológica": [6782.4, -5.031509453],
+    "Educación": [5457.8, -3.278439177],
+    "Salud pública y asistencia social": [6450.0, -4.363330667],
+    "Cultura y deporte": [5045.2, -3.750390837],
+    "Otras actividades de servicios comunales, de asociaciones y personales": [4671.9, -12.11109087]
+  }
+  

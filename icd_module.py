@@ -150,6 +150,11 @@ def egg_mean_price():
         
     mean_price = mean_list(price)
     return mean_price
+
+def salary_cuba():
+    data = read_json("data/salary_cuba.json")
+    data_sorted = dict(sorted(data.items(),key=lambda x:x[1][0],reverse=True))
+    return data_sorted
      
 #GRÁFICOS
 
@@ -330,13 +335,32 @@ def liquids_graph():
 def egg_graph():
     mean_price = egg_mean_price()
     price_five_eggs = mean_price/5
-    x_axis = ["Salario Medio", "Jubilación Mínima"]
-    y_axis = [(price_five_eggs/i)*100 for i in [AVERAGE_SALARY,MINIMUM_PENSION]]
+    salary = salary_cuba()
+    
+    sector = salary.keys()
+    percentage_five = [price_five_eggs/i[0]*100 for i in salary.values()]
+    percentage_thirty = [mean_price/i[0]*100 for i in salary.values()]
+    percentage_employees = [i[1] for i in salary.values()]
     
     fig, ax = plt.subplots()
     
-    ax.bar(x_axis,y_axis)
+    n = len(sector)
+    index = list(range(n))
+    height = 0.35 
     
+    x_egg = [i - height/2 for i in index]
+
+    x_employees = [i + height/2 for i in index]
+    
+    ax.barh(x_egg,percentage_thirty,label="Cartón (30 u)",color="#A8E6CF",height=height)
+    ax.barh(x_egg,percentage_five,label="Cuota normada (5 u)",color="#FF8C94",height=height),
+    ax.barh(x_employees, percentage_employees,height=height, label="Cambio en porcentaje de trabajadores")
+    
+    ax.set_yticks(index)
+    ax.set_yticklabels(sector)
+    ax.set_xlabel("Por ciento del Salario Medio")
+    ax.legend()
+    ax.axvline(x=0,ls="--",color="black")
+            
+    plt.subplots_adjust(left=0.4)
     plt.show()
-    
-rice_vs_minimum_pension()
