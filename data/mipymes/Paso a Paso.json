@@ -11,14 +11,6 @@
     "transfer_payment": true,
     "product": [
         {
-            "type": "",
-            "brand": null,
-            "details": null,
-            "price": 0,
-            "unity": null,
-            "origin": null
-        },
-        {
             "type": "Huevo",
             "brand": null,
             "details": null,

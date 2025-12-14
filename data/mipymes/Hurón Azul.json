@@ -75,14 +75,6 @@
             "origin": null
         },
         {
-            "type": "",
-            "brand": null,
-            "details": null,
-            "price": 0,
-            "unity": null,
-            "origin": null
-        },
-        {
             "type": "Helado",
             "brand": null,
             "details": null,
@@ -96,14 +88,6 @@
             "details": null,
             "price": 990,
             "unity": "1 l",
-            "origin": null
-        },
-        {
-            "type": "",
-            "brand": null,
-            "details": null,
-            "price": 0,
-            "unity": null,
             "origin": null
         },
         {
@@ -121,14 +105,6 @@
             "price": 700,
             "unity": null,
             "origin": "Importado"
-        },
-        {
-            "type": "",
-            "brand": null,
-            "details": null,
-            "price": 0,
-            "unity": null,
-            "origin": null
         },
         {
             "type": "Leche",
