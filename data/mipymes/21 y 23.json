@@ -11,7 +11,7 @@
     "transfer_payment": true,
     "product": [
         {
-            "type": "Frijoles",
+            "type": "Frijol",
             "brand": null,
             "details": "Negros",
             "price": 1200,

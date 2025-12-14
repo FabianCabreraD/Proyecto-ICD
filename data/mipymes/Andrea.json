@@ -27,7 +27,7 @@
             "origin": "Nacional"
         },
         {
-            "type": "Frijoles",
+            "type": "Frijol",
             "brand": null,
             "details": "Negros",
             "price": 750,
@@ -35,7 +35,7 @@
             "origin": null
         },
         {
-            "type": "Frijoles",
+            "type": "Frijol",
             "brand": null,
             "details": "Judías",
             "price": 850,
@@ -43,7 +43,7 @@
             "origin": null
         },
         {
-            "type": "Frijoles",
+            "type": "Frijol",
             "brand": null,
             "details": "Colorados",
             "price": 800,
