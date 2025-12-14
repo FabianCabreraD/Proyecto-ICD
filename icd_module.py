@@ -1,8 +1,12 @@
+#Para obtener los archivos de una carpeta
 import os
+#Para leer archivos
 import json
-import folium
-import matplotlib.pyplot as plt
 import csv
+#Para mapa
+import folium
+#Para gráfico
+import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 import matplotlib.patches as mpatches
