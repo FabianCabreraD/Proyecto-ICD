@@ -1,0 +1,134 @@
+{
+    "name": "DLis",
+    "location": {
+        "province": "La Habana",
+	    "municipality": "La Lisa",
+        "address": "Avenida 251 #4405 E/44 y 46 Punta Brava",
+        "lat": 23.016479,
+        "long": -82.497953
+    },
+    "delivery": null,
+    "tranfer_payment": true,
+    "product": [
+        {
+            "type": "Aceite",
+            "brand": null,
+            "details": null,
+            "price": 900,
+            "unity": "1 l",
+            "origin": null
+        },
+        {
+            "type": "Café",
+            "brand": null,
+            "details": null,
+            "price": 2000,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Azúcar",
+            "brand": null,
+            "details": null,
+            "price": 700,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Arroz",
+            "brand": null,
+            "details": null,
+            "price": 800,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Leche",
+            "brand": null,
+            "details": "Condensada",
+            "price": 550,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Jabón de Baño",
+            "brand": "Jolie",
+            "details": null,
+            "price": 160,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Papel Sanitario",
+            "brand": null,
+            "details": null,
+            "price": 1500,
+            "unity": "12 u",
+            "origin": null
+        },
+        {
+            "type": "Pollo",
+            "brand": null,
+            "details": "Hígado",
+            "price": 750,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Pollo",
+            "brand": null,
+            "details": "Entero",
+            "price": 2000,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Pasta Dental",
+            "brand": "Colgate",
+            "details": null,
+            "price": 1500,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Huevo",
+            "brand": null,
+            "details": null,
+            "price": 3000,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Cerveza",
+            "brand": "Cristal",
+            "details": null,
+            "price": 340,
+            "unity": null,
+            "origin": "Nacional"
+        },
+        {
+            "type": "Cerveza",
+            "brand": "Presidente",
+            "details": null,
+            "price": 220,
+            "unity": null,
+            "origin": "Importado"
+        },
+        {
+            "type": "Jugo",
+            "brand": null,
+            "details": null,
+            "price": 200,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Malta",
+            "brand": null,
+            "details": null,
+            "price": 250,
+            "unity": null,
+            "origin": null
+        }
+    ]
+}

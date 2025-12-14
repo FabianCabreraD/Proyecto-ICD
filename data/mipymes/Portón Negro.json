@@ -1,0 +1,118 @@
+{
+    "name": "Portón Negro",
+    "location": {
+        "province": "La Habana",
+	"municipality": "La Lisa",
+        "address": "46 E/247 y 245",
+        "lat": 23.017756,
+        "long": -82.498765
+    },
+    "delivery": null,
+    "tranfer_payment": true,
+    "product": [
+        {
+            "type": "Leche",
+            "brand": null,
+            "details": null,
+            "price": 2690,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Azúcar",
+            "brand": null,
+            "details": null,
+            "price": 670,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Frijol",
+            "brand": "Negro",
+            "details": null,
+            "price": 1000,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Jabón de Baño",
+            "brand": null,
+            "details": null,
+            "price": 170,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Pasta Dental",
+            "brand": null,
+            "details": null,
+            "price": 900,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Arroz",
+            "brand": null,
+            "details": null,
+            "price": 750,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Leche",
+            "brand": "Condensada",
+            "details": null,
+            "price": 550,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Café",
+            "brand": null,
+            "details": null,
+            "price": 1900,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Papel Sanitario",
+            "brand": null,
+            "details": null,
+            "price": 650,
+            "unity":"4 u",
+            "origin": null
+        },
+        {
+            "type": "Aceite",
+            "brand": null,
+            "details": null,
+            "price": 900,
+            "unity": "0.9 l",
+            "origin": null
+        },
+        {
+            "type": "Cerveza",
+            "brand": "Moyo",
+            "details": null,
+            "price": 230,
+            "unity": null,
+            "origin": "Importado"
+        },
+        {
+            "type": "Malta",
+            "brand": "Santa Isabel",
+            "details": null,
+            "price": 320,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Refresco",
+            "brand": null,
+            "details": null,
+            "price": 250,
+            "unity": null,
+            "origin": null
+        }
+    ]
+}
