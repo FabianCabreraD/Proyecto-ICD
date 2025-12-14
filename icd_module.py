@@ -355,7 +355,7 @@ def milk_beans_minpens():
         labels=labels,
         autopct='%1.1f%%',
         colors=colors,
-        wedgeprops={"edgecolor":"gray","linewidth":0},
+        wedgeprops={"edgecolor":"#003366","linewidth":1},
         textprops={"fontsize":12,"color":"black"},
     )
     plt.show()
@@ -429,3 +429,5 @@ def egg_employees_graph():
 
     plt.subplots_adjust(left=0.4)
     plt.show()
+    
+milk_beans_minpens()
