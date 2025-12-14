@@ -3,7 +3,7 @@
     "location": {
         "province": "La Habana",
         "address": "B E/21 y 23",
-        "municipality": "Plaza de la Revoluci\u00f3n",
+        "municipality": "Plaza de la Revolución",
         "lat": 23.133287,
         "long": -82.392971
     },
@@ -29,13 +29,13 @@
         {
             "type": "Pollo",
             "brand": null,
-            "details": "H\u00edgado",
+            "details": "Hígado",
             "price": 950,
             "unity": "1 kg",
             "origin": null
         },
         {
-            "type": "Caf\u00e9",
+            "type": "Café",
             "brand": null,
             "details": null,
             "price": 600,
@@ -43,7 +43,7 @@
             "origin": null
         },
         {
-            "type": "Az\u00facar",
+            "type": "Azúcar",
             "brand": null,
             "details": null,
             "price": 750,
@@ -68,7 +68,7 @@
         },
         {
             "type": "Helado",
-            "brand": "Gust\u00f3",
+            "brand": "Gustó",
             "details": null,
             "price": 1200,
             "unity": "1 l",
@@ -155,7 +155,7 @@
             "origin": null
         },
         {
-            "type": "Jab\u00f3n",
+            "type": "Jabón",
             "brand": null,
             "details": null,
             "price": 180,

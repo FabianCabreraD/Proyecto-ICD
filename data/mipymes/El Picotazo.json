@@ -61,7 +61,7 @@
         {
             "type": "Refresco",
             "brand": "Booms Boom",
-            "details": "Lim\u00f3n",
+            "details": "Limón",
             "price": 250,
             "unity": "Lata",
             "origin": "Importado"
@@ -103,7 +103,7 @@
             "brand": null,
             "details": "Manzana",
             "price": 180,
-            "unity": "Caja Peque\u00f1a",
+            "unity": "Caja Pequeña",
             "origin": "180"
         },
         {
@@ -125,14 +125,14 @@
         {
             "type": "Pollo",
             "brand": null,
-            "details": "H\u00edgado",
+            "details": "Hígado",
             "price": 850,
             "unity": "1 kg",
             "origin": null
         },
         {
-            "type": "Az\u00facar Blanca",
-            "brand": "Caiob\u00e1",
+            "type": "Azúcar Blanca",
+            "brand": "Caiobá",
             "details": null,
             "price": 800,
             "unity": "1kg",
@@ -147,8 +147,8 @@
             "origin": null
         },
         {
-            "type": "Jab\u00f3n de Ba\u00f1o",
-            "brand": "Joli\u00e9",
+            "type": "Jabón de Baño",
+            "brand": "Joliú",
             "details": null,
             "price": 170,
             "unity": "70 gr",
@@ -165,7 +165,7 @@
         {
             "type": "Pan",
             "brand": null,
-            "details": "Con Ajonjol\u00ed",
+            "details": "Con Ajonjolí",
             "price": 400,
             "unity": "6 u",
             "origin": "Nacional"
@@ -181,7 +181,7 @@
         {
             "type": "Frijol",
             "brand": null,
-            "details": "Ch\u00edcharos verdes",
+            "details": "Chícharos verdes",
             "price": 700,
             "unity": "1 lb",
             "origin": null

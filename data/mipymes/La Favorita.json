@@ -42,7 +42,7 @@
             "origin": null
         },
         {
-            "type": "Jab\u00f3n de Ba\u00f1o",
+            "type": "Jabón de Baño",
             "brand": null,
             "details": null,
             "price": 180,
@@ -58,7 +58,7 @@
             "origin": null
         },
         {
-            "type": "Az\u00facar",
+            "type": "Azúcar",
             "brand": null,
             "details": null,
             "price": 800,
@@ -91,7 +91,7 @@
         },
         {
             "type": "Cerveza",
-            "brand": "La Fr\u00eda",
+            "brand": "La Fría",
             "details": null,
             "price": 270,
             "unity": null,
@@ -140,7 +140,7 @@
         {
             "type": "Frijoles",
             "brand": null,
-            "details": "Ch\u00edcharos",
+            "details": "Chícharos",
             "price": 850,
             "unity": "1 kg",
             "origin": null
@@ -162,7 +162,7 @@
             "origin": null
         },
         {
-            "type": "Caf\u00e9",
+            "type": "Café",
             "brand": null,
             "details": null,
             "price": 1700,

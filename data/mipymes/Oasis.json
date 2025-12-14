@@ -1,9 +1,9 @@
 {
-    "name": "Bodeg\u00f3n Oasis",
+    "name": "Bodegón Oasis",
     "location": {
         "province": "La Habana",
-        "address": "J E/L\u00ednea y 11 #210 B",
-        "municipality": "Plaza de la Revoluci\u00f3n",
+        "address": "J E/Línea y 11 #210 B",
+        "municipality": "Plaza de la Revolución",
         "lat": 23.142762,
         "long": -82.389374
     },
@@ -55,11 +55,11 @@
             "brand": "Dimes",
             "details": null,
             "price": 200,
-            "unity": "Caja Peque\u00f1a",
+            "unity": "Caja Pequeña",
             "origin": "Importado"
         },
         {
-            "type": "Az\u00facar Blanca",
+            "type": "Azúcar Blanca",
             "brand": "Uniao",
             "details": null,
             "price": 730,
@@ -67,7 +67,7 @@
             "origin": "Importado"
         },
         {
-            "type": "Jab\u00f3n de Ba\u00f1o",
+            "type": "Jabón de Baño",
             "brand": "Kare",
             "details": null,
             "price": 215,

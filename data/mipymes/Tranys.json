@@ -3,7 +3,7 @@
     "location": {
         "province": "La Habana",
         "address": "17 E/B y C",
-        "municipality": "Plaza de la Revoluci\u00f3n",
+        "municipality": "Plaza de la Revolución",
         "lat": 23.136019,
         "long": -82.394129
     },
@@ -29,7 +29,7 @@
         {
             "type": "Pollo",
             "brand": null,
-            "details": "H\u00edgado",
+            "details": "Hígado",
             "price": 970,
             "unity": "1 kg",
             "origin": null
@@ -77,13 +77,13 @@
         {
             "type": "Frijoles",
             "brand": null,
-            "details": "Ch\u00edcharos",
+            "details": "Chícharos",
             "price": 940,
             "unity": "1 kg",
             "origin": null
         },
         {
-            "type": "Caf\u00e9",
+            "type": "Café",
             "brand": null,
             "details": null,
             "price": 1900,
@@ -107,7 +107,7 @@
             "origin": null
         },
         {
-            "type": "Az\u00facar",
+            "type": "Azúcar",
             "brand": null,
             "details": null,
             "price": 780,

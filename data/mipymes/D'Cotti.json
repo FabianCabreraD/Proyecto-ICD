@@ -3,6 +3,7 @@
     "location": {
         "province": "La Habana",
         "address": "15 E/L y K",
+        "municipality": "Plaza de la Revolución",
         "lat": 23.142964,
         "long": -82.386882
     },
@@ -52,13 +53,13 @@
         {
             "type": "Frijoles",
             "brand": null,
-            "details": "Ch\u00edcharo",
+            "details": "Chícharo",
             "price": 560,
             "unity": "1 lb",
             "origin": null
         },
         {
-            "type": "Az\u00facar",
+            "type": "Azúcar",
             "brand": null,
             "details": null,
             "price": 810,
@@ -86,7 +87,7 @@
             "brand": null,
             "details": null,
             "price": 200,
-            "unity": "Caja peque\u00f1a",
+            "unity": "Caja pequeña",
             "origin": null
         },
         {

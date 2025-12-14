@@ -55,7 +55,7 @@
             "brand": null,
             "details": null,
             "price": 200,
-            "unity": "Caja Peque\u00f1a",
+            "unity": "Caja Pequeña",
             "origin": null
         },
         {
@@ -69,13 +69,13 @@
         {
             "type": "Pollo",
             "brand": null,
-            "details": "H\u00edgado",
+            "details": "Hígado",
             "price": 980,
             "unity": "1kg",
             "origin": null
         },
         {
-            "type": "Az\u00facar",
+            "type": "Azúcar",
             "brand": null,
             "details": null,
             "price": 760,
@@ -83,7 +83,7 @@
             "origin": null
         },
         {
-            "type": "Jab\u00f3n de Ba\u00f1o",
+            "type": "Jabón de Baño",
             "brand": null,
             "details": null,
             "price": 160,
@@ -109,7 +109,7 @@
         {
             "type": "Frijol",
             "brand": null,
-            "details": "Jud\u00eda",
+            "details": "Judía",
             "price": 900,
             "unity": "500 g",
             "origin": null

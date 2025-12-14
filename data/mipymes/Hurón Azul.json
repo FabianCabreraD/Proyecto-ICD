@@ -1,9 +1,9 @@
 {
-    "name": "Hur\u00f3n Azul",
+    "name": "Hurón Azul",
     "location": {
         "province": "La Habana",
         "address": "Humboldt E/O y P",
-        "municipality": "Plaza de la Revoluci\u00f3n",
+        "municipality": "Plaza de la Revolución",
         "lat": 23.14127,
         "long": -82.379149
     },
@@ -59,7 +59,7 @@
             "origin": null
         },
         {
-            "type": "Az\u00facar",
+            "type": "Azúcar",
             "brand": null,
             "details": null,
             "price": 750,
@@ -139,7 +139,7 @@
             "origin": null
         },
         {
-            "type": "Caf\u00e9",
+            "type": "Café",
             "brand": null,
             "details": null,
             "price": 1800,

@@ -3,7 +3,7 @@
     "location": {
         "province": "La Habana",
         "address": "12 E/17 y 19",
-        "municipality": "Plaza de la Revoluci\u00f3n",
+        "municipality": "Plaza de la Revolución",
         "lat": 23.129395,
         "long": -82.401758
     },
@@ -83,7 +83,7 @@
             "origin": null
         },
         {
-            "type": "Az\u00facar",
+            "type": "Azúcar",
             "brand": null,
             "details": null,
             "price": 840,
