@@ -1,8 +1,9 @@
 {
     "name": "",
     "location": {
-        "province": "",
-        "address": "",
+        "province": "La Habana",
+        "municipality": "Plaza de la Revolución",
+        "address": "17 E/L y M",
         "lat": 23.142525,
         "long": -82.385316
     },

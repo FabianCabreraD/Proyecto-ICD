@@ -2,6 +2,7 @@
     "name": "La Favorita",
     "location": {
         "province": "La Habana",
+        "municipality": "Plaza de la Revolución",
         "address": "J E/23 y 25",
         "lat": 23.137873,
         "long": -82.38487
