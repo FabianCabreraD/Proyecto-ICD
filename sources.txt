@@ -2,7 +2,7 @@ Tasas de cambio de monedas internacionales:
 - https://www.xe.com
 
 Fuentes de ingreso promedio mensual
--
+- 
 
 Precio promedio de 1kg de arroz en diversos países
 - https://preciosmundi.com/
@@ -19,6 +19,6 @@ Fuente Precios Normados del arroz
 Fuente Imagen arroz
 - https://www.cleanpng.com/png-rice-grain-food-healthy-organic-white-rice-with-gr-8081644/
 
-Fuente Memes
+Fuente Iconos
 - https://venngage.com/blog/meme-icons/
 - https://pngtree.com

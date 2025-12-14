@@ -3,8 +3,6 @@ import json
 import folium
 import matplotlib.pyplot as plt
 import csv
-import datetime
-import numpy as np
 import matplotlib.image as mpimg
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 import matplotlib.patches as mpatches
