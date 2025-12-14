@@ -166,7 +166,7 @@ def last_usd_price():
 #GRÁFICOS
 
 def soft_drink_map():    
-    mapa = folium.Map(location=(23.0515757,-82.3304645),zoom_start=11)
+    mapa = folium.Map(location=(23.07088,-82.43847),zoom_start=12)
     
     archivos = mipymes_list()
     for i in archivos:
@@ -196,7 +196,6 @@ def soft_drink_map():
             <p>No alcanza para ningún líquido</p>
         """
 
-        
         if len(products) > 0:
             folium.Marker([lat,long],tooltip=name,popup=html_like,icon=like_marker).add_to(mapa)
         else:
