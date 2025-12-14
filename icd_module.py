@@ -193,6 +193,7 @@ def soft_drink_map():
         
         html_dislike = f"""
             <h1>{name}</h1>
+            <p>No alcanza para ningún líquido</p>
         """
 
         
@@ -429,5 +430,3 @@ def egg_employees_graph():
 
     plt.subplots_adjust(left=0.4)
     plt.show()
-    
-milk_beans_minpens()
