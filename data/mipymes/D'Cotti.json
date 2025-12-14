@@ -45,14 +45,6 @@
         {
             "type": "Frijol",
             "brand": null,
-            "details": null,
-            "price": 0,
-            "unity": "",
-            "origin": ""
-        },
-        {
-            "type": "Frijol",
-            "brand": null,
             "details": "Chícharo",
             "price": 560,
             "unity": "1 lb",
