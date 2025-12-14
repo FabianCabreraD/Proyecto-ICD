@@ -23,6 +23,7 @@ Este proyecto lo demuestra.
 
 ## Resultado
 
+Pues eso, que no alzancan, pero con nestos análisis es aún mas dura la realidad. Te nvito a echarles un ojos
 
 ## Estructura
 
