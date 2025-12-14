@@ -1,5 +1,9 @@
 > **Proyecto ICD**
 
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![Data](https://img.shields.io/badge/Datos_Reales-In_Situ-red?style=for-the-badge&logo=google-maps&logoColor=white)
+
 ## Problemática
 
 Si estás leyendo esto, lo más probable es o que seas un estudiante como yo, o un simple trabajador estatal
@@ -12,8 +16,6 @@ Y aunque sea repetitivo, en cualquiera de los 3 casos, no nos alcanza.
 Este proyecto lo demuestra.
 
 ## Datos
-
-Para que esto fuera serio, tuve que mezclar tres fuentes distintas:
 
 1.  **ONEI:** Nos aporta informes estadísticos de salarios, pensiones, estipendios.
 2.  **elTOQUE:** 'Seguramente nadie sabe qué es', esa 'increíble' página que nos dice cuánto vale nuestra moneda.
