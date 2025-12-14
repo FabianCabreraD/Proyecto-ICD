@@ -22,7 +22,7 @@ Este proyecto lo demuestra.
 
 ## Resultado
 
-Pues eso, que no alzancan, pero con nestos análisis es aún mas dura la realidad. Te nvito a echarles un ojos
+Pues eso, que no alzancan, pero con estos análisis es aún mas dura la realidad. Te invito a echarles un ojos
 
 ## Estructura
 
