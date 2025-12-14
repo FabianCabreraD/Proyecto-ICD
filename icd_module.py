@@ -308,10 +308,8 @@ def rice_vs_minimum_pension():
     imagebox = OffsetImage(img, zoom=0.05)
 
     ab = AnnotationBbox(imagebox, (2, 2400), frameon=False)
-    ax.add_artist(ab)      
-
-    # bar_container = ax.bar(x,y,color=['#aac79a','#f0c4b2','#e3d3c2'],edgecolor="gray")
-    # ax.bar_label(bar_container,y)
+    ax.add_artist(ab)
+    
     ax.bar(x,y,color=['#aac79a','#f0c4b2','#e3d3c2'], edgecolor="gray")
     ax.axhline(y=3056,ls="--",color="black")
     ax.set_title("Pensión mínima y costo del arroz: subsidiado vs privado (7 lb)")
@@ -325,6 +323,41 @@ def rice_vs_minimum_pension():
     ax.annotate("", xytext=(0, y[0]-100), xy=(1, 3020),arrowprops=dict(arrowstyle="->",color="black"))
     ax.set_yticks(list(range(0,3600,500)))
     ax.text(x=1,y=3100,s="Pensión Mínima")
+    plt.show()
+    
+def milk_beans_minpens():
+    files = mipymes_list()
+       
+    milk_kg = []
+    bean_kg = []
+       
+    for i in files:
+        path = return_path_mipymes(i)
+        data = read_json(path)
+           
+        for j in data["product"]:
+            if j["type"] == "Frijol" and j["unity"] == "1 kg":
+                bean_kg.append(j["price"])
+            if j["type"] == "Leche" and j["unity"] == "1 kg":
+                milk_kg.append(j["price"])
+        
+    mean_milk = mean_list(milk_kg)
+    mean_bean = mean_list(bean_kg)
+    surplus = MINIMUM_PENSION - (mean_milk + mean_bean)
+    
+    fractions = [i/MINIMUM_PENSION*100 for i in [mean_milk,mean_bean,surplus]]
+    labels = ["Leche 1 kg","Frijoles 1 kg","Resto"]
+    
+    fig, ax = plt.subplots()
+
+    colors = ['#84994F','#FFE797','#FCB53B']
+    ax.pie(x=fractions,
+        labels=labels,
+        autopct='%1.1f%%',
+        colors=colors,
+        wedgeprops={"edgecolor":"black","linewidth":1},
+        textprops={"fontsize":12,"color":"black"},
+    )
     plt.show()
     
 def liquids_graph():
@@ -380,7 +413,7 @@ def egg_employees_graph():
 
     ax.legend(handles=[positivo_patch, negativo_patch, otro_patch],fontsize="small")
     
-    ax.set_xticks(list(range(-30,90,10)))
+    ax.set_xticks(list(range(-20,90,10)))
     ax.tick_params(axis="y",labelsize="small")
     
         
@@ -388,7 +421,7 @@ def egg_employees_graph():
         if percentage_employees[i] > 0:
             x = percentage_employees[i] + 2
         else:
-            x = percentage_employees[i] - 7
+            x = percentage_employees[i] - 6
         ax.text(x,y=i,s=round(percentage_employees[i],2),fontsize="small")
         
         ax.text(x=percentage_thirty[i]+2, y=i-0.35,s=round(percentage_thirty[i],2),fontsize="small")
