@@ -1,0 +1,166 @@
+{
+    "name": "Calle 13",
+    "location": {
+        "province": "La Habana",
+        "address": "13 E/182 Y 184",
+        "municipality": "Playa",
+        "lat": 23.086112,
+        "long": -82.468054
+    },
+    "delivery": null,
+    "tranfer_payment": true,
+    "product": [
+        {
+            "type": "",
+            "brand": null,
+            "details": null,
+            "price": 0,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Arroz",
+            "brand": null,
+            "details": null,
+            "price": 750,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Azúcar",
+            "brand": null,
+            "details": null,
+            "price": 650,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Frjol",
+            "brand": null,
+            "details": null,
+            "price": 900,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Aceite",
+            "brand": null,
+            "details": null,
+            "price": 990,
+            "unity": "1 l",
+            "origin": null
+        },
+        {
+            "type": "Huevo",
+            "brand": null,
+            "details": null,
+            "price": 2900,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Pollo",
+            "brand": null,
+            "details": "Pechuga",
+            "price": 4700,
+            "unity": "2 kg",
+            "origin": null
+        },
+        {
+            "type": "Café",
+            "brand": null,
+            "details": null,
+            "price": 1500,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Frijol",
+            "brand": null,
+            "details": "Chícharo",
+            "price": 700,
+            "unity": "1 lb",
+            "origin": null
+        },
+        {
+            "type": "Malta",
+            "brand": "Perla Negra",
+            "details": null,
+            "price": 270,
+            "unity": null,
+            "origin": "Importado"
+        },
+        {
+            "type": "Malta",
+            "brand": "Guajira",
+            "details": null,
+            "price": 280,
+            "unity": null,
+            "origin": "Nacional"
+        },
+        {
+            "type": "Cerveza",
+            "brand": "Cristal",
+            "details": null,
+            "price": 320,
+            "unity": null,
+            "origin": "Nacional"
+        },
+        {
+            "type": "Cerveza",
+            "brand": "Moyo",
+            "details": null,
+            "price": 230,
+            "unity": null,
+            "origin": "Importado"
+        },
+        {
+            "type": "Leche",
+            "brand": null,
+            "details": "Polvo",
+            "price": 1670,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Pasta Dental",
+            "brand": "Colgate",
+            "details": null,
+            "price": 900,
+            "unity": null,
+            "origin": "Importado"
+        },
+        {
+            "type": "Jabón de Baño",
+            "brand": null,
+            "details": null,
+            "price": 120,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Papel Sanitario",
+            "brand": null,
+            "details": null,
+            "price": 550,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Leche",
+            "brand": null,
+            "details": "Condensada",
+            "price": 500,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Helado",
+            "brand": "Gustó",
+            "details": null,
+            "price": 1300,
+            "unity": "1 l",
+            "origin": null
+        }
+    ]
+}
