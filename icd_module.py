@@ -84,6 +84,7 @@ def currency_vs_data(data,data_currency):
     values = [dt/i for i in data_currency]
     return values
 
+#Retorna el precio promedio de los líquidos
 def mean_price_liquids():
     soft_drink = []
     beer = []
@@ -112,6 +113,7 @@ def mean_price_liquids():
     
     return [mean_soft_drink,mean_beer,mean_juice,mean_malt]
 
+#Devuelve promedios usados
 def means():
     data = currency_data()
     usd, euro = data[1], data[2]
@@ -134,7 +136,8 @@ def means():
     print("--------------------------------------------")
     for mean in means:
         print(mean)
-     
+ 
+#Retorna el precio promedio del huevo     
 def egg_mean_price():
     files = mipymes_list()
     
@@ -152,11 +155,13 @@ def egg_mean_price():
     mean_price = mean_list(price)
     return mean_price
 
+#Lee el archivo de los salarios en Cuba y los devuelve ordenados
 def salary_cuba():
     data = read_json("data/salary_cuba.json")
     data_sorted = dict(sorted(data.items(),key=lambda x:x[1][0],reverse=True))
     return data_sorted
 
+#Retorna el valor del usd del último día
 def last_usd_price():
     usd = currency_data()[1]
     last_usd = usd[-1]
@@ -164,7 +169,7 @@ def last_usd_price():
     
 #GRÁFICOS
 
-#Mapa de las mipymes
+#Mapa de las mipymes, el marcador varía en dependencia del precio de los líquidos
 def soft_drink_map():    
     mapa = folium.Map(location=(23.0515757,-82.3304645),zoom_start=11)
     
@@ -279,7 +284,7 @@ def rice_and_salary_graph():
       
     ax.barh(countries,rice,color="#78aa87",edgecolor="gray", label="Precio Promedio 1kg")
     ax.barh(countries,percentage,edgecolor="gray",color="#c3854c",label="Por ciento del salario medio")
-    ax.axvline(x=0,ls = "--", color="black")
+    ax.axvline(x=0, color="black")
     ticks = ax.get_xticks()
     ax.set_xticks(ticks)
     ax.set_xticklabels([abs(int(t)) for t in ticks])
