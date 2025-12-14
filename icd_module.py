@@ -10,6 +10,9 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 import matplotlib.patches as mpatches
+#Para mostrar tabla
+import prettytable
+from prettytable import PrettyTable
 
 #CONSTANTES
 MIPYMES_PATH = "data\\mipymes"
@@ -29,7 +32,7 @@ def mipymes_list():
     return files
 
 #Devuelve el path del json dado su nombre
-def return_path_mipymes(name):
+def path_mipyme(name):
     path = f"{MIPYMES_PATH+"\\"+name}"
     return path
 
@@ -66,7 +69,7 @@ def rice_mean_price():
     files = mipymes_list()
     prices = []
     for i in files:
-        path = return_path_mipymes(i)
+        path = path_mipyme(i)
         data = read_json(path)
         for j in data["product"]:
             if j["type"].lower() == "Arroz".lower():
@@ -87,57 +90,49 @@ def currency_vs_data(data,data_currency):
     return values
 
 #Retorna el precio promedio de los líquidos
-def mean_price_liquids():
-    soft_drink = []
-    beer = []
-    juice = []
-    malt = []
+def liquids_mean_price():    
+    prices = {
+        "Refresco": [],
+        "Cerveza": [],
+        "Jugo": [],
+        "Malta": []
+    }
     
     mipymes = mipymes_list()
     
     for i in mipymes:
-        path = return_path_mipymes(i)
+        path = path_mipyme(i)
         json_file = read_json(path)
         for j in json_file['product']:
-            if j['type'] == "Refresco":
-                soft_drink.append(j['price'])
-            elif j['type'] == "Cerveza":
-                beer.append(j['price'])
-            elif j['type'] == "Jugo":
-                juice.append(j['price']) 
-            elif j['type'] == "Malta":
-                malt.append(j['price'])
+            if j["type"] in prices:
+                prices[j["type"]].append(j["price"])
     
-    mean_soft_drink = mean_list(soft_drink)
-    mean_beer = mean_list(beer)
-    mean_juice = mean_list(juice)
-    mean_malt = mean_list(malt)
+    mean_soft_drink = mean_list(prices["Refresco"])
+    mean_beer = mean_list(prices["Cerveza"])
+    mean_juice = mean_list(prices["Jugo"])
+    mean_malt = mean_list(prices["Malta"])
     
     return [mean_soft_drink,mean_beer,mean_juice,mean_malt]
 
 #Devuelve promedios usados
-def means():
+def means_table():
     data = currency_data()
     usd, euro = data[1], data[2]
     
     usd_mean = round(mean_list(usd))
     euro_mean = round(mean_list(euro))
     
-    tx1 = f"Precio promedio de USD: {usd_mean}"
-    tx2 = f"Precio promedio de EUR: {euro_mean}"
-    tx3 = f"Promedio Salario Medio en USD: {round(AVERAGE_SALARY/usd_mean,2)}"
-    tx4 = f"Promedio Salario Medio en EUR: {round(AVERAGE_SALARY/euro_mean,2)}"
-    tx5 = f"Promedio Pensión Mínima en USD: {round(MINIMUM_PENSION/usd_mean,2)}"
-    tx6 = f"Promedio Pensión Mínima en EUR: {round(MINIMUM_PENSION/euro_mean,2)}"
-    tx7 = f"Promedio Estipendio 1er Año en USD: {round(STIPEND_YEAR_ONE/usd_mean,2)}"
-    tx8 = f"Promedio Estipendio 1er Año en EUR: {round(STIPEND_YEAR_ONE/euro_mean,2)}"
+    sectors = ["Salario Medio", "Pensión Mínima", "Estipendio 1er Año"]
+    constants = [AVERAGE_SALARY, MINIMUM_PENSION, STIPEND_YEAR_ONE]
     
-    means = [tx1,tx2,tx3,tx4,tx5,tx6,tx7,tx8]
+    table = PrettyTable()
+    for i in ["Últimos 3 meses", "USD", "EURO"]:
+        table.add_column(i,[])
+    for sector,constant in zip(sectors, constants):
+        table.add_row([sector,round(constant/usd_mean,2),round(constant/euro_mean,2)])
     
-    print("Últimos 3 Meses")
-    print("--------------------------------------------")
-    for mean in means:
-        print(mean)
+    print(table)
+    
  
 #Retorna el precio promedio del huevo     
 def egg_mean_price():
@@ -146,7 +141,7 @@ def egg_mean_price():
     price = []
     
     for i in files:
-        path = return_path_mipymes(i)
+        path = path_mipyme(i)
         data = read_json(path)
         
         for j in data["product"]:
@@ -158,8 +153,8 @@ def egg_mean_price():
     return mean_price
 
 #Lee el archivo de los salarios en Cuba y los devuelve ordenados
-def salary_cuba():
-    data = read_json("data/salary_cuba.json")
+def cuba_salary():
+    data = read_json("data/cuba_salary.json")
     data_sorted = dict(sorted(data.items(),key=lambda x:x[1][0],reverse=True))
     return data_sorted
 
@@ -171,7 +166,6 @@ def last_usd_price():
     
 #GRÁFICOS
 
-#Mapa de las mipymes, el marcador varía en dependencia del precio de los líquidos
 def soft_drink_map():    
     mapa = folium.Map(location=(23.0515757,-82.3304645),zoom_start=11)
     
@@ -339,7 +333,7 @@ def milk_beans_minpens():
     bean_kg = []
        
     for i in files:
-        path = return_path_mipymes(i)
+        path = path_mipyme(i)
         data = read_json(path)
            
         for j in data["product"]:
@@ -362,13 +356,13 @@ def milk_beans_minpens():
         labels=labels,
         autopct='%1.1f%%',
         colors=colors,
-        wedgeprops={"edgecolor":"black","linewidth":1},
+        wedgeprops={"edgecolor":"gray","linewidth":2},
         textprops={"fontsize":12,"color":"black"},
     )
     plt.show()
     
 def liquids_graph():
-    means = mean_price_liquids()
+    means = liquids_mean_price()
     products = ["Refresco", "Cerveza", "Jugo", "Malta"]
     
     fig, ax = plt.subplots(figsize=(7,5))
@@ -386,8 +380,7 @@ def liquids_graph():
 
 def egg_employees_graph():
     mean_price = egg_mean_price()
-    price_five_eggs = mean_price/5
-    salary = salary_cuba()
+    salary = cuba_salary()
     
     sector = salary.keys()
     percentage_thirty = [mean_price/i[0]*100 for i in salary.values()]
@@ -405,7 +398,9 @@ def egg_employees_graph():
     
     color_list = ["#A8E6CF" if v > 0 else "#FF8C94" for v in percentage_employees]
     
-    ax.barh(x_egg,percentage_thirty,label="Cartón (30 u)",color="#AED9E0",height=height,edgecolor="gray")
+    edgecolor = ["gray" if i != "Educación" else "red" for i in sector]
+    
+    ax.barh(x_egg,percentage_thirty,label="Cartón (30 u)",color="#AED9E0",height=height,edgecolor=edgecolor)
     ax.barh(x_employees, percentage_employees,height=height,color=color_list,edgecolor="gray")
     
     ax.set_yticks(index)
