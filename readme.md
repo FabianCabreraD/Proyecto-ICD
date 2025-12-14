@@ -2,7 +2,6 @@
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
-![Data](https://img.shields.io/badge/Datos_Reales-In_Situ-red?style=for-the-badge&logo=google-maps&logoColor=white)
 
 ## Problemática
 
@@ -28,20 +27,20 @@ Este proyecto lo demuestra.
 
 ```text
 ├── data/                    # Todos los datos usados: Mipymes, informes de la ONEI, datos de la web.
-│   ├── mipymes/              # JSON de las mipymes.
+│   ├── mipymes/             # JSON de las mipymes.
 │   ├── cuba_salary.json     # Salarios medios en Cuba por sectores.
 │   ├── indicadores.pdf      # Informe de la ONEI.
 │   ├── precio_compra.csv    # Datos de cambio de la moneda extraídos de elTOQUE.
 │   ├── salary_and_rice.json # Salarios medio y precio promedio de arroz en países de América.
 │
-├── evidencia/             # Fotos de las mipymes que visité
+├── evidencia/               # Fotos de las mipymes que visité
 │
-├── img/               # Imágenes usadas en el Jupyter
+├── img/                     # Imágenes usadas en el Jupyter
 │
-├── main.ipynb           #Jupyter Notebook para mostrar la historia y las gráficas
+├── main.ipynb               #Jupyter Notebook para mostrar la historia y las gráficas
 │
-├── icd_module.py             # Archivos con las funciones utilizadas para procesar la información y crear gráficos
-├── readme.md        # Para explicar un poquito el proyecto.
-├── report.pdf              # Se profundiza en la problemática y etapas del trabajo.
+├── icd_module.py            # Archivos con las funciones utilizadas para procesar la información y crear gráficos
+├── readme.md                # Para explicar un poquito el proyecto.
+├── report.pdf               # Se profundiza en la problemática y etapas del trabajo.
 └── Readme.md                # Documentación del proyecto
 ```
