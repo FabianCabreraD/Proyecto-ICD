@@ -2,8 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
-![Jupyter](https://img.shields.io/badge/FOLIUM-000000?style=for-the-badge&logo=folium&logoColor=green)
-![Jupyter](https://img.shields.io/badge/MATPLOTLIB-20B2AA?style=for-the-badge)
+![Matlpotlib](https://img.shields.io/badge/-Matplotlib-000000?style=for-the-badge&logo=python)
 ## Problemática
 
 Si estás leyendo esto, lo más probable es o que seas un estudiante como yo, o un simple trabajador estatal
