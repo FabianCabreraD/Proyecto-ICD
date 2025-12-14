@@ -11,7 +11,6 @@ import matplotlib.image as mpimg
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 import matplotlib.patches as mpatches
 #Para mostrar tabla
-import prettytable
 from prettytable import PrettyTable
 
 #CONSTANTES
@@ -351,12 +350,12 @@ def milk_beans_minpens():
     
     fig, ax = plt.subplots()
 
-    colors = ['#84994F','#FFE797','#FCB53B']
+    colors = ["#006494","#0582ca","#00a6fb"]
     ax.pie(x=fractions,
         labels=labels,
         autopct='%1.1f%%',
         colors=colors,
-        wedgeprops={"edgecolor":"gray","linewidth":2},
+        wedgeprops={"edgecolor":"gray","linewidth":0},
         textprops={"fontsize":12,"color":"black"},
     )
     plt.show()
