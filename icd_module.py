@@ -162,8 +162,6 @@ def table():
         cell.set_linewidth(0.5)           
         cell.set_facecolor("white")      
         
-    ax.set_title("Hola",)
-    
     plt.show()
     
 #Retorna el precio promedio del huevo     
