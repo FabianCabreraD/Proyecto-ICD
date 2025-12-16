@@ -299,7 +299,7 @@ def salary_cuba_vs_america():
     ax.set_xticks(list(range(0,4100,1000)))
     index_cuba = list(range(len(x)))[0]
     ax.annotate(f"Cambio: 1 USD - {usd} ({date})", (300,index_cuba),(1000,index_cuba-0.1),arrowprops=dict(arrowstyle="->",color="black"))
-    ax.set_title("Salario en varios países de América en USD")
+    ax.set_title("Salario Mensual en varios países de América en USD")
     for i in enumerate(x):
         index = i[0]
         ax.text(y[index]+3,index-0.2,s=f"{y[index]}")
@@ -443,8 +443,9 @@ def liquids_graph():
         ax.text(x=index,y=mean+5,s=mean,ha="center")
     
     ax.axhline(y=200,ls="--",color="#003049")
-    ax.annotate("Estipendio 1er Año Mensual", xytext=(-0.2,330), xy=(0, 205),arrowprops=dict(arrowstyle="->",color="#003049",linewidth=2),weight="bold")
+    ax.annotate("Estipendio 1er Año Mensual", xytext=(-0.2,310), xy=(0, 205),arrowprops=dict(arrowstyle="->",color="#003049",linewidth=2),weight="bold")
     ax.set_title("Precio promedio de líquidos")
+    ax.set_ylim(top=325)
     ax.set_ylabel("Precio en CUP")
     plt.show()
     
