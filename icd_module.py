@@ -130,9 +130,11 @@ def beer_price():
     national_mean = mean_list(national)
     imported_mean = mean_list(imported)
     return national_mean, imported_mean
-
-#Devuelve promedios usados
-def means_table():
+    
+def table():
+    columns_labels = ["","USD", "EURO"]
+    table_data = []
+    
     data = currency_data()
     usd, euro = data[1], data[2]
     
@@ -142,15 +144,28 @@ def means_table():
     sectors = ["Salario Medio", "Pensión Mínima", "Estipendio 1er Año"]
     constants = [AVERAGE_SALARY, MINIMUM_PENSION, STIPEND_YEAR_ONE]
     
-    table = PrettyTable()
-    for i in ["Últimos 3 meses", "USD", "EURO"]:
-        table.add_column(i,[])
     for sector,constant in zip(sectors, constants):
-        table.add_row([sector,round(constant/usd_mean,2),round(constant/euro_mean,2)])
+        table_data.append([sector,round(constant/usd_mean,2),round(constant/euro_mean,2)])
     
-    print(table)
+    fig, ax = plt.subplots()
+    ax.axis("off")
+        
+    table = ax.table(cellText=table_data,colLabels=columns_labels,loc="center")
+
+    table.auto_set_font_size(False)
+    table.set_fontsize(12)
+    table.scale(1.2, 1.5)
+
+    for key, cell in table.get_celld().items():
+        cell.set_edgecolor("lightgrey")   
+        cell.set_text_props(ha="center", va="center")
+        cell.set_linewidth(0.5)           
+        cell.set_facecolor("white")      
+        
+    ax.set_title("Hola",)
     
- 
+    plt.show()
+    
 #Retorna el precio promedio del huevo     
 def egg_mean_price():
     files = mipymes_list()
@@ -266,7 +281,6 @@ def salary_graph():
     ax.legend(loc="upper left", bbox_to_anchor=(1, 1))
     plt.show()
     
-#Terminar gráfico
 def salary_cuba_vs_america():
     usd = last_usd_price()
     date = last_currency_date()
@@ -294,7 +308,6 @@ def salary_cuba_vs_america():
         
     
     plt.show()
-    
     
 #Precio promedio del arroz en países de América
 def rice_mean_price_graph(ax):
@@ -453,6 +466,8 @@ def beer_graph():
         ax.annotate("",(i,inf),(i,sup),arrowprops=dict(arrowstyle="<->"))
         porcentage = round((sup-inf)/200*100,2)
         ax.text(x=i+0.2,y=(inf+sup)/2,s=f"{porcentage}%",ha="center",fontsize="large")
+        ax.text(x=i,y=y[i]+5,s=y[i], ha="center")
+    ax.set_ylim(top=340)
     plt.show()
     
 
@@ -495,7 +510,6 @@ def egg_employees_graph():
     
     ax.set_xticks(list(range(-20,90,10)))
     ax.tick_params(axis="y",labelsize="small")
-    
         
     for i in range(len(sector)):
         if percentage_employees[i] > 0:
