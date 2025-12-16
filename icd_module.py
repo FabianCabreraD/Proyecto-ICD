@@ -47,7 +47,7 @@ def mean_list(list):
 
 #Retorna las fechas y el valor correspondiente del dolar y el euro
 def currency_data():
-    with open("d:\\uh\\icd\\Proyecto-ICD\\data\\precio_compra.csv","r") as file:
+    with open("d:\\uh\\icd\\Proyecto-ICD\\data\\precio_venta.csv","r") as file:
         data = csv.reader(file)
         data_list = [i for i in data]
         
@@ -140,6 +140,9 @@ def table():
     
     usd_mean = round(mean_list(usd))
     euro_mean = round(mean_list(euro))
+    
+    print(usd_mean)
+    print(euro_mean)
     
     sectors = ["Salario Medio", "Pensión Mínima", "Estipendio 1er Año"]
     constants = [AVERAGE_SALARY, MINIMUM_PENSION, STIPEND_YEAR_ONE]
@@ -386,14 +389,14 @@ def rice_vs_minimum_pension():
     ax.text(x[0],y[0]/2,f"{percentage}%",ha='center',color='black',fontname="Arial",fontweight="bold",fontsize=20)
     for index in enumerate(x):
         ind = index[0]
-        if index != 0:
+        if ind != 0:
             s = f"{y[ind]} ({round(y[ind]/MINIMUM_PENSION*100,2)}%)"
         else:
             s = y[ind]
         ax.text(x=x[ind], y=y[ind]+20,s=s,ha="center")
-    ax.annotate("", xytext=(0, y[0]-100), xy=(1, 3020),arrowprops=dict(arrowstyle="->",color="black"))
+    ax.annotate("", xytext=(0, y[0]-400), xy=(1, 3020),arrowprops=dict(arrowstyle="->",color="black"))
     ax.set_yticks(list(range(0,3600,500)))
-    ax.text(x=1,y=3100,s="Pensión Mínima")
+    ax.text(x=1,y=3100,s="Pensión Mínima",fontweight="bold")
     plt.show()
     
 def milk_beans_minpens():
@@ -490,7 +493,8 @@ def egg_employees_graph():
     
     color_list = ["#A8E6CF" if v > 0 else "#FF8C94" for v in percentage_employees]
     
-    edgecolor = ["gray" if i != "Educación" else "red" for i in sector]
+    key_sectors = ["Educación", "Salud pública y asistencia social", "Agricultura, ganadería, caza y sivicultura"]
+    edgecolor = ["gray" if i not in key_sectors else "red" for i in sector]
     
     ax.barh(x_egg,percentage_thirty,label="Cartón (30 u)",color="#AED9E0",height=height,edgecolor=edgecolor)
     ax.barh(x_employees, percentage_employees,height=height,color=color_list,edgecolor="gray")
@@ -510,14 +514,15 @@ def egg_employees_graph():
     ax.set_xticks(list(range(-20,90,10)))
     ax.tick_params(axis="y",labelsize="small")
         
+    sectors = list(sector)
     for i in range(len(sector)):
         if percentage_employees[i] > 0:
             x = percentage_employees[i] + 2
         else:
             x = percentage_employees[i] - 6
         ax.text(x,y=i,s=round(percentage_employees[i],2),fontsize="small")
-        
-        ax.text(x=percentage_thirty[i]+2, y=i-0.35,s=round(percentage_thirty[i],2),fontsize="small")
+        fontweight = "normal" if sectors[i] not in key_sectors else "bold"
+        ax.text(x=percentage_thirty[i]+2, y=i-0.35,s=round(percentage_thirty[i],2),fontsize="small",fontweight=fontweight)
 
     plt.subplots_adjust(left=0.4)
     plt.show()
