@@ -8,7 +8,7 @@
 Si estás leyendo esto, lo más probable es o que seas un estudiante como yo, o un simple trabajador estatal
 o una persona retirada.
 
-En cualquiera de los 3 casos, el estado nos entrega un dinero: Un estipendio, un salario o una pensión.
+En cualquiera de los 3 casos, el estado nos entrega un dinero: un estipendio, un salario o una pensión.
 
 Y aunque sea repetitivo, en cualquiera de los 3 casos, no nos alcanza.
 
@@ -22,7 +22,7 @@ Este proyecto lo demuestra.
 
 ## Resultado
 
-Pues eso, que no alzancan, pero con estos análisis es aún mas dura la realidad. Te invito a echarles un ojos
+Pues eso, que no alzancan, pero con estos análisis es aún mas dura la realidad. Te invito a echarles un ojo.
 
 ## Estructura
 
