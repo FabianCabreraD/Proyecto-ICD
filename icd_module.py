@@ -424,7 +424,7 @@ def milk_beans_minpens():
     
     fig, ax = plt.subplots()
 
-    colors = ["#fe218b","#fed700","#21b0fe"]
+    colors = ["#ef476f","#ffd166","#26547c"]
     wedges, texts, autotexts = ax.pie(x=fractions,
         labels=labels,
         autopct='%1.1f%%',
