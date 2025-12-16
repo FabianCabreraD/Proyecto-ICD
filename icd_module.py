@@ -452,27 +452,6 @@ def liquids_graph():
     ax.set_ylabel("Precio en CUP")
     plt.show()
     
-def beer_graph():
-    national, imported = beer_price()
-    x = ["Nacional", "Importada"]
-    y = [national, imported]
-    
-    fig, ax = plt.subplots(figsize=(6,4))
-    
-    ax.bar(x, y, color="#F0B884",edgecolor="gray")
-    ax.axhline(y=200,ls="--",color="#003049")
-    ax.set_title("Precios de la cerveza nacional e importada vs. estipendio universitario")
-    for i in range(len(x)):
-        inf = 200
-        sup = y[i]
-        ax.annotate("",(i,inf),(i,sup),arrowprops=dict(arrowstyle="<->"))
-        porcentage = round((sup-inf)/200*100,2)
-        ax.text(x=i+0.2,y=(inf+sup)/2,s=f"{porcentage}%",ha="center",fontsize="large")
-        ax.text(x=i,y=y[i]+5,s=y[i], ha="center")
-    ax.set_ylim(top=340)
-    plt.show()
-    
-
 def egg_employees_graph():
     mean_price = egg_mean_price()
     salary = cuba_salary()
@@ -526,3 +505,26 @@ def egg_employees_graph():
 
     plt.subplots_adjust(left=0.4)
     plt.show()
+    
+def beer_graph():
+    national, imported = beer_price()
+    x = ["Nacional", "Importada"]
+    y = [national, imported]
+    
+    fig, ax = plt.subplots(figsize=(6,4))
+    
+    for i in range(len(x)):
+        ax.bar(i,200, color="#e7bc91")
+        ax.bar(i,y[i]-200,bottom=200,color="#a47148")
+        inf = 200
+        sup = y[i]
+        ax.annotate("",(i,inf),(i,sup),arrowprops=dict(arrowstyle="<->",color="white"))
+        porcentage = round((sup-inf)/200*100,2)
+        ax.text(x=i+0.2,y=(inf+sup)/2,s=f"{porcentage}%",ha="center",fontsize="large",color="white",fontweight="bold")
+        ax.text(x=i,y=y[i]+5,s=y[i], ha="center")
+    ax.axhline(y=200,ls="--",color="white")
+    ax.set_title("Precios de la cerveza nacional e importada vs. estipendio universitario")
+    ax.set_ylim(top=340)
+    ax.set_xticks([0,1])
+    ax.set_xticklabels(x)
+    plt.show()    
