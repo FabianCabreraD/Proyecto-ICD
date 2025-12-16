@@ -278,7 +278,7 @@ def salary_graph():
     ax.plot(dates,euro_vs_stipend,label="Estipendio 1er Año Euro",color="#5f3c8c")
     ax.set_xticks(dates[::15])
     ax.tick_params(axis="x",rotation=45)
-    #Arreglar posicion lygenda
+    ax.set_title("Ingresos en México frente a divisas internacionales (Últimos 3 meses)")
     ax.legend(loc="upper left", bbox_to_anchor=(1, 1))
     plt.show()
     
@@ -296,9 +296,9 @@ def salary_cuba_vs_america():
     
     fig, ax = plt.subplots(figsize=(10,6))
     
-    color = ["#1564a3" if i != "Cuba" else "#EC2E30" for i in x]
+    color = ["#ff0f7b" if i != "Cuba" else "#f89b29" for i in x]
 
-    ax.barh(x,y,color=color,edgecolor="black")
+    ax.barh(x,y,color=color,edgecolor="gray")
     ax.set_xticks(list(range(0,4100,1000)))
     index_cuba = list(range(len(x)))[0]
     ax.annotate(f"Cambio: 1 USD - {usd} ({date})", (300,index_cuba),(1000,index_cuba-0.1),arrowprops=dict(arrowstyle="->",color="black"))
@@ -424,21 +424,25 @@ def milk_beans_minpens():
     
     fig, ax = plt.subplots()
 
-    colors = ["#006494","#0582ca","#00a6fb"]
-    ax.pie(x=fractions,
+    colors = ["#fe218b","#fed700","#21b0fe"]
+    wedges, texts, autotexts = ax.pie(x=fractions,
         labels=labels,
         autopct='%1.1f%%',
         colors=colors,
         wedgeprops={"edgecolor":"#003366","linewidth":1},
         textprops={"fontsize":12,"color":"black"},
     )
+    for i in autotexts:
+        i.set_fontweight("bold")
+        i.set_color("white")
+    ax.set_title("Reparto de la pensión mínima en productos básicos")
     plt.show()
-    
+
 def liquids_graph():
     means = liquids_mean_price()
     products = ["Refresco", "Cerveza", "Jugo", "Malta"]
     
-    fig, ax = plt.subplots(figsize=(7,5))
+    fig, ax = plt.subplots(figsize=(6,4))
     
     ax.bar(products,means,color="#F0B884",edgecolor="gray")
     
