@@ -172,7 +172,7 @@ def soft_drink_map():
     for i in archivos:
         data = read_json(f"d:\\uh\\icd\\Proyecto-ICD\\data\\mipymes\\{i}")
         
-        name = data['name']
+        name = data['name'] if data["name"] is not None else j["address"]
         lat = data["location"]["lat"]
         long = data["location"]["long"]          
         

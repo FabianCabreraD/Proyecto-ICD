@@ -1,0 +1,133 @@
+{
+    "name": null,
+    "location": {
+        "province": "La Habana",
+	    "municipality": "Marianao",
+        "address": "51 E/128 y 124",
+        "lat": 23.072109,
+        "long": -82.432517
+    },
+    "delivery": null,
+    "tranfer_payment": true,
+    "product": [
+        {
+            "type": "Cerveza",
+            "brand": "Unlaguer",
+            "details": null,
+            "price": 240,
+            "unity": null,
+            "origin": "Importado"
+        },
+        {
+            "type": "Refresco",
+            "brand": null,
+            "details": null,
+            "price": 230,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Jugo",
+            "brand": null,
+            "details": null,
+            "price": 350,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Jugo",
+            "brand": null,
+            "details": null,
+            "price": 190,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Pechuga",
+            "brand": null,
+            "details": null,
+            "price": 4700,
+            "unity": "2 kg",
+            "origin": null
+        },
+        {
+            "type": "Jugo",
+            "brand": null,
+            "details": null,
+            "price": 350,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Pasta",
+            "brand": null,
+            "details": null,
+            "price": 800,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Papel Sanitario",
+            "brand": null,
+            "details": null,
+            "price": 580,
+            "unity": "4 u",
+            "origin": null
+        },
+        {
+            "type": "Leche",
+            "brand": null,
+            "details": null,
+            "price": 1675,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Arroz",
+            "brand": null,
+            "details": null,
+            "price": 650,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Azúcar",
+            "brand": null,
+            "details": null,
+            "price": 600,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Sal",
+            "brand": null,
+            "details": null,
+            "price": 250,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Café",
+            "brand": "El Morro",
+            "details": null,
+            "price": 1900,
+            "unity": null,
+            "origin": null
+        },{
+            "type": "Aceite",
+            "brand": null,
+            "details": null,
+            "price": 890,
+            "unity": "0.9 l",
+            "origin": null
+        },
+        {
+            "type": "Frijol",
+            "brand": null,
+            "details": "Negro",
+            "price": 800,
+            "unity": null,
+            "origin": null
+        }
+    ]
+}
