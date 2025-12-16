@@ -1,0 +1,102 @@
+{
+    "name": "Los Zafiros",
+    "location": {
+        "province": "La Habana",
+	"municipality": "Marianao",
+        "address": "100 E/45 y 47",
+        "lat": 23.081799,
+        "long": -82.422287
+    },
+    "delivery": null,
+    "tranfer_payment": true,
+    "product": [
+        {
+            "type": "Leche",
+            "brand": null,
+            "details": "Polvo",
+            "price": 1650,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Pollo",
+            "brand": null,
+            "details": "Pechuga",
+            "price": 5000,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Frijol",
+            "brand": null,
+            "details": "Negro",
+            "price": 800,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Sal",
+            "brand": null,
+            "details": null,
+            "price": "1 kg",
+            "unity": 200,
+            "origin": null
+        },
+        {
+            "type": "Papel Sanitario",
+            "brand": null,
+            "details": null,
+            "price": 500,
+            "unity": "4 u",
+            "origin": null
+        },
+        {
+            "type": "Azúcar",
+            "brand": null,
+            "details": null,
+            "price": 600,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Pan",
+            "brand": null,
+            "details": null,
+            "price": 250,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Refresco",
+            "brand": "Boom Booms",
+            "details": null,
+            "price": 250,
+            "unity": null,
+            "origin": "Importado"
+        },
+        {
+            "type": "Cerveza",
+            "brand": "Cristal",
+            "details": null,
+            "price": 300,
+            "unity": null,
+            "origin": "Nacional"
+        },
+        {
+            "type": "Helado",
+            "brand": null,
+            "details": null,
+            "price": "1 l",
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Jugo",
+            "brand": null,
+            "details": null,
+            "price": 180,
+            "unity": null,
+            "origin": null
+        }
+    ]
+}

@@ -1,0 +1,126 @@
+{
+    "name": "",
+    "location": {
+        "province": "",
+	    "municipality": "",
+        "address": "",
+        "lat": 0,
+        "long": 0
+    },
+    "delivery": null,
+    "tranfer_payment": true,
+    "product": [
+        {
+            "type": "",
+            "brand": null,
+            "details": null,
+            "price": 0,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Arroz",
+            "brand": null,
+            "details": null,
+            "price": 650,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Frijol",
+            "brand": null,
+            "details": "Negro",
+            "price": 800,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Azúcar",
+            "brand": null,
+            "details": null,
+            "price": 600,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Sal",
+            "brand": null,
+            "details": null,
+            "price": 250,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Leche",
+            "brand": null,
+            "details": null,
+            "price": 2500,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Leche",
+            "brand": null,
+            "details": "Condensada",
+            "price": 600,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Cerveza",
+            "brand": "Cristal",
+            "details": null,
+            "price": 330,
+            "unity": null,
+            "origin": "Nacional"
+        },
+        {
+            "type": "Jugo",
+            "brand": null,
+            "details": null,
+            "price": 190,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Refresco",
+            "brand": null,
+            "details": null,
+            "price": 230,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Papel Sanitario",
+            "brand": null,
+            "details": null,
+            "price": 780,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "",
+            "brand": null,
+            "details": null,
+            "price": 0,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Aceite",
+            "brand": null,
+            "details": null,
+            "price": 890,
+            "unity": "0.9 l",
+            "origin": null
+        },
+        {
+            "type": "Pechuga",
+            "brand": null,
+            "details": null,
+            "price": 2500,
+            "unity": "1 kg",
+            "origin": null
+        }
+    ]
+}

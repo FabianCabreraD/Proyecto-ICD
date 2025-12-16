@@ -1,0 +1,133 @@
+{
+    "name": "Al 100",
+    "location": {
+        "province": "La Habana",
+	"municipality": "Marianao",
+        "address": "100 E/51 y 51A",
+        "lat": 23.080639,
+        "long": -82.421805
+    },
+    "delivery": null,
+    "tranfer_payment": true,
+    "product": [
+        {
+            "type": "Arroz",
+            "brand": null,
+            "details": null,
+            "price": 700,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Huevo",
+            "brand": null,
+            "details": null,
+            "price": 3300,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Azúcar",
+            "brand": null,
+            "details": null,
+            "price": 650,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Frijol",
+            "brand": null,
+            "details": "Negro",
+            "price": 900,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Aceite",
+            "brand": null,
+            "details": null,
+            "price": 1100,
+            "unity": "1 l",
+            "origin": null
+        },
+        {
+            "type": "Papel Sanitario",
+            "brand": null,
+            "details": null,
+            "price": 560,
+            "unity": "4 u",
+            "origin": null
+        },
+        {
+            "type": "Leche Condensada",
+            "brand": null,
+            "details": null,
+            "price": 520,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Pollo",
+            "brand": null,
+            "details": "Pechuga",
+            "price": 4000,
+            "unity": "2 kg",
+            "origin": null
+        },
+        {
+            "type": "Leche",
+            "brand": null,
+            "details": "Polvo",
+            "price": 2400,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Helado",
+            "brand": null,
+            "details": null,
+            "price": 780,
+            "unity": "1 l",
+            "origin": null
+        },
+        {
+            "type": "Refresco",
+            "brand": "Boom Boom",
+            "details": null,
+            "price": 270,
+            "unity": null,
+            "origin": "Importado"
+        },{
+            "type": "Cerveza",
+            "brand": "Moyo",
+            "details": null,
+            "price": 270,
+            "unity": null,
+            "origin": "Importado"
+        },
+        {
+            "type": "Jugo",
+            "brand": null,
+            "details": null,
+            "price": 300,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Sal",
+            "brand": null,
+            "details": null,
+            "price": 250,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Cerveza",
+            "brand": "Cristal",
+            "details": null,
+            "price": 380,
+            "unity": null,
+            "origin": "Nacional"
+        }
+    ]
+}

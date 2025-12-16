@@ -1,0 +1,118 @@
+{
+    "name": "LBMA",
+    "location": {
+        "province": "La Habana",
+	"municipality": "Marianao",
+        "address": "51 E/104 y 106",
+        "lat": 23.079212,
+        "long": -82.423185
+    },
+    "delivery": null,
+    "tranfer_payment": true,
+    "product": [
+        {
+            "type": "Huevo",
+            "brand": null,
+            "details": null,
+            "price": 3300,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Pollo",
+            "brand": null,
+            "details": null,
+            "price": 3800,
+            "unity": "4 kg",
+            "origin": null
+        },
+        {
+            "type": "Pan",
+            "brand": null,
+            "details": null,
+            "price": 180,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Jugo",
+            "brand": null,
+            "details": null,
+            "price": 180,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Cerveza",
+            "brand": "Cristal",
+            "details": null,
+            "price": 330,
+            "unity": null,
+            "origin": "Nacional"
+        },
+        {
+            "type": "Refresco",
+            "brand": "Pepsi",
+            "details": null,
+            "price": 300,
+            "unity": null,
+            "origin": "Nacional"
+        },
+        {
+            "type": "Malta",
+            "brand": "Unlaguer",
+            "details": null,
+            "price": 270,
+            "unity": null,
+            "origin": "Importado"
+        },
+        {
+            "type": "Leche",
+            "brand": null,
+            "details": null,
+            "price": 1900,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Café",
+            "brand": null,
+            "details": null,
+            "price": 1600,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Aceite",
+            "brand": null,
+            "details": null,
+            "price": 930,
+            "unity": "0.9 l",
+            "origin": null
+        },
+        {
+            "type": "Arroz",
+            "brand": null,
+            "details": null,
+            "price": 680,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Azúcar",
+            "brand": null,
+            "details": null,
+            "price": 600,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Sal",
+            "brand": null,
+            "details": null,
+            "price": 250,
+            "unity": "1 kg",
+            "origin": null
+        }
+    ]
+}

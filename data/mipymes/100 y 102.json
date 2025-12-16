@@ -1,0 +1,110 @@
+{
+    "name": null,
+    "location": {
+        "province": "La Habana",
+	"municipality": "Marianao",
+        "address": "51 E/100 y 102",
+        "lat": 23.080402,
+        "long": -82.422601
+    },
+    "delivery": null,
+    "tranfer_payment": true,
+    "product": [
+        {
+            "type": "Refresco",
+            "brand": null,
+            "details": null,
+            "price": 230,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Jabón",
+            "brand": null,
+            "details": null,
+            "price": 130,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Aceite",
+            "brand": null,
+            "details": null,
+            "price": 990,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Leche",
+            "brand": null,
+            "details": "Condensada",
+            "price": 500,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Cerveza",
+            "brand": null,
+            "details": null,
+            "price": 220,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Papel Sanitario",
+            "brand": null,
+            "details": null,
+            "price": 600,
+            "unity": "4 u",
+            "origin": null
+        },
+        {
+            "type": "Pollo",
+            "brand": null,
+            "details": "Hígado",
+            "price": 800,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Huevo",
+            "brand": null,
+            "details": null,
+            "price": 3100,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Sal",
+            "brand": null,
+            "details": null,
+            "price": 250,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Arroz",
+            "brand": null,
+            "details": null,
+            "price": 620,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Frijol",
+            "brand": null,
+            "details": null,
+            "price": 800,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Azúcar",
+            "brand": null,
+            "details": null,
+            "price": 600,
+            "unity": "1 kg",
+            "origin": null
+        }
+    ]
+}
