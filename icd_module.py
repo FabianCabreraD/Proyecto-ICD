@@ -113,6 +113,24 @@ def liquids_mean_price():
     
     return [mean_soft_drink,mean_beer,mean_juice,mean_malt]
 
+def beer_price():
+    national = []
+    imported = []
+    
+    mipymes = mipymes_list()
+    for i in mipymes:
+        path = path_mipyme(i)
+        data = read_json(path)
+        products = data["product"]
+        for product in products:
+            if product["type"] == "Cerveza":
+                price = product["price"]
+                national.append(price) if product["origin"] == "Nacional" else imported.append(price)
+                
+    national_mean = mean_list(national)
+    imported_mean = mean_list(imported)
+    return national_mean, imported_mean
+
 #Devuelve promedios usados
 def means_table():
     data = currency_data()
@@ -162,6 +180,11 @@ def last_usd_price():
     usd = currency_data()[1]
     last_usd = usd[-1]
     return last_usd
+
+def last_currency_date():
+    date = currency_data()[0]
+    last_date = date[-1]
+    return last_date
     
 #GRÁFICOS
 
@@ -203,18 +226,22 @@ def soft_drink_map():
             
     return mapa
           
-def full_currency_graph():
-    fig, (ax1, ax2) = plt.subplots(1,2,figsize=(12,6))
+def currency_graph():
+    fig, ax = plt.subplots()
     
     dates, usd, euro = currency_data()
     
-    ax1.plot(dates,usd,label="USD",color="#EC2E30",linewidth=2)
-    ax1.plot(dates,euro,label="EUR",color="#FA620F",linewidth=2)
-    ax1.set_xticks(dates[::15])
-    ax1.tick_params(axis="x",rotation=45)
-    ax1.set_title("Tasa de Cambio Últimos 3 meses")
-    ax1.set_ylabel("cambio en CUP")
-    ax1.legend()
+    ax.plot(dates,usd,label="USD",color="#EC2E30",linewidth=2)
+    ax.plot(dates,euro,label="EUR",color="#FA620F",linewidth=2)
+    ax.set_xticks(dates[::15])
+    ax.tick_params(axis="x",rotation=45)
+    ax.set_title("Tasa de Cambio Últimos 3 meses")
+    ax.set_ylabel("cambio en CUP")
+    ax.legend()
+    plt.show()
+    
+def salary_graph():
+    dates, usd, euro = currency_data()
     
     usd_vs_salary = currency_vs_data("salary",usd)
     euro_vs_salary = currency_vs_data("salary",euro)
@@ -225,17 +252,49 @@ def full_currency_graph():
     usd_vs_stipend = currency_vs_data("stipend",usd)
     euro_vs_stipend = currency_vs_data("stipend",euro)
     
-    ax2.plot(dates,usd_vs_salary,label="Salario Medio USD",color="#EC2E30")
-    ax2.plot(dates,euro_vs_salary,label="Salario Medio EUR",color="#fa620f")
-    ax2.plot(dates,usd_vs_pension, label="Pensión Mínima USD",color="#fdc401")
-    ax2.plot(dates,euro_vs_pension, label="Pensión Mínima EUR",color="#549044")
-    ax2.plot(dates,usd_vs_stipend,label="Estipendio 1er Año USD",color="#1564a3")
-    ax2.plot(dates,euro_vs_stipend,label="Estipendio 1er Año Euro",color="#5f3c8c")
-    ax2.set_xticks(dates[::15])
-    ax2.tick_params(axis="x",rotation=45)
-    ax2.legend(loc="upper left", bbox_to_anchor=(1, 1))
+    fig, ax = plt.subplots()
+    
+    ax.plot(dates,usd_vs_salary,label="Salario Medio USD",color="#EC2E30")
+    ax.plot(dates,euro_vs_salary,label="Salario Medio EUR",color="#fa620f")
+    ax.plot(dates,usd_vs_pension, label="Pensión Mínima USD",color="#fdc401")
+    ax.plot(dates,euro_vs_pension, label="Pensión Mínima EUR",color="#549044")
+    ax.plot(dates,usd_vs_stipend,label="Estipendio 1er Año USD",color="#1564a3")
+    ax.plot(dates,euro_vs_stipend,label="Estipendio 1er Año Euro",color="#5f3c8c")
+    ax.set_xticks(dates[::15])
+    ax.tick_params(axis="x",rotation=45)
+    #Arreglar posicion lygenda
+    ax.legend(loc="upper left", bbox_to_anchor=(1, 1))
+    plt.show()
+    
+#Terminar gráfico
+def salary_cuba_vs_america():
+    usd = last_usd_price()
+    date = last_currency_date()
+    usd_vs_salary_cuba = AVERAGE_SALARY/usd
+    
+    data = read_json("data/salary_and_rice.json")
+    data["Cuba"]["Salary"] = round(usd_vs_salary_cuba,2)
+    
+    sorted_data = dict(sorted(data.items(), key=lambda x: x[1]["Salary"]))
+    x = sorted_data.keys()
+    y = [i["Salary"] for i in sorted_data.values()]
+    
+    fig, ax = plt.subplots(figsize=(10,6))
+    
+    color = ["#1564a3" if i != "Cuba" else "#EC2E30" for i in x]
+
+    ax.barh(x,y,color=color,edgecolor="black")
+    ax.set_xticks(list(range(0,4100,1000)))
+    index_cuba = list(range(len(x)))[0]
+    ax.annotate(f"Cambio: 1 USD - {usd} ({date})", (300,index_cuba),(1000,index_cuba-0.1),arrowprops=dict(arrowstyle="->",color="black"))
+    ax.set_title("Salario en varios países de América en USD")
+    for i in enumerate(x):
+        index = i[0]
+        ax.text(y[index]+3,index-0.2,s=f"{y[index]}")
+        
     
     plt.show()
+    
     
 #Precio promedio del arroz en países de América
 def rice_mean_price_graph(ax):
@@ -314,12 +373,13 @@ def rice_vs_minimum_pension():
     ax.axhline(y=3056,ls="--",color="black")
     ax.set_title("Pensión mínima y costo del arroz: subsidiado vs privado (7 lb)")
     ax.text(x[0],y[0]/2,f"{percentage}%",ha='center',color='black',fontname="Arial",fontweight="bold",fontsize=20)
-    for index,value in enumerate(x):
+    for index in enumerate(x):
+        ind = index[0]
         if index != 0:
-            s = f"{y[index]} ({round(y[index]/MINIMUM_PENSION*100,2)}%)"
+            s = f"{y[ind]} ({round(y[ind]/MINIMUM_PENSION*100,2)}%)"
         else:
-            s = y[index]
-        ax.text(x=x[index], y=y[index]+20,s=s,ha="center")
+            s = y[ind]
+        ax.text(x=x[ind], y=y[ind]+20,s=s,ha="center")
     ax.annotate("", xytext=(0, y[0]-100), xy=(1, 3020),arrowprops=dict(arrowstyle="->",color="black"))
     ax.set_yticks(list(range(0,3600,500)))
     ax.text(x=1,y=3100,s="Pensión Mínima")
@@ -376,6 +436,25 @@ def liquids_graph():
     ax.set_title("Precio promedio de líquidos")
     ax.set_ylabel("Precio en CUP")
     plt.show()
+    
+def beer_graph():
+    national, imported = beer_price()
+    x = ["Nacional", "Importada"]
+    y = [national, imported]
+    
+    fig, ax = plt.subplots(figsize=(6,4))
+    
+    ax.bar(x, y, color="#F0B884",edgecolor="gray")
+    ax.axhline(y=200,ls="--",color="#003049")
+    ax.set_title("Precios de la cerveza nacional e importada vs. estipendio universitario")
+    for i in range(len(x)):
+        inf = 200
+        sup = y[i]
+        ax.annotate("",(i,inf),(i,sup),arrowprops=dict(arrowstyle="<->"))
+        porcentage = round((sup-inf)/200*100,2)
+        ax.text(x=i+0.2,y=(inf+sup)/2,s=f"{porcentage}%",ha="center",fontsize="large")
+    plt.show()
+    
 
 def egg_employees_graph():
     mean_price = egg_mean_price()
