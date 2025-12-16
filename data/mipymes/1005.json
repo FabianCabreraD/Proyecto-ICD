@@ -11,14 +11,6 @@
     "transfer_payment": true,
     "product": [
         {
-            "type": "",
-            "brand": null,
-            "details": null,
-            "price": 0,
-            "unity": null,
-            "origin": null
-        },
-        {
             "type": "Pollo",
             "brand": null,
             "details": "Pechuga",
@@ -43,11 +35,83 @@
             "origin": "Importado"
         },
         {
+            "type": "Refresco",
+            "brand": null,
+            "details": null,
+            "price": 250,
+            "unity": null,
+            "origin": null
+        },
+        {
             "type": "Leche",
             "brand": null,
             "details": "Polvo",
             "price": 1650,
             "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Malta",
+            "brand": null,
+            "details": null,
+            "price": 270,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Café",
+            "brand": null,
+            "details": null,
+            "price": 1800,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Arroz",
+            "brand": null,
+            "details": null,
+            "price": 800,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Azúcar",
+            "brand": null,
+            "details": null,
+            "price": 700,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Sal",
+            "brand": null,
+            "details": null,
+            "price": 300,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Frijol",
+            "brand": null,
+            "details": "Negro",
+            "price": 800,
+            "unity": "1 kg",
+            "origin": null
+        },
+        {
+            "type": "Jabón",
+            "brand": null,
+            "details": null,
+            "price": 180,
+            "unity": null,
+            "origin": null
+        },
+        {
+            "type": "Pasta Dental",
+            "brand": null,
+            "details": null,
+            "price": 700,
+            "unity": null,
             "origin": null
         }
     ]

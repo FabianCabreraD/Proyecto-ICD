@@ -1,23 +1,15 @@
 {
-    "name": "",
+    "name": "Fresko Habana",
     "location": {
-        "province": "",
-	    "municipality": "",
-        "address": "",
-        "lat": 0,
-        "long": 0
+        "province": "La Habana",
+	    "municipality": "Marianao",
+        "address": "114 E/51 y 49",
+        "lat": 23.075942,
+        "long": -82.427064
     },
     "delivery": null,
     "tranfer_payment": true,
     "product": [
-        {
-            "type": "",
-            "brand": null,
-            "details": null,
-            "price": 0,
-            "unity": null,
-            "origin": null
-        },
         {
             "type": "Arroz",
             "brand": null,
@@ -95,14 +87,6 @@
             "brand": null,
             "details": null,
             "price": 780,
-            "unity": null,
-            "origin": null
-        },
-        {
-            "type": "",
-            "brand": null,
-            "details": null,
-            "price": 0,
             "unity": null,
             "origin": null
         },
