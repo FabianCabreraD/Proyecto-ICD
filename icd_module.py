@@ -10,8 +10,6 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from matplotlib.offsetbox import OffsetImage, AnnotationBbox
 import matplotlib.patches as mpatches
-#Para mostrar tabla
-from prettytable import PrettyTable
 
 #CONSTANTES
 MIPYMES_PATH = "data\\mipymes"
@@ -130,43 +128,7 @@ def beer_price():
     national_mean = mean_list(national)
     imported_mean = mean_list(imported)
     return national_mean, imported_mean
-    
-def table():
-    columns_labels = ["","USD", "EURO"]
-    table_data = []
-    
-    data = currency_data()
-    usd, euro = data[1], data[2]
-    
-    usd_mean = round(mean_list(usd))
-    euro_mean = round(mean_list(euro))
-    
-    print(usd_mean)
-    print(euro_mean)
-    
-    sectors = ["Salario Medio", "Pensión Mínima", "Estipendio 1er Año"]
-    constants = [AVERAGE_SALARY, MINIMUM_PENSION, STIPEND_YEAR_ONE]
-    
-    for sector,constant in zip(sectors, constants):
-        table_data.append([sector,round(constant/usd_mean,2),round(constant/euro_mean,2)])
-    
-    fig, ax = plt.subplots()
-    ax.axis("off")
         
-    table = ax.table(cellText=table_data,colLabels=columns_labels,loc="center")
-
-    table.auto_set_font_size(False)
-    table.set_fontsize(12)
-    table.scale(1.2, 1.5)
-
-    for key, cell in table.get_celld().items():
-        cell.set_edgecolor("lightgrey")   
-        cell.set_text_props(ha="center", va="center")
-        cell.set_linewidth(0.5)           
-        cell.set_facecolor("white")      
-        
-    plt.show()
-    
 #Retorna el precio promedio del huevo     
 def egg_mean_price():
     files = mipymes_list()
@@ -251,7 +213,7 @@ def currency_graph():
     ax.plot(dates,euro,label="EUR",color="#FA620F",linewidth=2)
     ax.set_xticks(dates[::15])
     ax.tick_params(axis="x",rotation=45)
-    ax.set_title("Tasa de Cambio Últimos 3 meses")
+    ax.set_title("Tasa de Cambio Septiembre - Diciembre")
     ax.set_ylabel("cambio en CUP")
     ax.legend()
     plt.show()
@@ -278,7 +240,7 @@ def salary_graph():
     ax.plot(dates,euro_vs_stipend,label="Estipendio 1er Año Euro",color="#5f3c8c")
     ax.set_xticks(dates[::15])
     ax.tick_params(axis="x",rotation=45)
-    ax.set_title("Ingresos en México frente a divisas internacionales (Últimos 3 meses)")
+    ax.set_title("Ingresos en Cuba frente a divisas internacionales (Sep-Dic)")
     ax.legend(loc="upper left", bbox_to_anchor=(1, 1))
     plt.show()
     
@@ -493,7 +455,7 @@ def egg_employees_graph():
     otro_patch = mpatches.Patch(color="#AED9E0", label="Cartón de Huevo vs Salario (%)")
 
     ax.legend(handles=[positivo_patch, negativo_patch, otro_patch],fontsize="small")
-    
+    ax.text(53,4,f"Precio Promedio: {mean_price}")    
     ax.set_xticks(list(range(-20,90,10)))
     ax.tick_params(axis="y",labelsize="small")
         
