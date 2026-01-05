@@ -2,7 +2,8 @@
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
-![Matlpotlib](https://img.shields.io/badge/-Matplotlib-000000?style=for-the-badge&logo=python)
+![Static Badge](https://img.shields.io/badge/Matplotlib-black?style=for-the-badge)
+
 ## Problemática
 
 Si estás leyendo esto, lo más probable es o que seas un estudiante como yo, o un simple trabajador estatal
