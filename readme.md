@@ -12,17 +12,13 @@ En cualquiera de los 3 casos, el estado nos entrega un dinero: un estipendio, un
 
 Y aunque sea repetitivo, en cualquiera de los 3 casos, no nos alcanza.
 
-Este proyecto lo demuestra.
+Este proyecto lo demuestra, anímate a echarle un vistazo
 
-## Datos
+## Fuentes de Datos
 
-1.  **ONEI:** Nos aporta informes estadísticos de salarios, pensiones, estipendios.
-2.  **elTOQUE:** 'Seguramente nadie sabe qué es', esa 'increíble' página que nos dice cuánto vale nuestra moneda.
-3.  **MIPYMES:** Nuestras 'bodegas' particulares, donde hay de todo, pero a qué precios!
-
-## Resultado
-
-Pues eso, que no alzancan, pero con estos análisis es aún mas dura la realidad. Te invito a echarles un ojo.
+- **ONEI:** Nos aporta informes estadísticos de salarios, pensiones, estipendios.
+- **elTOQUE:** 'Seguramente nadie sabe qué es', esa 'increíble' página que nos dice cuánto vale nuestra moneda.
+- **MIPYMES:** Nuestras 'bodegas' particulares, donde hay de todo, pero a qué precios!
 
 ## Estructura
 
@@ -33,15 +29,16 @@ Pues eso, que no alzancan, pero con estos análisis es aún mas dura la realidad
 │   ├── indicadores.pdf      # Informe de la ONEI.
 │   ├── precio_compra.csv    # Datos de cambio de la moneda extraídos de elTOQUE.
 │   ├── salary_and_rice.json # Salarios medio y precio promedio de arroz en países de América.
+|   ├── sources.txt          # Fuente de datos obtenidos.
 │
-├── evidencia/               # Fotos de las mipymes que visité
+├── evidencia/               # Fotos de las mipymes que visité.
 │
-├── img/                     # Imágenes usadas en el Jupyter
+├── img/                     # Imágenes usadas en el Jupyter.
 │
-├── main.ipynb               #Jupyter Notebook para mostrar la historia y las gráficas
+├── main.ipynb               #Jupyter Notebook para mostrar la historia y las gráficas.
 │
-├── icd_module.py            # Archivos con las funciones utilizadas para procesar la información y crear gráficos
+├── icd_module.py            # Archivos con las funciones utilizadas para procesar la información y crear gráficos.
 ├── readme.md                # Para explicar un poquito el proyecto.
 ├── report.pdf               # Se profundiza en la problemática y etapas del trabajo.
-└── Readme.md                # Documentación del proyecto
+└── requeriments.txt         # Requisitos para reproducir el proyecto
 ```
