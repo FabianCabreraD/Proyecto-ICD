@@ -17,7 +17,7 @@ Este proyecto lo demuestra, anímate a echarle un vistazo
 ## Fuentes de Datos
 
 - **ONEI:** Nos aporta informes estadísticos de salarios, pensiones, estipendios.
-- **elTOQUE:** 'Seguramente nadie sabe qué es', esa 'increíble' página que nos dice cuánto vale nuestra moneda.
+- **elTOQUE:** 'Seguramente nadie sabe qué es, esa 'increíble' página que nos dice cuánto vale nuestra moneda.
 - **MIPYMES:** Nuestras 'bodegas' particulares, donde hay de todo, pero a qué precios!
 
 ## Estructura
