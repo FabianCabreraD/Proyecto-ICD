@@ -45,7 +45,7 @@ def mean_list(list):
 
 #Retorna las fechas y el valor correspondiente del dolar y el euro
 def currency_data():
-    with open("d:\\uh\\icd\\Proyecto-ICD\\data\\precio_venta.csv","r") as file:
+    with open("d:\\uh\\icd\\Proyecto-ICD\\data\\selling_price.csv","r") as file:
         data = csv.reader(file)
         data_list = [i for i in data]
         
