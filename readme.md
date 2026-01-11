@@ -28,7 +28,7 @@ Este proyecto lo demuestra, anímate a echarle un vistazo
 │   ├── mipymes/             # JSON de las mipymes.
 │   ├── cuba_salary.json     # Salarios medios en Cuba por sectores.
 │   ├── indicadores.pdf      # Informe de la ONEI.
-│   ├── precio_compra.csv    # Datos de cambio de la moneda extraídos de elTOQUE.
+│   ├── selling_price.csv    # Datos de cambio de la moneda extraídos de elTOQUE.
 │   ├── salary_and_rice.json # Salarios medio y precio promedio de arroz en países de América.
 |   ├── sources.txt          # Fuente de datos obtenidos.
 │
