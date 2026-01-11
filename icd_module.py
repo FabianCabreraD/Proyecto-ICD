@@ -81,6 +81,7 @@ def rice_mean_price():
     mean = mean_list(prices)
     return mean
     
+#Convierte el dato de Salario o Pension en una moneda dada
 def currency_vs_data(data,data_currency):
     dt = AVERAGE_SALARY if data == "salary" else (MINIMUM_PENSION if data == "pension" else STIPEND_YEAR_ONE)
     values = [dt/i for i in data_currency]
@@ -111,6 +112,7 @@ def liquids_mean_price():
     
     return [mean_soft_drink,mean_beer,mean_juice,mean_malt]
 
+#Retorna precios de la cerveza
 def beer_price():
     national = []
     imported = []
@@ -159,6 +161,7 @@ def last_usd_price():
     last_usd = usd[-1]
     return last_usd
 
+#Devuelve el ultimo dato de moneda recogido
 def last_currency_date():
     date = currency_data()[0]
     last_date = date[-1]
@@ -166,6 +169,7 @@ def last_currency_date():
     
 #GRÁFICOS
 
+#Mapa de líquidos
 def soft_drink_map():    
     mapa = folium.Map(location=(23.07088,-82.43847),zoom_start=12)
     
@@ -204,6 +208,7 @@ def soft_drink_map():
             
     return mapa
           
+#Gráfico de cambio de moneda
 def currency_graph():
     fig, ax = plt.subplots()
     
@@ -218,6 +223,7 @@ def currency_graph():
     ax.legend()
     plt.show()
     
+#Gráfico de datos analizados en USD y Euro
 def salary_graph():
     dates, usd, euro = currency_data()
     
@@ -244,6 +250,7 @@ def salary_graph():
     ax.legend(loc="upper left", bbox_to_anchor=(1, 1))
     plt.show()
     
+#Comparación del salario de Cuba vs países de América
 def salary_cuba_vs_america():
     usd = last_usd_price()
     date = last_currency_date()
@@ -324,7 +331,8 @@ def rice_and_salary_graph():
     plt.subplots_adjust(left=0.2)
     plt.legend()
     plt.show()
-    
+
+#Precio de arroz vs pensión mínima
 def rice_vs_minimum_pension():
     cuba_rice = rice_mean_price()
     lb7_to_kg = round(7/2.20462,2)
@@ -361,6 +369,7 @@ def rice_vs_minimum_pension():
     ax.text(x=1,y=3100,s="Pensión Mínima",fontweight="bold")
     plt.show()
     
+#Pensión mínima vs leche y frijoles
 def milk_beans_minpens():
     files = mipymes_list()
        
@@ -400,6 +409,7 @@ def milk_beans_minpens():
     ax.set_title("Reparto de la pensión mínima en productos básicos")
     plt.show()
 
+#Precio de líquidos 
 def liquids_graph():
     means = liquids_mean_price()
     products = ["Refresco", "Cerveza", "Jugo", "Malta"]
@@ -418,6 +428,7 @@ def liquids_graph():
     ax.set_ylabel("Precio en CUP")
     plt.show()
     
+#Precio de datos de trabajadores y precio del huevo
 def egg_employees_graph():
     mean_price = egg_mean_price()
     salary = cuba_salary()
@@ -472,6 +483,7 @@ def egg_employees_graph():
     plt.subplots_adjust(left=0.4)
     plt.show()
     
+#Gráfico de la cerveza vs estipendio estudiantil
 def beer_graph():
     national, imported = beer_price()
     x = ["Nacional", "Importada"]
