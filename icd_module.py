@@ -45,7 +45,7 @@ def mean_list(list):
 
 #Retorna las fechas y el valor correspondiente del dolar y el euro
 def currency_data():
-    with open("d:\\uh\\icd\\Proyecto-ICD\\data\\selling_price.csv","r") as file:
+    with open("data\\selling_price.csv","r") as file:
         data = csv.reader(file)
         data_list = [i for i in data]
         
@@ -175,7 +175,7 @@ def soft_drink_map():
     
     archivos = mipymes_list()
     for i in archivos:
-        data = read_json(f"d:\\uh\\icd\\Proyecto-ICD\\data\\mipymes\\{i}")
+        data = read_json(f"data\\mipymes\\{i}")
         
         name = data['name'] if data["name"] is not None else data["location"]["address"]
         lat = data["location"]["lat"]
@@ -186,8 +186,8 @@ def soft_drink_map():
             if j["type"] in ["Refresco","Malta","Jugo","Cerveza"] and j["price"] <= 200:
                 products.append(j["type"])
         
-        like_marker = folium.CustomIcon("d:\\uh\\icd\\Proyecto-ICD\\img\\like.png",icon_size=(30,30))
-        dislike_marker = folium.CustomIcon("d:\\uh\\icd\\Proyecto-ICD\\img\\dislike.png",icon_size=(30,30))
+        like_marker = folium.CustomIcon("img\\like.png",icon_size=(30,30))
+        dislike_marker = folium.CustomIcon("img\\dislike.png",icon_size=(30,30))
         
         products_string = ', '.join(products)
         
