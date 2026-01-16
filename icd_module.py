@@ -303,7 +303,7 @@ def rice_and_salary_graph():
     
     salary_and_rice_data = read_json("data/salary_and_rice.json")
     salary_and_rice_data["Cuba"]["Rice"] = cuba_rice/usd_price
-    salary_and_rice_data["Cuba"]["Salary"] = 6660.1/usd_price
+    salary_and_rice_data["Cuba"]["Salary"] = AVERAGE_SALARY/usd_price
     
     data = dict(sorted(salary_and_rice_data.items(), key=lambda x: x[1]["Rice"]))
         
@@ -450,7 +450,7 @@ def egg_employees_graph():
     color_list = ["#A8E6CF" if v > 0 else "#FF8C94" for v in percentage_employees]
     
     key_sectors = ["Educación", "Salud pública y asistencia social", "Agricultura, ganadería, caza y sivicultura"]
-    edgecolor = ["gray" if i not in key_sectors else "red" for i in sector]
+    edgecolor = ["gray" if i not in key_sectors else "purple" for i in sector]
     
     ax.barh(x_egg,percentage_thirty,label="Cartón (30 u)",color="#AED9E0",height=height,edgecolor=edgecolor)
     ax.barh(x_employees, percentage_employees,height=height,color=color_list,edgecolor="gray")
@@ -500,9 +500,9 @@ def beer_graph():
         porcentage = round((sup-inf)/200*100,2)
         ax.text(x=i+0.2,y=(inf+sup)/2,s=f"{porcentage}%",ha="center",fontsize="large",color="white",fontweight="bold")
         ax.text(x=i,y=y[i]+5,s=y[i], ha="center")
-    ax.axhline(y=200,ls="--",color="white")
+    ax.axhline(y=200,ls="--",color="black")
     ax.set_title("Precios de la cerveza nacional e importada vs. estipendio universitario")
     ax.set_ylim(top=340)
     ax.set_xticks([0,1])
     ax.set_xticklabels(x)
-    plt.show()    
+    plt.show()   
