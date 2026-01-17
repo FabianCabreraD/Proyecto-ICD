@@ -332,43 +332,41 @@ def rice_and_salary_graph():
     plt.legend()
     plt.show()
 
-#Precio de arroz vs pensión mínima
-def rice_vs_minimum_pension():
-    cuba_rice = rice_mean_price()
-    lb7_to_kg = round(7/2.20462,2)
-    cuba_rice_rationed = round(lb7_to_kg*cuba_rice,2)
-    pension = MINIMUM_PENSION
-    
-    percentage = round((cuba_rice_rationed/pension)*100,2)
-    
-    fig, ax = plt.subplots(figsize=(10,6))
-    
-    x = ["Precio Mipymes", "Precio Subsidiado Importado", "Precio Subsidiado Nacional"]
-    y = [cuba_rice_rationed,7*REG_RICE_INTERNATIONAL_PRICE_LB,7*REG_RICE_NATIONAL_PRICE_LB]
-    
-    img = mpimg.imread("img/rice.png")
-    
-    imagebox = OffsetImage(img, zoom=0.05)
+#Pensión mínima vs Cuota de arroz mensual
+def rice_mipyme_reg():
+    cuba_rice_kg = rice_mean_price()
+    cuba_rice_lb = cuba_rice_kg/2.2
+        
+    fig, ax = plt.subplots()
 
-    ab = AnnotationBbox(imagebox, (2, 2400), frameon=False)
-    ax.add_artist(ab)
-    
-    ax.bar(x,y,color=['#aac79a','#f0c4b2','#e3d3c2'], edgecolor="gray")
-    ax.axhline(y=3056,ls="--",color="black")
-    ax.set_title("Pensión mínima y costo del arroz: subsidiado vs privado (7 lb)")
-    ax.text(x[0],y[0]/2,f"{percentage}%",ha='center',color='black',fontname="Arial",fontweight="bold",fontsize=20)
-    for index in enumerate(x):
-        ind = index[0]
-        if ind != 0:
-            s = f"{y[ind]} ({round(y[ind]/MINIMUM_PENSION*100,2)}%)"
-        else:
-            s = y[ind]
-        ax.text(x=x[ind], y=y[ind]+20,s=s,ha="center")
-    ax.annotate("", xytext=(0, y[0]-400), xy=(1, 3020),arrowprops=dict(arrowstyle="->",color="black"))
-    ax.set_yticks(list(range(0,3600,500)))
-    ax.text(x=1,y=3100,s="Pensión Mínima",fontweight="bold")
+    for i in range(8):
+        rest = 7-i
+        y = rest*cuba_rice_lb
+        
+        label_mipyme = "Precio Mipyme" if i==0 else ""
+        label_regulated = "Precio Subsidiado" if i==0 else ""
+        
+        ax.bar(i+1,y,color="#aac79a",label=label_mipyme)
+        
+        y_top = i*REG_RICE_NATIONAL_PRICE_LB
+        percentage = f"{round((y+y_top)/MINIMUM_PENSION*100,2)}%"
+        
+        ax.bar(i+1,y_top,bottom=y,color="black",label=label_regulated)
+        ax.text(i+1,y+y_top+20,percentage,ha="center")
+        
+    ax.bar(0,MINIMUM_PENSION,color="#f0c4b2")
+    ax.text(0,MINIMUM_PENSION+12,"3056",ha="center")
+        
+    ax.set_title("Pensión Mínima vs Cuota Mensual de Arroz (7 lb)")
+    ax.set_xticks(list(range(9)))
+    ax.set_xticklabels(["Pensión"] + list(range(8)))
+    ax.set_xlabel("lb de arroz entregadas por el Estado")
+    ax.set_ylabel("Precio de la cuota mensual - CUP")  
+    ax.legend()  
+        
     plt.show()
     
+
 #Pensión mínima vs leche y frijoles
 def milk_beans_minpens():
     files = mipymes_list()
